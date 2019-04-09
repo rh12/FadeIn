@@ -1,0 +1,22 @@
+//
+// Prefix header for all source files of the 'FadeIn' target in the 'FadeIn' project
+//
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+    #import <CoreData/CoreData.h>
+
+    #import "UIKit_ext.h"
+    #import "CG_ext.h"
+    #import "NSDate_ext.h"
+    #import "NSString_ext.h"
+
+    #import "FadeInAppDelegate.h"
+#endif

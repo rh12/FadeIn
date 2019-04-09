@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Allen & Heath" product="GL2400" file="a&h_gl2400.xml">
+    <layout name="Allen & Heath GL2400-416" desc="[ 14M ][ 2ST ][ Master ]"/>
+    <layout name="Allen & Heath GL2400-424" desc="[ 14M ][ 2ST ][ Master ][ 8M ]"/>
+    <layout name="Allen & Heath GL2400-432" desc="[ 14M ][ 2ST ][ Master ][ 16M ]"/>
+    <layout name="Allen & Heath GL2400-440" desc="[ 22M ][ 2ST ][ Master ][ 16M ]"/>
+</equipment>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Yamaha" product="PM3500" file="yamaha_pm3500.xml">
+    <layout name="Yamaha PM3500-24" desc="[ 24M ][ 4ST ][ Master ]"/>
+    <layout name="Yamaha PM3500-32" desc="[ 32M ][ 4ST ][ Master ]"/>
+    <layout name="Yamaha PM3500-40" desc="[ 24M ][ 4ST ][ Master ][ 16M ]"/>
+    <layout name="Yamaha PM3500-40 (ST-last)" desc="[ 28M ][ Master ][ 12M ][ 4ST ]"/>
+    <layout name="Yamaha PM3500-48" desc="[ 24M ][ 4ST ][ Master ][ 24M ]"/>
+    <layout name="Yamaha PM3500-48 (ST-last)" desc="[ 28M ][ Master ][ 20M ][ 4ST ]"/>
+</equipment>

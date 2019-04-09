@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FIMainScreenVC">
+            <connections>
+                <outlet property="view" destination="1" id="3"/>
+                <outletCollection property="buttonsArray" destination="18" id="57"/>
+                <outletCollection property="buttonsArray" destination="6" id="58"/>
+                <outletCollection property="buttonsArray" destination="10" id="59"/>
+                <outletCollection property="buttonsArray" destination="15" id="60"/>
+                <outletCollection property="hlArray" destination="61" id="62"/>
+                <outletCollection property="hlArray" destination="63" id="66"/>
+                <outletCollection property="hlArray" destination="64" id="67"/>
+                <outletCollection property="hlArray" destination="65" id="68"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mainscreen_bg.png" id="21">
+                    <rect key="frame" x="0.0" y="88" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="18" userLabel="Stage Button">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                    <state key="normal" backgroundImage="mainscreen_stage@4in.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" title="SELECTED"/>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="continueFromLastTime:" destination="-1" eventType="touchUpInside" id="20"/>
+                        <action selector="turnOffHighlightFor:" destination="-2" eventType="touchDragOutside" id="37"/>
+                        <action selector="turnOffHighlightFor:" destination="-2" eventType="touchCancel" id="52"/>
+                        <action selector="turnOnHighlightFor:" destination="-2" eventType="touchDown" id="27"/>
+                        <action selector="turnOnHighlightFor:" destination="-2" eventType="touchDragInside" id="38"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6" userLabel="Console Button">
+                    <rect key="frame" x="0.0" y="223" width="320" height="240"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="createQuickScene:" destination="-1" eventType="touchUpInside" id="14"/>
+                        <action selector="turnOffHighlightFor:" destination="-2" eventType="touchDragOutside" id="33"/>
+                        <action selector="turnOffHighlightFor:" destination="-2" eventType="touchCancel" id="54"/>
+                        <action selector="turnOnHighlightFor:" destination="-2" eventType="touchDown" id="28"/>
+                        <action selector="turnOnHighlightFor:" destination="-2" eventType="touchDragInside" id="34"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="10" userLabel="Notebook Button">
+                    <rect key="frame" x="62" y="318" width="116" height="104"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openNotebook:" destination="-1" eventType="touchUpInside" id="11"/>
+                        <action selector="turnOffHighlightFor:" destination="-2" eventType="touchDragOutside" id="31"/>
+                        <action selector="turnOffHighlightFor:" destination="-2" eventType="touchCancel" id="55"/>
+                        <action selector="turnOnHighlightFor:" destination="-2" eventType="touchDown" id="29"/>
+                        <action selector="turnOnHighlightFor:" destination="-2" eventType="touchDragInside" id="32"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="15" userLabel="Toolbox Button">
+                    <rect key="frame" x="0.0" y="463" width="157" height="105"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showSettings:" destination="-1" eventType="touchUpInside" id="16"/>
+                        <action selector="turnOffHighlightFor:" destination="-2" eventType="touchDragOutside" id="35"/>
+                        <action selector="turnOffHighlightFor:" destination="-2" eventType="touchCancel" id="56"/>
+                        <action selector="turnOnHighlightFor:" destination="-2" eventType="touchDown" id="30"/>
+                        <action selector="turnOnHighlightFor:" destination="-2" eventType="touchDragInside" id="36"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="mainscreen_stage_hl@4in.png" id="61" userLabel="Stage HL">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="mainscreen_console_hl.png" id="63" userLabel="Console HL">
+                    <rect key="frame" x="0.0" y="88" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="mainscreen_notebook_hl.png" id="64" userLabel="Notebook HL">
+                    <rect key="frame" x="0.0" y="88" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="mainscreen_settings_hl.png" id="65" userLabel="Toolbox HL">
+                    <rect key="frame" x="0.0" y="88" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mainscreen_bg.png" width="320" height="480"/>
+        <image name="mainscreen_console_hl.png" width="320" height="480"/>
+        <image name="mainscreen_notebook_hl.png" width="320" height="480"/>
+        <image name="mainscreen_settings_hl.png" width="320" height="480"/>
+        <image name="mainscreen_stage@4in.png" width="640" height="406"/>
+        <image name="mainscreen_stage_hl@4in.png" width="640" height="1136"/>
+    </resources>
+</document>

@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layouts type="Console" scale="0.22142857" height="3396" bgcolor="#1F3B4F" inactiveColor="#DDDDDD">
+    <!-- scale: 31mm / 140px-->
+
+    <layoutDef name="Custom Defaults" dir="LeftRight">
+        <mainModule type="CHMono" id="cd__CHMono">MONO</mainModule>
+        <mainModule type="CHStereo" id="cd__CHStereo">STEREO</mainModule>
+    </layoutDef>
+    
+    <colors 
+        black="#262626"
+        white="#FFFFFF"
+        knobDark="#585858"
+        knobLight="#E0E0E0"
+        grey="#D0D0D0"
+        green="#00A552"
+        yellow="#FFF200"
+        blue="#0882D8"
+        red="#F6232A"
+        haloDark="#000000"
+    />
+    
+
+    <!-- ------------------------------------------------------------------------------------------
+        CONSOLE LAYOUTS
+    ------------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas XL250" dir="LeftRight">
+    
+        <group>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="17" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        
+        <!--
+         <group>
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+        <group>
+            <mainModuleArray type="CHMono" start="25" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="33" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="41" count="4" id="ch*">*</mainModuleArray>
+            <mainModuleArray type="CHStereo" start="45" count="4" id="ch*">*</mainModuleArray>
+        </group>
+        
+    </layoutDef>
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        MAIN MODULES
+    ------------------------------------------------------------------------------------------- -->
+    
+    <mainModuleDef name="CHMono" width="140" dir="TopDown">
+        <scrollbar file="xl250_sb_mono.png"/>
+        <module type="CH_TopPadding" />
+        <module type="CH_Top_Mono" />
+        <module type="CH_AUX_Mono" />
+        <module type="CH_Mutes" />
+        <module type="CH_Fader_Mono" />
+    </mainModuleDef>
+    
+    <mainModuleDef name="CHStereo" width="140" dir="TopDown">
+        <scrollbar file="xl250_sb_stereo.png"/>
+        <module type="CH_TopPadding" />
+        <module type="CH_Top_Stereo" />
+        <module type="CH_AUX_Stereo" />
+        <module type="CH_Mutes" />
+        <module type="CH_Fader_Stereo" />
+    </mainModuleDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+        MODULES
+    ------------------------------------------------------------------------------------------- -->
+    <!-- Textures:  TopLeft origin !! -->
+
+    <moduleDef name="CH_TopPadding" height="36" tileDir="TopDown">
+        <texture file="xl250_tex0.png" x0="564" y0="709" w="140" h="36" />
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Top_Mono" height="769" tileDir="TopDown">
+        <texture file="xl250_tex0.png" x0="282" y0="0" w="140" h="769" />
+
+        <control type="SmallButton" x="89" y="29.5" texOffset="1">PHASE</control>
+        <control type="Gain" x="82.5" y="97.5">gain</control>
+        <control type="LEDButton" x="49.5" y="154.5" texOffset="10">48V</control>
+        <control type="LEDButton" x="93.5" texOffset="11">PAD</control>
+        
+        <control type="EQInner" x="82.5" y="221.5" colors="top=knobLight, mark=black">treble (gain)</control>
+        <control type="EQOuter" link="1">treble (freq)</control>
+        <control type="EQInner" y="309.5">hi mid (gain)</control>
+        <control type="EQOuter" link="1">hi mid (freq)</control>
+        <control type="EQSmall" y="390.5">hi mid (width)</control>
+        <control type="EQSmall" y="457.5">lo mid (width)</control>
+        <control type="EQInner" y="533.5">lo mid (gain)</control>
+        <control type="EQOuter" link="1">lo mid (freq)</control>
+        <control type="EQInner" y="621.5" colors="top=knobDark">bass (gain)</control>
+        <control type="EQOuter" link="1">bass (freq)</control>
+        <control type="HPFFreq" y="702.5">high pass</control>
+        <control type="EQButton" x="49.5" y="751.5">EQ</control>
+        <control type="LEDButton" x="93.5" texOffset="12">HI PASS</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Top_Stereo" height="769" tileDir="TopDown">
+        <texture file="xl250_tex0.png" x0="422" y0="0" w="140" h="769" />
+        
+        <control type="SmallButton" x="54" y="29.5" texOffset="1">PHASE L</control>
+        <control type="SmallButton" x="89" texOffset="1">PHASE R</control>
+        <control type="GainInner" x="82.5" y="97.5">gain left</control>
+        <control type="GainOuter" link="1">gain right</control>
+        <control type="LEDButton" x="49.5" y="154.5" texOffset="10">48V</control>
+        <control type="LEDButton" x="93.5" texOffset="11">PAD</control>
+        <control type="SmallButton" x="54" y="192.5" texOffset="2">L</control>
+        <control type="SmallButton" x="89" texOffset="3">R</control>
+        
+        <control type="EQBig" x="58.5" y="271.5" colors="top=knobLight, mark=black">treble</control>
+        <control type="EQBig" y="372.5">mid (gain)</control>
+        <control type="EQSmall" y="455.5">mid (freq)</control>
+        <control type="EQBig" y="578.5" colors="top=knobDark">bass</control>
+        <control type="BlueButton" x="54" y="514.5">X 5</control>
+        <control type="BlueButton" x="89" texOffset="1">WIDTH</control>
+        <control type="EQButton" x="49.5" y="641.5">EQ L</control>
+        <control type="EQButton" x="93.5" texOffset="1">EQ R</control>
+        <control type="HPFFreq" x="82.5" y="702.5">high pass</control>
+        <control type="LEDButton" x="93.5" y="751.5" texOffset="12">HI PASS</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_AUX_Mono" height="1274" tileDir="TopDown">
+        <texture file="xl250_tex0.png" x0="564" y0="0" w="140" h="167" />
+        <texture file="xl250_tex0.png" x0="0" y0="0" w="140" h="1024" />
+        <texture file="xl250_tex0.png" x0="282" y0="771" w="140" h="83" />
+
+        <control type="LEDButton" x="49.5" y="26.5" texOffset="13">INS</control>
+        <control type="LEDButton" x="93.5" texOffset="15">PRE</control>
+
+        <control type="AUX" x="35" y="88.5">AUX 1</control>
+        <control type="AUX" x="102">AUX 2</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL1</control>
+        <control type="AUXLED" x="102" link="2"         >AL2</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 1</control>
+        <control type="SmallButton" x="102"           >PRE 2</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=green">AUX 3</control>
+        <control type="AUX" x="102"        colors="top=green">AUX 4</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL3</control>
+        <control type="AUXLED" x="102" link="2"         >AL4</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 3</control>
+        <control type="SmallButton" x="102"           >PRE 4</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=yellow, mark=black">AUX 5</control>
+        <control type="AUX" x="102"        colors="top=yellow, mark=black">AUX 6</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL5</control>
+        <control type="AUXLED" x="102" link="2"         >AL6</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 5</control>
+        <control type="SmallButton" x="102"           >PRE 6</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=blue">AUX 7</control>
+        <control type="AUX" x="102"        colors="top=blue">AUX 8</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL7</control>
+        <control type="AUXLED" x="102" link="2"         >AL8</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 7</control>
+        <control type="SmallButton" x="102"           >PRE 8</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=red">AUX 9</control>
+        <control type="AUX" x="102"        colors="top=red">AUX 10</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL9</control>
+        <control type="AUXLED" x="102" link="2"         >AL10</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 9</control>
+        <control type="SmallButton" x="102"           >PRE 10</control>
+        
+        <control type="AUX" x="35" dy="61">AUX 11</control>
+        <control type="AUX" x="102">AUX 12</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL11</control>
+        <control type="AUXLED" x="102" link="2"         >AL12</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 11</control>
+        <control type="SmallButton" x="102"           >PRE 12</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=green">AUX 13</control>
+        <control type="AUX" x="102"        colors="top=green">AUX 14</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL13</control>
+        <control type="AUXLED" x="102" link="2"         >AL14</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 13</control>
+        <control type="SmallButton" x="102"           >PRE 14</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=yellow, mark=black">AUX 15</control>
+        <control type="AUX" x="102"        colors="top=yellow, mark=black">AUX 16</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL15</control>
+        <control type="AUXLED" x="102" link="2"         >AL16</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 15</control>
+        <control type="SmallButton" x="102"           >PRE 16</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=blue">AUX 17</control>
+        <control type="AUX" x="102"        colors="top=blue">AUX 18</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL17</control>
+        <control type="AUXLED" x="102" link="2"         >AL18</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 17</control>
+        <control type="SmallButton" x="102"           >PRE 18</control>
+        
+        <control type="HPFFreq" x="35" dy="61">direct</control>
+        <control type="Pan" x="102">pan</control>
+        <control type="SmallButton" x="53" y="1235.5" halo="haloDark">PRE</control>
+        <control type="LEDButton" x="92.5">ST</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_AUX_Stereo" height="1274" tileDir="TopDown">
+        <texture file="xl250_tex0.png" x0="564" y0="0" w="140" h="167" />
+        <texture file="xl250_tex0.png" x0="140" y0="0" w="140" h="1024" />
+        <texture file="xl250_tex0.png" x0="422" y0="771" w="140" h="83" />
+        
+        <control type="LEDButton" x="49.5" y="26.5" texOffset="13">INS L</control>
+        <control type="LEDButton" x="93.5" texOffset="14">INS R</control>
+        
+        <control type="AUX" x="35" y="88.5">AUX 1</control>
+        <control type="AUX" x="102">AUX 2</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL1</control>
+        <control type="AUXLED" x="102" link="2"         >AL2</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 1</control>
+        <control type="SmallButton" x="102"           >PRE 2</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=green">AUX 3</control>
+        <control type="AUX" x="102"        colors="top=green">AUX 4</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL3</control>
+        <control type="AUXLED" x="102" link="2"         >AL4</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 3</control>
+        <control type="SmallButton" x="102"           >PRE 4</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=yellow, mark=black">AUX 5</control>
+        <control type="AUX" x="102"        colors="top=yellow, mark=black">AUX 6</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL5</control>
+        <control type="AUXLED" x="102" link="2"         >AL6</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 5</control>
+        <control type="SmallButton" x="102"           >PRE 6</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=blue">AUX 7</control>
+        <control type="AUX" x="102"        colors="top=blue">AUX 8</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL7</control>
+        <control type="AUXLED" x="102" link="2"         >AL8</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 7</control>
+        <control type="SmallButton" x="102"           >PRE 8</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=red">AUX 9</control>
+        <control type="AUX" x="102"        colors="top=red">AUX 10</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL9</control>
+        <control type="AUXLED" x="102" link="2"         >AL10</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 9</control>
+        <control type="SmallButton" x="102"           >PRE 10</control>
+        
+        <control type="AUX" x="35" dy="61">AUX 11</control>
+        <control type="AUX" x="102">AUX 12</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL11</control>
+        <control type="AUXLED" x="102" link="2"         >AL12</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 11</control>
+        <control type="SmallButton" x="102"           >PRE 12</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=green">AUX 13</control>
+        <control type="AUX" x="102"        colors="top=green">AUX 14</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL13</control>
+        <control type="AUXLED" x="102" link="2"         >AL14</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 13</control>
+        <control type="SmallButton" x="102"           >PRE 14</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=yellow, mark=black">AUX 15</control>
+        <control type="AUX" x="102"        colors="top=yellow, mark=black">AUX 16</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL15</control>
+        <control type="AUXLED" x="102" link="2"         >AL16</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 15</control>
+        <control type="SmallButton" x="102"           >PRE 16</control>
+        
+        <control type="AUX" x="35" dy="61" colors="top=blue">AUX 17</control>
+        <control type="AUX" x="102"        colors="top=blue">AUX 18</control>
+        <control type="AUXLED" x="35" dy="34.5" link="2">AL17</control>
+        <control type="AUXLED" x="102" link="2"         >AL18</control>
+        <control type="SmallButton" x="35" dy="25.5"  >PRE 17</control>
+        <control type="SmallButton" x="102"           >PRE 18</control>
+        
+        <control type="Pan" x="80" dy="61">stereo bal</control>
+        <control type="LEDButton" x="92.5" y="1235.5">ST</control>
+    </moduleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Mutes" height="538" tileDir="TopDown">
+        <texture file="xl250_tex0.png" x0="564" y0="169" w="140" h="538" />
+
+        <control type="LEDButton" x="49.5" y="18.5" texOffset="1">MUTE 1</control>
+        <control type="LEDButton" dy="35" texOffset="3">MUTE 3</control>
+        <control type="LEDButton" dy="35" texOffset="5">MUTE 5</control>
+        <control type="LEDButton" dy="35" texOffset="7">MUTE 7</control>
+        <control type="LEDButton" x="93.5" y="18.5" texOffset="2">MUTE 2</control>
+        <control type="LEDButton" dy="35" texOffset="4">MUTE 4</control>
+        <control type="LEDButton" dy="35" texOffset="6">MUTE 6</control>
+        <control type="LEDButton" dy="35" texOffset="8">MUTE 8</control>
+        <control type="LEDButton" dy="35" texOffset="9">SAFE</control>
+        
+        <control type="MuteButton" x="42" y="210">mute</control>
+        <control type="SoloButton" dy="99">solo</control>
+        
+        <label type="CHLabel"       x="5"       y="386"     >CHLabel</label>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Fader_Mono" height="779" tileDir="TopDown">
+        <texture file="xl250_tex0.png" x0="706" y0="0" w="140" h="113" />
+        <texture file="xl250_tex0.png" x0="706" y0="230" w="140" h="666" />
+        
+        <control type="Fader" x="38.5" y="588">fader</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Fader_Stereo" height="779" tileDir="TopDown">
+        <texture file="xl250_tex0.png" x0="706" y0="115" w="140" h="113" />
+        <texture file="xl250_tex0.png" x0="706" y0="230" w="140" h="666" />
+        
+        <control type="BigFader" x="38.5" y="588">fader</control>
+    </moduleDef>
+    
+
+    <!-- ------------------------------------------------------------------------------------------
+        CONTROLS
+    ------------------------------------------------------------------------------------------- -->
+
+    <!---- Labels ---->
+    
+    <labelDef name="CHLabel"
+        w="32" h="22">
+        <texture file="xl250_tex1.png" x0="923" y0="1" w="32" h="22" />
+        <texOffset dy="24" breakLimit="16" dBreak="34"/>
+    </labelDef>
+    
+    
+    <!---- LEDs ---->
+    
+    <controlDef name="AUXLED" class="LED"
+        default="0.0"
+        zOffset="-4.0"
+        mesh="xl250_led_aux.fim">
+        <color id="body" value="#008000"/>
+        <colorON id="body" value="#00B800"/>
+        <halo type="rect" color="#00FF00" alpha="0.6"/>
+    </controlDef>
+    
+    
+    <!---- Buttons ---->
+    
+    <controlDef name="SmallButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="xl250_button_small.fim">
+        <texture file="xl250_tex0.png" x0="283" y0="882" w="67" h="51" />
+        <texOffset dx="69"/>
+        <color id="body" value="grey"/>
+    </controlDef>
+    
+    <controlDef name="BlueButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="xl250_button_small.fim">
+        <texture file="xl250_tex0.png" x0="559" y0="882" w="67" h="51" />
+        <texOffset dx="69"/>
+        <color id="body" value="blue"/>
+        <halo color="haloDark"/>
+    </controlDef>
+    
+    <controlDef name="LEDButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="xl250_button_led.fim">
+        <texture file="xl250_tex0.png" x0="851" y0="1" w="85" h="51" />
+        <texOffset dy="53" dxON="87"/>
+        <color id="body" value="grey"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="EQButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="1.0"
+        mesh="xl250_button_led.fim">
+        <texture file="xl250_tex0.png" x0="697" y0="919" w="85" h="51" />
+        <texOffset dy="53" dxON="87"/>
+        <color id="body" value="grey"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="MuteButton" class="Button"
+        zON="-2.0" zOFF="-2.0"
+        default="0.0"
+        mesh="xl250_button_big.fim">
+        <texture file="xl250_tex0.png" x0="283" y0="935" w="88" h="88" />
+        <texOffset dxON="90"/>
+        <color id="body" value="#800000"/>
+        <colorON id="body" value="#D80000"/>
+        <halo color="#FF3030" alpha="0.6"/>
+    </controlDef>
+    
+    <controlDef name="SoloButton" class="Button"
+        zON="-2.0" zOFF="-2.0"
+        default="0.0"
+        mesh="xl250_button_big.fim">
+        <texture file="xl250_tex0.png" x0="463" y0="935" w="88" h="88" />
+        <texOffset dxON="90"/>
+        <color id="body" value="#707000"/>
+        <colorON id="body" value="#D8D800"/>
+        <halo color="#FFEB21" alpha="0.46"/>
+    </controlDef>
+    
+    
+    <!---- Knobs ---->
+    
+    <controlDef name="Gain" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="xl250_knob_big.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top" value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="GainInner" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        dualInner="1"
+        dualLockedName="gain L&R"
+        mesh="xl250_dual_inner.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top" value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="GainOuter" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="xl250_dual_outer.fim">
+        <color id="body" value="knobLight"/>
+    </controlDef>
+    
+    <controlDef name="EQInner" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        dualInner="1"
+        mesh="xl250_dual_inner.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top" value="blue"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="EQOuter" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="xl250_dual_outer.fim">
+        <color id="body" value="knobDark"/>
+    </controlDef>
+    
+    <controlDef name="EQBig" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="xl250_knob_big.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top" value="blue"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="EQSmall" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="xl250_knob_small.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top" value="blue"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="HPFFreq" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="xl250_knob_small.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top" value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="AUX" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="xl250_knob_small.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top" value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="Pan" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="xl250_knob_small.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top" value="red"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+
+
+    <!---- Faders ---->
+
+    <controlDef name="Fader" class="Fader"
+        sMax="100.0"
+        default="0.0"
+        mesh="xl250_fader.fim">
+        <color id="body" value="knobLight"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+    
+    <controlDef name="BigFader" class="Fader"
+        sMax="100.0"
+        default="0.0"
+        mesh="xl250_fader_big.fim">
+        <color id="body" value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+
+
+</layouts>

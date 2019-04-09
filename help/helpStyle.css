@@ -1,0 +1,49 @@
+body {
+    font-family: sans-serif;
+    font-size: 15px;
+    margin: 0px;
+}
+
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: blue;
+}
+
+
+.paragraph {
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.pTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+
+.titleTable {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.titleTable img {
+    margin-right: 4px;
+}
+
+
+img {
+    border-style: none;
+}

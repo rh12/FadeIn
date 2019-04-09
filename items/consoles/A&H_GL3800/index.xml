@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Allen & Heath" product="GL3800" file="a&h_gl3800.xml">
+    <group>
+        <layout name="Allen & Heath GL3800-824A" desc="[ 16M ][ Master ][ 8M ]"/>
+        <layout name="Allen & Heath GL3800-824B" desc="[ 16M ][ Master ][ 4ST ][ 4M ]"/>
+        <layout name="Allen & Heath GL3800-824C" desc="[ 16M ][ Master ][ 4M ][ 4ST ]"/>
+        <layout name="Allen & Heath GL3800-824D" desc="[ 16M ][ Master ][ 8ST ]"/>
+    </group>
+    <group>
+        <layout name="Allen & Heath GL3800-832A" desc="[ 16M ][ Master ][ 16M ]"/>
+        <layout name="Allen & Heath GL3800-832B" desc="[ 16M ][ Master ][ 4ST ][ 12M ]"/>
+        <layout name="Allen & Heath GL3800-832C" desc="[ 16M ][ Master ][ 12M ][ 4ST ]"/>
+        <layout name="Allen & Heath GL3800-832D" desc="[ 16M ][ Master ][ 8M ][ 8ST ]"/>
+    </group>
+    <group>
+        <layout name="Allen & Heath GL3800-840A" desc="[ 24M ][ Master ][ 16M ]"/>
+        <layout name="Allen & Heath GL3800-840B" desc="[ 24M ][ Master ][ 4ST ][ 12M ]"/>
+        <layout name="Allen & Heath GL3800-840C" desc="[ 24M ][ Master ][ 12M ][ 4ST ]"/>
+        <layout name="Allen & Heath GL3800-840D" desc="[ 24M ][ Master ][ 8M ][ 8ST ]"/>
+    </group>
+    <group>
+        <layout name="Allen & Heath GL3800-848A" desc="[ 24M ][ Master ][ 24M ]"/>
+        <layout name="Allen & Heath GL3800-848B" desc="[ 24M ][ Master ][ 4ST ][ 20M ]"/>
+        <layout name="Allen & Heath GL3800-848C" desc="[ 24M ][ Master ][ 20M ][ 4ST ]"/>
+        <layout name="Allen & Heath GL3800-848D" desc="[ 24M ][ Master ][ 16M ][ 8ST ]"/>
+    </group>
+</equipment>

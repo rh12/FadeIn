@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layouts type="Console" scale="0.19742857" height="3294" bgcolor="#1F3B4F" inactiveColor="1.098771 0.982500 0.875769">
+    <!-- scale: 27.64mm / 140px-->
+
+    <layoutDef name="Custom Defaults" dir="LeftRight">
+        <mainModule type="CHMonoLeft" id="cd__CHMono">MONO</mainModule>
+    </layoutDef>
+
+    <colors 
+        buttonGray="#E5E6E7"
+        red="#ED232A"
+        yellow="#FFF200"
+        knobDark="#6D6E71"
+        knobLight="#D0D2D4"
+        auxYellow="#FAE52E"
+        blue="#0882D8"
+        green="#00A552"
+        black="#45474E"
+        white="#FFFFFF"
+        haloDark="#000000"
+    />
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        CONSOLE LAYOUTS
+    ------------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas Siena 240" dir="LeftRight">
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch1">1</mainModule>
+            <mainModuleArray type="CHMono" start="2" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch9">9</mainModule>
+            <mainModuleArray type="CHMono" start="10" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch17">17</mainModule>
+            <mainModuleArray type="CHMono" start="18" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="MasterSection">M</mainModule>
+            <module type="EdgeRight"/>
+         </group>
+         -->
+        
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas Siena 320" dir="LeftRight">
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch1">1</mainModule>
+            <mainModuleArray type="CHMono" start="2" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch9">9</mainModule>
+            <mainModuleArray type="CHMono" start="10" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch17">17</mainModule>
+            <mainModuleArray type="CHMono" start="18" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="MasterSection">M</mainModule>
+            <module type="EdgeRight"/>
+         </group>
+         -->
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch25">25</mainModule>
+            <mainModuleArray type="CHMono" start="26" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas Siena 400" dir="LeftRight">
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch1">1</mainModule>
+            <mainModuleArray type="CHMono" start="2" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch9">9</mainModule>
+            <mainModuleArray type="CHMono" start="10" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch17">17</mainModule>
+            <mainModuleArray type="CHMono" start="18" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="MasterSection">M</mainModule>
+            <module type="EdgeRight"/>
+         </group>
+         -->
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch25">25</mainModule>
+            <mainModuleArray type="CHMono" start="26" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch33">33</mainModule>
+            <mainModuleArray type="CHMono" start="34" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas Siena 480" dir="LeftRight">
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch1">1</mainModule>
+            <mainModuleArray type="CHMono" start="2" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch9">9</mainModule>
+            <mainModuleArray type="CHMono" start="10" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch17">17</mainModule>
+            <mainModuleArray type="CHMono" start="18" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="MasterSection">M</mainModule>
+            <module type="EdgeRight"/>
+         </group>
+         -->
+
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch25">25</mainModule>
+            <mainModuleArray type="CHMono" start="26" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch33">33</mainModule>
+            <mainModuleArray type="CHMono" start="34" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch41">41</mainModule>
+            <mainModuleArray type="CHMono" start="42" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas Siena 560" dir="LeftRight">
+    
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch1">1</mainModule>
+            <mainModuleArray type="CHMono" start="2" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch9">9</mainModule>
+            <mainModuleArray type="CHMono" start="10" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch17">17</mainModule>
+            <mainModuleArray type="CHMono" start="18" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+         <module type="EdgeLeft"/>
+         <mainModule type="MasterSection">M</mainModule>
+         <module type="EdgeRight"/>
+         </group>
+         -->
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch25">25</mainModule>
+            <mainModuleArray type="CHMono" start="26" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch33">33</mainModule>
+            <mainModuleArray type="CHMono" start="34" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch41">41</mainModule>
+            <mainModuleArray type="CHMono" start="42" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch49">49</mainModule>
+            <mainModuleArray type="CHMono" start="50" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas Siena 640" dir="LeftRight">
+    
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch1">1</mainModule>
+            <mainModuleArray type="CHMono" start="2" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch9">9</mainModule>
+            <mainModuleArray type="CHMono" start="10" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch17">17</mainModule>
+            <mainModuleArray type="CHMono" start="18" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch25">25</mainModule>
+            <mainModuleArray type="CHMono" start="26" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="MasterSection">M</mainModule>
+            <module type="EdgeRight"/>
+         </group>
+         -->
+
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch33">33</mainModule>
+            <mainModuleArray type="CHMono" start="34" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch41">41</mainModule>
+            <mainModuleArray type="CHMono" start="42" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch49">49</mainModule>
+            <mainModuleArray type="CHMono" start="50" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModule type="CHMonoLeft" id="ch57">57</mainModule>
+            <mainModuleArray type="CHMono" start="58" count="7" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        MAIN MODULES
+    ------------------------------------------------------------------------------------------- -->
+    
+    <mainModuleDef name="CHMono" width="140" dir="TopDown">
+        <scrollbar file="siena_sb_mono.png"/>
+        <module type="CH_Top" />
+        <module type="CH_EQ" />
+        <module type="CH_Routing" />
+        <module type="CH_Fader" />
+    </mainModuleDef>
+    
+    <mainModuleDef name="CHMonoLeft" width="140" dir="TopDown" styleOf="CHMono">
+        <scrollbar file="siena_sb_mono.png"/>
+        <module type="CH_Top" />
+        <module type="CH_EQ" />
+        <module type="CH_Routing" />
+        <module type="CH_FaderLeft" />
+    </mainModuleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="EdgeLeft" width="43">
+        <texture file="siena_tex0.png" x0="568" y0="0" w="43" h="298" />
+        <texture file="siena_tex0.png" x0="568" y0="0" w="43" h="956" />
+        <texture file="siena_tex0.png" x0="568" y0="0" w="43" h="1024" />
+        <texture file="siena_tex0.png" x0="568" y0="0" w="43" h="232" />
+        <texture file="siena_tex0.png" x0="568" y0="0" w="43" h="716" />
+        <texture file="siena_tex0.png" x0="426" y0="858" w="43" h="68" />
+    </moduleDef>
+    
+    <moduleDef name="EdgeRight" width="53">
+        <texture file="siena_tex0.png" x0="613" y0="0" w="53" h="298" />
+        <texture file="siena_tex0.png" x0="613" y0="0" w="53" h="956" />
+        <texture file="siena_tex0.png" x0="613" y0="0" w="53" h="1024" />
+        <texture file="siena_tex0.png" x0="613" y0="0" w="53" h="232" />
+        <texture file="siena_tex0.png" x0="668" y0="0" w="53" h="716" />
+        <texture file="siena_tex0.png" x0="471" y0="858" w="53" h="68" />
+    </moduleDef>
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        MODULES
+    ------------------------------------------------------------------------------------------- -->
+    <!-- Textures:  TopLeft origin !! -->
+
+    <moduleDef name="CH_Top" height="298" tileDir="TopDown">
+        <texture file="siena_tex0.png" x0="0" y0="0" w="140" h="298" />
+
+        <control type="RedLED"      x="34.5"    y="37.5"    >PhantomLED</control>
+        <control type="WideButton"  x="34.5"    y="80.5"    colors="body=red" link="1">power</control>
+        <control type="WideButton"  x="99.5"                >pad</control>
+        <control type="MicGain"     x="67"      y="169.6"   >mic gain</control>
+        <control type="WideButton"  x="34.5"    y="259.5"   >mic phase</control>
+        <control type="WideButton"  x="99.5"                >ins</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_EQ" height="956" tileDir="TopDown">
+        <texture file="siena_tex0.png" x0="142" y0="0" w="140" h="956" />
+        
+        <control type="WideButton" x="34.5" y="68.5" halo="haloDark">hi-pass</control>
+        <control type="HPFFreq" x="99.5">hi-pass (freq)</control>
+        
+        <group>
+            <control type="EQLevel" x="67"      y="168.5"   colors="top=knobLight, mark=black">treble (level)</control>
+            <control type="EQFreq"  x="99.5"    y="246.5"   colors="top=knobLight, mark=black">treble (freq)</control>
+        </group>
+        <group>
+            <control type="EQLevel" x="67"      y="341.5"   colors="top=blue">hi-mid (level)</control>
+            <control type="EQFreq"  x="99.5"    y="422.5"   colors="top=blue">hi-mid (freq)</control>
+            <control type="EQFreq"  x="99.5"    y="511.5"   colors="top=blue">lo-mid (freq)</control>
+            <control type="EQLevel" x="67"      y="592.5"   colors="top=blue">lo-mid (level)</control>
+        </group>
+        <group>
+            <control type="EQFreq"  x="99.5"    y="687.5"   >bass (freq)</control>
+            <control type="EQLevel" x="67"      y="767.5"   >bass (level)</control>
+        </group>
+        
+        <control type="WideButton"  x="34.5"    y="839.5"   >mix pre</control>
+        <control type="EQButton"    x="99.5"                >eq on</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Routing" height="1256" tileDir="TopDown">
+        <texture file="siena_tex0.png" x0="284" y0="0" w="140" h="1024" />
+        <texture file="siena_tex0.png" x0="0" y0="300" w="140" h="232" />
+        
+        <control type="SmallButton" x="37.5"    y="42.5"    >mix 1 pre</control>
+        <control type="SmallButton"             dy="72"     >mix 2 pre</control>
+        <control type="SmallButton"             dy="72"     >mix 3 pre</control>
+        <control type="SmallButton"             dy="72"     >mix 4 pre</control>
+        <control type="SmallButton"             dy="72"     >mix 5 pre</control>
+        <control type="SmallButton"             dy="72"     >mix 6 pre</control>
+        <control type="SmallButton"             dy="72"     >mix 7 pre</control>
+        <control type="SmallButton"             dy="72"     >mix 8 pre</control>
+        <control type="SmallButton"             dy="72"     halo="haloDark">mix 9 pre</control>
+        <control type="SmallButton"             dy="72"     halo="haloDark">mix 10 pre</control>
+        <control type="SmallButton"             dy="72"     halo="haloDark">mix 11 pre</control>
+        <control type="SmallButton"             dy="72"     halo="haloDark">mix 12 pre</control>
+        <control type="SmallButton"             dy="72"     halo="haloDark">mix 13 pre</control>
+        <control type="SmallButton"             dy="72"     halo="haloDark">mix 14 pre</control>
+        <control type="SmallButton"             dy="72"     halo="haloDark">mix 15 pre</control>
+        <control type="SmallButton"             dy="72"     halo="haloDark">mix 16 pre</control>
+
+        <control type="AUXLight"    x="97.5"    y="52.5"    colors="top=red">mix 1</control>
+        <control type="AUXLight"                dy="72"     colors="top=red">mix 2</control>
+        <control type="AUXLight"                dy="72"     colors="top=green">mix 3</control>
+        <control type="AUXLight"                dy="72"     colors="top=green">mix 4</control>
+        <control type="AUXLight"                dy="72"     colors="top=auxYellow, mark=black">mix 5</control>
+        <control type="AUXLight"                dy="72"     colors="top=auxYellow, mark=black">mix 6</control>
+        <control type="AUXLight"                dy="72"     colors="top=blue">mix 7</control>
+        <control type="AUXLight"                dy="72"     colors="top=blue">mix 8</control>
+        <control type="AUXDark"                 dy="72"     colors="top=red">mix 9</control>
+        <control type="AUXDark"                 dy="72"     colors="top=red">mix 10</control>
+        <control type="AUXDark"                 dy="72"     colors="top=green">mix 11</control>
+        <control type="AUXDark"                 dy="72"     colors="top=green">mix 12</control>
+        <control type="AUXDark"                 dy="72"     colors="top=auxYellow, mark=black">mix 13</control>
+        <control type="AUXDark"                 dy="72"     colors="top=auxYellow, mark=black">mix 14</control>
+        <control type="AUXDark"                 dy="72"     colors="top=blue">mix 15</control>
+        <control type="AUXDark"                 dy="72"     colors="top=blue">mix 16</control>
+        
+        <control type="Pan"         x="38"      y="1207"    >pan</control>
+        <control type="SmallButton" x="97.5"    y="1219.5"  >stereo</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Fader" height="784" tileDir="TopDown">
+        <texture file="siena_tex0.png" x0="426" y0="0" w="140" h="716" />
+        <texture file="siena_tex0.png" x0="426" y0="718" w="140" h="68" />
+        
+        <control type="MuteButton"  x="66.5"    y="30.5"    >MUTE</control>
+        <control type="RedLED"      x="108.5"               link="1">MuteLED</control>
+        <control type="Fader"       x="46"      y="644"     >fader</control>
+            
+        <control type="RedLED"      x="115"     y="139"     >L1</control>
+        <control type="YellowLED"               dy="26"     >L2</control>
+        <control type="GreenLED"                dy="26"     >L3</control>
+        <control type="GreenLED"                dy="26"     >L4</control>
+        
+        <control type="SmallButton" x="112.5"   y="370.5"   >mute 1</control>
+        <control type="SmallButton"             dy="51"     >mute 2</control>
+        <control type="SmallButton"             dy="51"     >mute 3</control>
+        <control type="SmallButton"             dy="51"     >mute 4</control>
+        <control type="SmallButton"             dy="51"     >mute 5</control>
+        
+        <control type="YellowLED"   x="112.5"   y="647"     >SoloLED</control>
+        <control type="SoloButton"              dy="41.5"   link="1">SOLO</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_FaderLeft" height="784" tileDir="TopDown">
+        <texture file="siena_tex0.png" x0="426" y0="0" w="140" h="716" />
+        <texture file="siena_tex0.png" x0="426" y0="788" w="140" h="68" />
+        
+        <control type="MuteButton"  x="66.5"    y="30.5"    >MUTE</control>
+        <control type="RedLED"      x="108.5"               link="1">MuteLED</control>
+        <control type="Fader"       x="46"      y="644"     >fader</control>
+        
+        <control type="RedLED"      x="115"     y="139"     >L1</control>
+        <control type="YellowLED"               dy="26"     >L2</control>
+        <control type="GreenLED"                dy="26"     >L3</control>
+        <control type="GreenLED"                dy="26"     >L4</control>
+        
+        <control type="SmallButton" x="112.5"   y="370.5"   >mute 1</control>
+        <control type="SmallButton"             dy="51"     >mute 2</control>
+        <control type="SmallButton"             dy="51"     >mute 3</control>
+        <control type="SmallButton"             dy="51"     >mute 4</control>
+        <control type="SmallButton"             dy="51"     >mute 5</control>
+        
+        <control type="YellowLED"   x="112.5"   y="647"     >SoloLED</control>
+        <control type="SoloButton"              dy="41.5"   link="1">SOLO</control>
+    </moduleDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+        CONTROLS
+    ------------------------------------------------------------------------------------------- -->
+
+    <!---- LEDs ---->
+
+    <controlDef name="RedLED" class="LED"
+        default="0.0"
+        mesh="siena_led.fim">
+        <color id="body" value="#900000"/>
+        <colorON id="body" value="#B00000"/>
+        <halo color="#FF3030" alpha="0.8"/>
+    </controlDef>
+    
+    <controlDef name="YellowLED" class="LED"
+        default="0.0"
+        mesh="siena_led.fim">
+        <color id="body" value="#808000"/>
+        <colorON id="body" value="#B0B000"/>
+        <halo color="#FFFF00" alpha="0.42"/>
+    </controlDef>
+    
+    <controlDef name="GreenLED" class="LED"
+        default="0.0"
+        mesh="siena_led.fim">
+        <color id="body" value="#008000"/>
+    </controlDef>
+    
+    
+    <!---- Buttons ---->
+    
+    <controlDef name="WideButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="siena_button_wide.fim">
+        <color id="body" value="buttonGray"/>
+    </controlDef>
+    
+    <controlDef name="EQButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="1.0"
+        mesh="siena_button_wide.fim">
+        <color id="body" value="red"/>
+        <halo color="haloDark"/>
+    </controlDef>
+    
+    <controlDef name="SmallButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="siena_button_small.fim">
+        <color id="body" value="buttonGray"/>
+    </controlDef>
+    
+    <controlDef name="MuteButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="siena_button_big.fim">
+        <texture file="siena_tex0.png" x0="1" y0="797" w="112" h="112" />
+        <color id="body" value="red"/>
+    </controlDef>
+    
+    <controlDef name="SoloButton" class="Button"
+        zON="-3.0" zOFF="-3.0"
+        default="0.0"
+        mesh="siena_button_big.fim">
+        <texture file="siena_tex0.png" x0="1" y0="911" w="112" h="112" />
+        <color id="body" value="yellow"/>
+    </controlDef>
+    
+    
+    <!---- Knobs ---->
+    
+    <controlDef name="MicGain" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="siena_knob_big.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+
+    <controlDef name="HPFFreq" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="siena_knob_small.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top"  value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="EQFreq" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="siena_knob_small.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top"  value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="EQLevel" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="siena_knob_big.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top"  value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="AUXLight" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="siena_knob_small.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="knobLight"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="AUXDark" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="siena_knob_small.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top"  value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="Pan" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="siena_knob_small.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="red"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+
+
+    <!---- Faders ---->
+
+    <controlDef name="Fader" class="Fader"
+        sMax="100.0"
+        default="0.0"
+        mesh="siena_fader.fim">
+        <color id="body" value="knobLight"/>
+        <color id="mark" value="#292526"/>
+    </controlDef>
+
+
+</layouts>

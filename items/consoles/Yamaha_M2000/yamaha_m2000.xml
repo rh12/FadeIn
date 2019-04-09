@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layouts type="Console" scale="0.19914286" height="2845" zoomDef="CHMono" bgcolor="#1F3B4F" inactiveColor="#DDDDDD">
+    <!-- scale: 27.88mm / 140px-->
+
+    <layoutDef name="Custom Defaults" dir="LeftRight">
+        <mainModule type="CHMonoLeft" id="cd__CHMono">MONO</mainModule>
+        <mainModule type="CHStereoRight" id="cd__CHStereo">STEREO</mainModule>
+    </layoutDef>
+    
+    <colors 
+        black="#464646"
+        white="#F0F0CA"
+        onWhite="#F0F0CA"
+        grey="#A0A08E"
+        green="#7BCCA6"
+        blue="#7A94C4"
+        red="#FF4657"
+        orange="#FFA24B"
+    />
+    
+
+    <!-- ------------------------------------------------------------------------------------------
+        CONSOLE LAYOUTS
+    ------------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Yamaha M2000-16" dir="LeftRight">
+    
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch1">1</mainModule>
+            <mainModule type="CHMono"       id="ch2">2</mainModule>
+            <mainModule type="CHMono"       id="ch3">3</mainModule>
+            <mainModule type="CHMonoRight"  id="ch4">4</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch5">5</mainModule>
+            <mainModule type="CHMono"       id="ch6">6</mainModule>
+            <mainModule type="CHMono"       id="ch7">7</mainModule>
+            <mainModule type="CHMonoRight"  id="ch8">8</mainModule>
+        </group>
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch9">9</mainModule>
+            <mainModule type="CHMono"       id="ch10">10</mainModule>
+            <mainModule type="CHMono"       id="ch11">11</mainModule>
+            <mainModule type="CHMonoRight"  id="ch12">12</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch13">13</mainModule>
+            <mainModule type="CHMono"       id="ch14">14</mainModule>
+            <mainModule type="CHMono"       id="ch15">15</mainModule>
+            <mainModule type="CHMonoRight"  id="ch16">16</mainModule>
+        </group>
+        
+        <group>
+            <mainModule type="CHStereoLeft" id="st1">ST 1</mainModule>
+            <mainModule type="CHStereoRight" id="st2">ST 2</mainModule>
+        </group>
+        
+        <!--        
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+    </layoutDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <layoutDef name="Yamaha M2000-24" dir="LeftRight">
+        
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch1">1</mainModule>
+            <mainModule type="CHMono"       id="ch2">2</mainModule>
+            <mainModule type="CHMono"       id="ch3">3</mainModule>
+            <mainModule type="CHMonoRight"  id="ch4">4</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch5">5</mainModule>
+            <mainModule type="CHMono"       id="ch6">6</mainModule>
+            <mainModule type="CHMono"       id="ch7">7</mainModule>
+            <mainModule type="CHMonoRight"  id="ch8">8</mainModule>
+        </group>
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch9">9</mainModule>
+            <mainModule type="CHMono"       id="ch10">10</mainModule>
+            <mainModule type="CHMono"       id="ch11">11</mainModule>
+            <mainModule type="CHMonoRight"  id="ch12">12</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch13">13</mainModule>
+            <mainModule type="CHMono"       id="ch14">14</mainModule>
+            <mainModule type="CHMono"       id="ch15">15</mainModule>
+            <mainModule type="CHMonoRight"  id="ch16">16</mainModule>
+        </group>
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch17">17</mainModule>
+            <mainModule type="CHMono"       id="ch18">18</mainModule>
+            <mainModule type="CHMono"       id="ch19">19</mainModule>
+            <mainModule type="CHMonoRight"  id="ch20">20</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch21">21</mainModule>
+            <mainModule type="CHMono"       id="ch22">22</mainModule>
+            <mainModule type="CHMono"       id="ch23">23</mainModule>
+            <mainModule type="CHMonoRight"  id="ch24">24</mainModule>
+        </group>
+        
+        <group>
+            <mainModule type="CHStereoLeft" id="st1">ST 1</mainModule>
+            <mainModule type="CHStereoRight" id="st2">ST 2</mainModule>
+        </group>
+        
+        <!--
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+    </layoutDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <layoutDef name="Yamaha M2000-32" dir="LeftRight">
+        
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch1">1</mainModule>
+            <mainModule type="CHMono"       id="ch2">2</mainModule>
+            <mainModule type="CHMono"       id="ch3">3</mainModule>
+            <mainModule type="CHMonoRight"  id="ch4">4</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch5">5</mainModule>
+            <mainModule type="CHMono"       id="ch6">6</mainModule>
+            <mainModule type="CHMono"       id="ch7">7</mainModule>
+            <mainModule type="CHMonoRight"  id="ch8">8</mainModule>
+        </group>
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch9">9</mainModule>
+            <mainModule type="CHMono"       id="ch10">10</mainModule>
+            <mainModule type="CHMono"       id="ch11">11</mainModule>
+            <mainModule type="CHMonoRight"  id="ch12">12</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch13">13</mainModule>
+            <mainModule type="CHMono"       id="ch14">14</mainModule>
+            <mainModule type="CHMono"       id="ch15">15</mainModule>
+            <mainModule type="CHMonoRight"  id="ch16">16</mainModule>
+        </group>
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch17">17</mainModule>
+            <mainModule type="CHMono"       id="ch18">18</mainModule>
+            <mainModule type="CHMono"       id="ch19">19</mainModule>
+            <mainModule type="CHMonoRight"  id="ch20">20</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch21">21</mainModule>
+            <mainModule type="CHMono"       id="ch22">22</mainModule>
+            <mainModule type="CHMono"       id="ch23">23</mainModule>
+            <mainModule type="CHMonoRight"  id="ch24">24</mainModule>
+        </group>
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch25">25</mainModule>
+            <mainModule type="CHMono"       id="ch26">26</mainModule>
+            <mainModule type="CHMono"       id="ch27">27</mainModule>
+            <mainModule type="CHMonoRight"  id="ch28">28</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch29">29</mainModule>
+            <mainModule type="CHMono"       id="ch30">30</mainModule>
+            <mainModule type="CHMono"       id="ch31">31</mainModule>
+            <mainModule type="CHMonoRight"  id="ch32">32</mainModule>
+        </group>
+        
+        <group>
+            <mainModule type="CHStereoLeft" id="st1">ST 1</mainModule>
+            <mainModule type="CHStereoRight" id="st2">ST 2</mainModule>
+        </group>
+        
+        <!--
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+    </layoutDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <layoutDef name="Yamaha M2000-40" dir="LeftRight">
+        
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch1">1</mainModule>
+            <mainModule type="CHMono"       id="ch2">2</mainModule>
+            <mainModule type="CHMono"       id="ch3">3</mainModule>
+            <mainModule type="CHMonoRight"  id="ch4">4</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch5">5</mainModule>
+            <mainModule type="CHMono"       id="ch6">6</mainModule>
+            <mainModule type="CHMono"       id="ch7">7</mainModule>
+            <mainModule type="CHMonoRight"  id="ch8">8</mainModule>
+        </group>
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch9">9</mainModule>
+            <mainModule type="CHMono"       id="ch10">10</mainModule>
+            <mainModule type="CHMono"       id="ch11">11</mainModule>
+            <mainModule type="CHMonoRight"  id="ch12">12</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch13">13</mainModule>
+            <mainModule type="CHMono"       id="ch14">14</mainModule>
+            <mainModule type="CHMono"       id="ch15">15</mainModule>
+            <mainModule type="CHMonoRight"  id="ch16">16</mainModule>
+        </group>
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch17">17</mainModule>
+            <mainModule type="CHMono"       id="ch18">18</mainModule>
+            <mainModule type="CHMono"       id="ch19">19</mainModule>
+            <mainModule type="CHMonoRight"  id="ch20">20</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch21">21</mainModule>
+            <mainModule type="CHMono"       id="ch22">22</mainModule>
+            <mainModule type="CHMono"       id="ch23">23</mainModule>
+            <mainModule type="CHMonoRight"  id="ch24">24</mainModule>
+        </group>
+        
+        <group>
+            <mainModule type="CHStereoLeft" id="st1">ST 1</mainModule>
+            <mainModule type="CHStereoRight" id="st2">ST 2</mainModule>
+        </group>
+        
+        <!--
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch25">25</mainModule>
+            <mainModule type="CHMono"       id="ch26">26</mainModule>
+            <mainModule type="CHMono"       id="ch27">27</mainModule>
+            <mainModule type="CHMonoRight"  id="ch28">28</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch29">29</mainModule>
+            <mainModule type="CHMono"       id="ch30">30</mainModule>
+            <mainModule type="CHMono"       id="ch31">31</mainModule>
+            <mainModule type="CHMonoRight"  id="ch32">32</mainModule>
+        </group>
+        <group>
+            <mainModule type="CHMonoLeft"   id="ch33">33</mainModule>
+            <mainModule type="CHMono"       id="ch34">34</mainModule>
+            <mainModule type="CHMono"       id="ch35">35</mainModule>
+            <mainModule type="CHMonoRight"  id="ch36">36</mainModule>
+            <mainModule type="CHMonoLeft"   id="ch37">37</mainModule>
+            <mainModule type="CHMono"       id="ch38">38</mainModule>
+            <mainModule type="CHMono"       id="ch39">39</mainModule>
+            <mainModule type="CHMonoRight"  id="ch40">40</mainModule>
+        </group>
+        
+    </layoutDef>
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        MAIN MODULES
+    ------------------------------------------------------------------------------------------- -->
+    
+    <mainModuleDef name="CHMono" width="140" dir="LeftRight">
+        <scrollbar file="m2000_sb_mono.png"/>
+        <module type="CHMono-SideLeft_Line" />
+        <module type="CHMono-Mid" />
+        <module type="CHMono-SideRight_Line" />
+    </mainModuleDef>
+
+    <mainModuleDef name="CHMonoLeft" width="147" dir="LeftRight" styleOf="CHMono">
+        <scrollbar file="m2000_sb_mono.png"/>
+        <module type="CHMono-SideLeft_Edge" />
+        <module type="CHMono-Mid" />
+        <module type="CHMono-SideRight_Line" />
+    </mainModuleDef>
+    
+    <mainModuleDef name="CHMonoRight" width="147" dir="LeftRight" styleOf="CHMono">
+        <scrollbar file="m2000_sb_mono.png"/>
+        <module type="CHMono-SideLeft_Line" />
+        <module type="CHMono-Mid_Right" />
+        <module type="CHMono-SideRight_Edge" />
+    </mainModuleDef>
+    
+    <mainModuleDef name="CHStereo" width="140" dir="LeftRight">
+        <scrollbar file="m2000_sb_stereo.png"/>
+        <module type="CHStereo-SideLeft_Line" />
+        <module type="CHStereo-Mid" />
+        <module type="CHStereo-SideRight_Line" />
+    </mainModuleDef>
+    
+    <mainModuleDef name="CHStereoLeft" width="147" dir="LeftRight" styleOf="CHStereo">
+        <scrollbar file="m2000_sb_stereo.png"/>
+        <module type="CHStereo-SideLeft_Edge" />
+        <module type="CHStereo-Mid" />
+        <module type="CHStereo-SideRight_Line" />
+    </mainModuleDef>
+    
+    <mainModuleDef name="CHStereoRight" width="147" dir="LeftRight" styleOf="CHStereo">
+        <scrollbar file="m2000_sb_stereo.png"/>
+        <module type="CHStereo-SideLeft_Line" />
+        <module type="CHStereo-Mid_Right" />
+        <module type="CHStereo-SideRight_Edge" />
+    </mainModuleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CHMono-Mid" width="116" dir="TopDown">
+        <module type="CH_Top" />
+        <module type="CH_Pan_Mono" />
+        <module type="CH_Input-EQ_Mono" />
+        <module type="CH_EQ-Low" />
+        <module type="CH_AUX" />
+        <module type="CH_AUX-6_Mono" />
+        <module type="CH_On" />
+        <module type="CH_Fader_Mono" />
+    </moduleDef>
+    
+    <moduleDef name="CHMono-Mid_Right" width="116" dir="TopDown">
+        <module type="CH_Top" />
+        <module type="CH_Pan_Mono_Right" />
+        <module type="CH_Input-EQ_Mono" />
+        <module type="CH_EQ-Low" />
+        <module type="CH_AUX" />
+        <module type="CH_AUX-6_Mono" />
+        <module type="CH_On" />
+        <module type="CH_Fader_Mono" />
+    </moduleDef>
+    
+    <moduleDef name="CHStereo-Mid" width="116" dir="TopDown">
+        <module type="CH_Top" />
+        <module type="CH_Pan_Stereo" />
+        <module type="CH_Input-EQ_Stereo" />
+        <module type="CH_EQ-Low" />
+        <module type="CH_AUX" />
+        <module type="CH_AUX-6_Stereo" />
+        <module type="CH_On" />
+        <module type="CH_Fader_Stereo" />
+    </moduleDef>
+    
+    <moduleDef name="CHStereo-Mid_Right" width="116" dir="TopDown">
+        <module type="CH_Top" />
+        <module type="CH_Pan_Stereo_Right" />
+        <module type="CH_Input-EQ_Stereo" />
+        <module type="CH_EQ-Low" />
+        <module type="CH_AUX" />
+        <module type="CH_AUX-6_Stereo" />
+        <module type="CH_On" />
+        <module type="CH_Fader_Stereo" />
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CHMono-SideLeft_Line" width="12" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="590" y0="0" w="12" h="300" />    <!-- Top -->
+        <texture file="m2000_tex0.png" x0="618" y0="745" w="12" h="111" />  <!-- Pan -->
+        <texture file="m2000_tex0.png" x0="618" y0="0" w="12" h="745" />    <!-- In-EQ -->
+        <texture file="m2000_tex0.png" x0="618" y0="856" w="12" h="142" />  <!-- EQ-Low -->
+        <texture file="m2000_tex0.png" x0="590" y0="0" w="12" h="528" />    <!-- AUX -->
+        <texture file="m2000_tex0.png" x0="590" y0="0" w="12" h="130" />    <!-- AUX-6 -->
+        <texture file="m2000_tex0.png" x0="646" y0="745" w="12" h="134" />  <!-- Fader (On) -->
+        <texture file="m2000_tex0.png" x0="590" y0="0" w="12" h="663" />    <!-- Fader (Fader) -->
+        <texture file="m2000_tex0.png" x0="646" y0="879" w="12" h="92" />   <!-- Fader (Cue) -->
+    </moduleDef>
+    
+    <moduleDef name="CHStereo-SideLeft_Line" width="12" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="590" y0="0" w="12" h="300" />    <!-- Top -->
+        <texture file="m2000_tex0.png" x0="618" y0="745" w="12" h="111" />  <!-- Pan -->
+        <texture file="m2000_tex0.png" x0="646" y0="0" w="12" h="745" />    <!-- In-EQ -->
+        <texture file="m2000_tex0.png" x0="618" y0="856" w="12" h="142" />  <!-- EQ-Low -->
+        <texture file="m2000_tex0.png" x0="590" y0="0" w="12" h="528" />    <!-- AUX -->
+        <texture file="m2000_tex0.png" x0="590" y0="0" w="12" h="130" />    <!-- AUX-6 -->
+        <texture file="m2000_tex0.png" x0="646" y0="745" w="12" h="134" />  <!-- Fader (On) -->
+        <texture file="m2000_tex0.png" x0="590" y0="0" w="12" h="663" />    <!-- Fader (Fader) -->
+        <texture file="m2000_tex0.png" x0="646" y0="879" w="12" h="92" />   <!-- Fader (Cue) -->
+    </moduleDef>
+    
+    <moduleDef name="CHMono-SideRight_Line" width="12" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="604" y0="0" w="12" h="300" />    <!-- Top -->
+        <texture file="m2000_tex0.png" x0="632" y0="745" w="12" h="111" />  <!-- Pan -->
+        <texture file="m2000_tex0.png" x0="632" y0="0" w="12" h="745" />    <!-- In-EQ -->
+        <texture file="m2000_tex0.png" x0="632" y0="856" w="12" h="142" />  <!-- EQ-Low -->
+        <texture file="m2000_tex0.png" x0="604" y0="0" w="12" h="528" />    <!-- AUX -->
+        <texture file="m2000_tex0.png" x0="604" y0="0" w="12" h="130" />    <!-- AUX-6 -->
+        <texture file="m2000_tex0.png" x0="660" y0="745" w="12" h="134" />  <!-- Fader (On) -->
+        <texture file="m2000_tex0.png" x0="604" y0="0" w="12" h="663" />    <!-- Fader (Fader) -->
+        <texture file="m2000_tex0.png" x0="660" y0="879" w="12" h="92" />   <!-- Fader (Cue) -->
+    </moduleDef>
+    
+    <moduleDef name="CHStereo-SideRight_Line" width="12" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="604" y0="0" w="12" h="300" />    <!-- Top -->
+        <texture file="m2000_tex0.png" x0="632" y0="745" w="12" h="111" />  <!-- Pan -->
+        <texture file="m2000_tex0.png" x0="660" y0="0" w="12" h="745" />    <!-- In-EQ -->
+        <texture file="m2000_tex0.png" x0="632" y0="856" w="12" h="142" />  <!-- EQ-Low -->
+        <texture file="m2000_tex0.png" x0="604" y0="0" w="12" h="528" />    <!-- AUX -->
+        <texture file="m2000_tex0.png" x0="604" y0="0" w="12" h="130" />    <!-- AUX-6 -->
+        <texture file="m2000_tex0.png" x0="660" y0="745" w="12" h="134" />  <!-- Fader (On) -->
+        <texture file="m2000_tex0.png" x0="604" y0="0" w="12" h="663" />    <!-- Fader (Fader) -->
+        <texture file="m2000_tex0.png" x0="660" y0="879" w="12" h="92" />   <!-- Fader (Cue) -->
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CHMono-SideLeft_Edge" width="19" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="674" y0="0" w="19" h="300" />    <!-- Top -->
+        <texture file="m2000_tex0.png" x0="716" y0="745" w="19" h="111" />  <!-- Pan -->
+        <texture file="m2000_tex0.png" x0="716" y0="0" w="19" h="745" />    <!-- In-EQ -->
+        <texture file="m2000_tex0.png" x0="716" y0="856" w="19" h="142" />  <!-- EQ-Low -->
+        <texture file="m2000_tex0.png" x0="674" y0="0" w="19" h="528" />    <!-- AUX -->
+        <texture file="m2000_tex0.png" x0="674" y0="0" w="19" h="130" />    <!-- AUX-6 -->
+        <texture file="m2000_tex0.png" x0="758" y0="745" w="19" h="134" />  <!-- Fader (On) -->
+        <texture file="m2000_tex0.png" x0="674" y0="0" w="19" h="663" />    <!-- Fader (Fader) -->
+        <texture file="m2000_tex0.png" x0="758" y0="879" w="19" h="92" />   <!-- Fader (Cue) -->
+    </moduleDef>
+    
+    <moduleDef name="CHStereo-SideLeft_Edge" width="19" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="674" y0="0" w="19" h="300" />    <!-- Top -->
+        <texture file="m2000_tex0.png" x0="716" y0="745" w="19" h="111" />  <!-- Pan -->
+        <texture file="m2000_tex0.png" x0="758" y0="0" w="19" h="745" />    <!-- In-EQ -->
+        <texture file="m2000_tex0.png" x0="716" y0="856" w="19" h="142" />  <!-- EQ-Low -->
+        <texture file="m2000_tex0.png" x0="674" y0="0" w="19" h="528" />    <!-- AUX -->
+        <texture file="m2000_tex0.png" x0="674" y0="0" w="19" h="130" />    <!-- AUX-6 -->
+        <texture file="m2000_tex0.png" x0="758" y0="745" w="19" h="134" />  <!-- Fader (On) -->
+        <texture file="m2000_tex0.png" x0="674" y0="0" w="19" h="663" />    <!-- Fader (Fader) -->
+        <texture file="m2000_tex0.png" x0="758" y0="879" w="19" h="92" />   <!-- Fader (Cue) -->
+    </moduleDef>
+    
+    <moduleDef name="CHMono-SideRight_Edge" width="19" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="695" y0="0" w="19" h="300" />    <!-- Top -->
+        <texture file="m2000_tex0.png" x0="737" y0="745" w="19" h="111" />  <!-- Pan -->
+        <texture file="m2000_tex0.png" x0="737" y0="0" w="19" h="745" />    <!-- In-EQ -->
+        <texture file="m2000_tex0.png" x0="737" y0="856" w="19" h="142" />  <!-- EQ-Low -->
+        <texture file="m2000_tex0.png" x0="695" y0="0" w="19" h="528" />    <!-- AUX -->
+        <texture file="m2000_tex0.png" x0="695" y0="0" w="19" h="130" />    <!-- AUX-6 -->
+        <texture file="m2000_tex0.png" x0="779" y0="745" w="19" h="134" />  <!-- Fader (On) -->
+        <texture file="m2000_tex0.png" x0="695" y0="0" w="19" h="663" />    <!-- Fader (Fader) -->
+        <texture file="m2000_tex0.png" x0="779" y0="879" w="19" h="92" />   <!-- Fader (Cue) -->
+    </moduleDef>
+    
+    <moduleDef name="CHStereo-SideRight_Edge" width="19" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="695" y0="0" w="19" h="300" />    <!-- Top -->
+        <texture file="m2000_tex0.png" x0="737" y0="745" w="19" h="111" />  <!-- Pan -->
+        <texture file="m2000_tex0.png" x0="779" y0="0" w="19" h="745" />    <!-- In-EQ -->
+        <texture file="m2000_tex0.png" x0="737" y0="856" w="19" h="142" />  <!-- EQ-Low -->
+        <texture file="m2000_tex0.png" x0="695" y0="0" w="19" h="528" />    <!-- AUX -->
+        <texture file="m2000_tex0.png" x0="695" y0="0" w="19" h="130" />    <!-- AUX-6 -->
+        <texture file="m2000_tex0.png" x0="779" y0="745" w="19" h="134" />  <!-- Fader (On) -->
+        <texture file="m2000_tex0.png" x0="695" y0="0" w="19" h="663" />    <!-- Fader (Fader) -->
+        <texture file="m2000_tex0.png" x0="779" y0="879" w="19" h="92" />   <!-- Fader (Cue) -->
+    </moduleDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+        MODULES
+    ------------------------------------------------------------------------------------------- -->
+    <!-- Textures:  TopLeft origin !! -->
+
+    <moduleDef name="CH_Top" height="300" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="0" y0="0" w="116" h="300" />
+
+        <control type="GreyButton"      x="30"      y="31.5"    >GROUP 1-2</control>
+        <control type="GreyButton"                  dy="50"     >GROUP 3-4</control>
+        <control type="GreyButton"                  dy="50"     >GROUP 5-6</control>
+        <control type="GreyButton"                  dy="50"     >GROUP 7-8</control>
+        <control type="GreyButton"                  dy="50"     colors="body=red">ST</control>
+        <control type="OrangeButton"                dy="50"     >MONO</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Pan_Mono" height="111" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="0" y0="302" w="116" h="111" />
+        
+        <control type="Pan"     x="63"  y="46"  >PAN</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Pan_Stereo" height="111" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="0" y0="415" w="116" h="111" />
+        
+        <control type="Pan"     x="63"  y="46"  >BAL / PAN</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Pan_Mono_Right" height="111" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="0" y0="528" w="116" h="111" />
+        
+        <control type="Pan"     x="63"  y="46"  >PAN</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Pan_Stereo_Right" height="111" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="0" y0="641" w="116" h="111" />
+        
+        <control type="Pan"     x="63"  y="46"  >BAL / PAN</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Input-EQ_Mono" height="745" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="118" y0="0" w="116" h="745" />
+
+        <!-- LABEL: L=25-2=23  R=53+3=56  |  TOP=31-3=28  BOT=72+2=74  -->
+        <control type="PhantomLabel"    x="23"      y="29"      >+48V_Label</control>
+        <control type="Phantom"         x="39"      y="58.25"   link="1">+48V</control>
+        <control type="GreyButton"      x="91"      y="31.5"    >PHASE</control>
+        <control type="GreyButton"                  dy="50"     >A / B</control>
+        <control type="GreyButton"                  y="235.5"   >PAD</control>
+        <control type="GreyButton"                  dy="50"     colors="body=green">HPF</control>
+        <control type="RedLED"          x="20"      y="211.5"   >PEAK_LED</control>
+        <control type="GreenLED"                    dy="32.5"   >SIGNAL_LED</control>
+        <control type="Gain"            x="63"      y="156"     >GAIN</control>
+        <control type="EQGain"                      y="355.5"   >HIGH</control>
+        <control type="EQFreq"                      dy="90"     >HI-MID (Hz)</control>
+        <control type="EQGain"                      dy="80"     >HI-MID (dB)</control>
+        <control type="EQFreq"                      dy="90"     >LO-MID (Hz)</control>
+        <control type="EQGain"                      dy="80"     >LO-MID (dB)</control>
+    </moduleDef>
+
+
+    <moduleDef name="CH_Input-EQ_Stereo" height="745" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="236" y0="0" w="116" h="745" />
+        
+        <control type="GreyButton"      x="30"      y="30.5"    >L + R</control>
+        <control type="GreyButton"                  dy="50"     >A / B</control>
+        <control type="RedLED"          x="19"      y="326.5"   >PEAK_LED</control>
+        <control type="GreenLED"                    dy="32.5"   >SIGNAL_LED</control>
+        <control type="Gain"            x="63"      y="156"     >GAIN B</control>
+        <control type="Gain"                        y="267"     >GAIN A</control>
+        <control type="EQGain"                      y="525.5"   >HIGH</control>
+        <control type="EQFreq"                      dy="90"     >MID (Hz)</control>
+        <control type="EQGain"                      dy="80"     >MID (dB)</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_EQ-Low" height="142" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="354" y0="0" w="116" h="142" />
+        
+        <control type="EQGain"      x="63"      y="39.5"    >LOW</control>
+        <control type="EQButton"    x="32"      y="110.5"   >EQ</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_AUX" height="528" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="354" y0="144" w="116" h="528" />
+        
+        <control type="AUX"         x="63"      y="48"      >AUX 1</control>
+        <control type="AUX"                     dy="90"     >AUX 2</control>
+        <control type="AUX"                     y="263"     >AUX 3</control>
+        <control type="AUX"                     dy="90"     >AUX 4</control>
+        <control type="AUX"                     y="478"     colors="mark=white">AUX 5</control>
+        <control type="GreyButton"  x="32"      y="208.5"   >AUX 1-2 PRE</control>
+        <control type="GreyButton"              y="423.5"   >AUX 3-4 PRE</control>
+    </moduleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_AUX-6_Mono" height="130" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="354" y0="674" w="116" h="130" />
+        
+        <control type="AUX"         x="63"      y="40"      colors="mark=white">AUX 6</control>
+        <control type="GreyButton"  x="32"      y="110.5"   >DIRECT</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_AUX-6_Stereo" height="130" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="354" y0="806" w="116" h="130" />
+        
+        <control type="AUX"         x="63"      y="40"      colors="mark=white">AUX 6</control>
+    </moduleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_On" height="134" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="472" y0="0" w="116" h="134" />
+        
+        <control type="OnButton"    x="32"      y="45.5"    >ON / EDIT</control>
+        <control type="RedLED"      x="21"      y="90.5"    link="1">ON_LED</control>
+        <control type="GreenLED"                y="113.5"   >CHECK_LED</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Fader_Mono" height="755" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="472" y0="134" w="116" h="663" />
+        <texture file="m2000_tex0.png" x0="472" y0="797" w="116" h="92" />
+        
+        <control type="FaderRight"  x="65"  y="581" >FADER</control>
+        <control type="GreyButton"  x="76"  y="705" colors="body=white">CUE</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Fader_Stereo" height="755" tileDir="TopDown">
+        <texture file="m2000_tex0.png" x0="472" y0="134" w="116" h="663" />
+        <texture file="m2000_tex0.png" x0="472" y0="797" w="116" h="92" />
+
+        <control type="FaderRight"  x="65"  y="581" colors="body=black, mark=white">FADER</control>
+        <control type="GreyButton"  x="76"  y="705" colors="body=white">CUE</control>
+    </moduleDef>
+    
+
+    <!-- ------------------------------------------------------------------------------------------
+        CONTROLS
+    ------------------------------------------------------------------------------------------- -->
+
+    <!---- LEDs ---->
+
+    <controlDef name="RedLED" class="LED"
+        default="0.0"
+        mesh="m2000_led.fim">
+        <color id="body" value="#A00000"/>
+        <colorON id="body" value="#BB0000"/>
+        <halo color="#FF1010" alpha="0.75"/>
+    </controlDef>
+    
+    <controlDef name="GreenLED" class="LED"
+        default="0.0"
+        mesh="m2000_led.fim">
+        <color id="body" value="#007000"/>
+    </controlDef>
+    
+    
+    <!---- Buttons ---->
+    
+    <controlDef name="GreyButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="m2000_button.fim">
+        <color id="body" value="grey"/>
+    </controlDef>
+    
+    <controlDef name="OrangeButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="m2000_button.fim">
+        <color id="body" value="orange"/>
+    </controlDef>
+    
+    <controlDef name="EQButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="1.0"
+        mesh="m2000_button.fim">
+        <color id="body" value="green"/>
+    </controlDef>
+    
+    <controlDef name="OnButton" class="Button"
+        zON="-3.4" zOFF="-3.4"
+        default="0.0"
+        mesh="m2000_button_on.fim">
+        <color id="body" value="onWhite"/>
+    </controlDef>
+    
+    
+    <!---- Switches ---->
+    
+    <controlDef name="Phantom" class="Switch"
+        s="3.0"
+        default="0.0"
+        mesh="m2000_switch.fim">
+        <color id="body" value="#363636"/>
+        <color id="bottom" value="#23F323"/>
+    </controlDef>
+    
+    <controlDef name="PhantomLabel" class="ControlLabel"
+        w="32" h="45">
+        <texture file="m2000_tex0.png" x0="0" y0="979" w="32" h="45" />
+    </controlDef>
+    
+    
+    <!---- Knobs ---->
+    
+    <controlDef name="Gain" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="m2000_knob_big.fim">
+        <color id="body" value="grey"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+
+    <controlDef name="Pan" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="m2000_knob_big.fim">
+        <color id="body" value="white"/>
+        <color id="mark" value="red"/>
+    </controlDef>
+    
+    <controlDef name="EQGain" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="m2000_knob_small.fim">
+        <color id="body" value="green"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="EQFreq" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="m2000_knob_small.fim">
+        <color id="body" value="white"/>
+        <color id="mark" value="green"/>
+    </controlDef>
+    
+    <controlDef name="AUX" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="m2000_knob_small.fim">
+        <color id="body" value="blue"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+
+
+    <!---- Faders ---->
+
+    <controlDef name="FaderLeft" class="Fader"
+        sMax="100.0"
+        default="0.0"
+        mesh="m2000_fader_left.fim">
+        <color id="body" value="white"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+
+    <controlDef name="FaderRight" class="Fader"
+        sMax="100.0"
+        default="0.0"
+        mesh="m2000_fader_right.fim">
+        <color id="body" value="white"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+
+
+</layouts>

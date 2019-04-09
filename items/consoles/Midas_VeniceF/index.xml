@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Midas" product="VeniceF" file="midas_venicef.xml">
+    <layout name="Midas VeniceF 16" desc="[ 8M ][ 4ST ][ Master ]"/>
+    <layout name="Midas VeniceF 24" desc="[ 16M ][ 4ST ][ Master ]"/>
+    <layout name="Midas VeniceF 32" desc="[ 24M ][ 4ST ][ Master ]"/>
+</equipment>

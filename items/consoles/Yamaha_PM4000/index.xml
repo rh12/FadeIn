@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Yamaha" product="PM4000" file="yamaha_pm4000.xml">
+    <layout name="Yamaha PM4000-24" desc="[ 24M ][ 4ST ][ Master ]"/>
+    <layout name="Yamaha PM4000-32" desc="[ 32M ][ 4ST ][ Master ]"/>
+    <layout name="Yamaha PM4000-40" desc="[ 20M ][ 4ST ][ Master ][ 20M ]"/>
+    <layout name="Yamaha PM4000-48" desc="[ 24M ][ 4ST ][ Master ][ 24M ]"/>
+</equipment>

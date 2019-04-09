@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layouts type="Console" scale="0.19742857" height="2412" bgcolor="#1F3B4F" inactiveColor="1.098771 0.982500 0.875769">
+    <!-- scale: 27.64mm / 140px-->
+
+    <layoutDef name="Custom Defaults" dir="LeftRight">
+        <mainModule type="CHMono" id="cd__CHMono">MONO</mainModule>
+        <mainModule type="CHStereo" id="cd__CHStereo">STEREO</mainModule>
+    </layoutDef>
+
+    <colors 
+        buttonGray="#E5E6E7"
+        red="#ED232A"
+        knobDark="#6D6E71"
+        knobLight="#D0D2D4"
+        auxYellow="#FAE52E"
+        blue="#0882D8"
+        green="#00A552"
+        black="#45474E"
+        white="#FFFFFF"
+        haloDark="#000000"
+    />
+
+    <!-- ------------------------------------------------------------------------------------------
+        CONSOLE LAYOUTS
+    ------------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas Venice 160" dir="LeftRight">
+        
+        <group>
+             <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModule type="CHStereo" id="ch9-10" tag="1">9-10</mainModule>
+            <mainModule type="CHStereo" id="ch11-12" tag="2">11-12</mainModule>
+            <mainModule type="CHStereo" id="ch13-14" tag="3">13-14</mainModule>
+            <mainModule type="CHStereo" id="ch15-16" tag="4">15-16</mainModule>
+        </group>
+        
+        <!--
+         <group>
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas Venice 240" dir="LeftRight">
+        
+        <group>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModule type="CHStereo" id="ch9-10" tag="1">9-10</mainModule>
+            <mainModule type="CHStereo" id="ch11-12" tag="2">11-12</mainModule>
+            <mainModule type="CHStereo" id="ch13-14" tag="3">13-14</mainModule>
+            <mainModule type="CHStereo" id="ch15-16" tag="4">15-16</mainModule>
+        </group>
+        
+        <!--
+         <group>
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+        <group>
+            <mainModuleArray type="CHMono" start="17" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Midas Venice 320" dir="LeftRight">
+    
+        <group>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModule type="CHStereo" id="ch17-18" tag="5">17-18</mainModule>
+            <mainModule type="CHStereo" id="ch19-20" tag="6">19-20</mainModule>
+            <mainModule type="CHStereo" id="ch21-22" tag="7">21-22</mainModule>
+            <mainModule type="CHStereo" id="ch23-24" tag="8">23-24</mainModule>
+        </group>
+        
+        <!--        
+         <group>
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+        <group>
+            <mainModuleArray type="CHMono" start="25" count="8" id="ch*">*</mainModuleArray>
+        </group>
+
+    </layoutDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+        MAIN MODULES
+    ------------------------------------------------------------------------------------------- -->
+    
+    <mainModuleDef name="CHMono" width="140" dir="TopDown">
+        <scrollbar file="venice_sb_mono.png"/>
+        <module type="CH_Top_Mono" />
+        <module type="CH_Mid" />
+        <module type="CH_Pan_Mono" />
+        <module type="CH_Fader_Mono" />
+    </mainModuleDef>
+    
+    <mainModuleDef name="CHStereo" width="140" dir="TopDown">
+        <scrollbar file="venice_sb_stereo.png"/>
+        <module type="CH_Top_Stereo" />
+        <module type="CH_Mid" />
+        <module type="CH_Pan_Stereo" />
+        <module type="CH_Fader_Stereo" />
+    </mainModuleDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+         MODULES
+    ------------------------------------------------------------------------------------------- -->
+    <!-- Textures:  TopLeft origin !! -->
+
+    <moduleDef name="CH_Top_Mono" height="758" tileDir="TopDown">
+        <texture file="venice_tex0.png" x0="0" y0="0" w="140" h="758" />
+
+        <label type="TopLabelMono"      x="77"      y="12"      >CHLabel</label>
+        <control type="PhantomLED"      x="26.5"    y="23.5"    >+48V</control>
+        <control type="Gain"            x="49.626"  y="87.3"    >gain</control>
+        <control type="SmallGreyButton" x="50"      y="186"     >80Hz</control>
+        
+        <control type="EQLevel"         x="49.626"  y="288.5"   colors="top=knobLight">treble</control>
+        <group>
+            <control type="EQLevel"                 dy="108"    >hi mid (level)</control>
+            <control type="EQFreq"                  dy="97"     >hi mid (freq)</control>
+        </group>
+        <group>
+            <control type="EQLevel"                 dy="108"    >lo mid (level)</control>
+            <control type="EQFreq"                  dy="97"     >lo mid (freq)</control>
+        </group>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Top_Stereo" height="758" tileDir="TopDown">
+        <texture file="venice_tex0.png" x0="142" y0="0" w="140" h="758" />
+
+        <label type="TopLabelStereo"    x="77"      y="12"      >CHLabel</label>
+        <control type="PhantomLED"      x="26.5"    y="23.5"    >+48V</control>
+        <control type="Gain"            x="49.626"  y="87.3"    >gain</control>
+        <control type="SmallGreyButton" x="50"      y="186"     >80Hz</control>
+        
+        <control type="Gain"            x="49.626"  y="288.5"   >line trim</control>
+        
+        <control type="EQLevel"                     y="493.5"   colors="top=knobLight">treble</control>
+        <group>
+            <control type="EQLevel"                 dy="108"    >hi mid</control>
+            <control type="EQLevel"                 dy="97"     >lo mid</control>
+        </group>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Mid" height="811" tileDir="TopDown">
+        <texture file="venice_tex0.png" x0="284" y0="0" w="140" h="811" />
+        
+        <control type="EQLevel"     x="49.626"  y="48.5"    colors="top=knobDark">bass</control>
+        <control type="EQButton"    x="112.5"   y="141.5"   >eq on</control>
+        
+        <control type="AUX"         x="49.626"  y="255.5"   colors="top=green">fx 1</control>
+        <control type="AUX"                     dy="98"     colors="top=green">fx 2</control>
+        <control type="AUX"                     dy="98"     colors="top=red">mon 1</control>
+        <control type="AUX"                     dy="98"     colors="top=red">mon 2</control>
+        <control type="AUX"                     dy="98"     colors="top=auxYellow, mark=black, body=knobDark">aux 1</control>
+        <control type="AUX"                     dy="98"     colors="top=auxYellow, mark=black, body=knobDark">aux 2</control>
+    </moduleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <moduleDef name="CH_Pan_Mono" height="106" tileDir="TopDown">
+        <texture file="venice_tex0.png" x0="0" y0="760" w="140" h="106" />
+        
+        <control type="Pan"     x="49.626"  y="49.5"    >pan</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Pan_Stereo" height="106" tileDir="TopDown">
+        <texture file="venice_tex0.png" x0="142" y0="760" w="140" h="106" />
+        
+        <control type="Pan"     x="49.626"  y="49.5"    >bal</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Fader_Mono" height="737" tileDir="TopDown">
+        <texture file="venice_tex0.png" x0="426" y0="0" w="140" h="689" />
+        <texture file="venice_tex0.png" x0="426" y0="691" w="140" h="48" />
+        
+        <control type="MuteButton"      x="47.5"    y="38.5"    >mute</control>
+        <control type="RedLED"          x="103.5"   y="25.5"    link="1">MuteLED</control>
+        <label type="MidLabelMono"      x="82"      y="80"      >CHLabel</label>
+        <control type="WideGreyButton"  x="47.5"    y="191.5"   >solo</control>
+        <control type="YellowLED"       x="103.5"   y="179.5"   link="1">SoloLED</control>
+        <control type="RedLED"                      y="262.5"   >pkLED</control>
+        <control type="GreenLED"                    y="290.5"   >sigLED</control>
+        <control type="Fader"           x="48.5"    y="622"     >fader</control>
+        <control type="SmallGreyButton" x="111"     y="445"     halo="haloDark">group 1-2</control>
+        <control type="SmallGreyButton" y="510"                 halo="haloDark">group 3-4</control>
+        <control type="SmallGreyButton" y="577"                 halo="haloDark">mas</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Fader_Stereo" height="737" tileDir="TopDown">
+        <texture file="venice_tex0.png" x0="426" y0="0" w="140" h="689" />
+        <texture file="venice_tex0.png" x0="426" y0="741" w="140" h="48" />
+        
+        <control type="MuteButton"      x="47.5"    y="38.5"    >mute</control>
+        <control type="RedLED"          x="103.5"   y="25.5"    link="1">MuteLED</control>
+        <label type="MidLabelStereo"    x="82"      y="80"      >CHLabel</label>
+        <control type="WideGreyButton"  x="47.5"    y="191.5"   >solo</control>
+        <control type="YellowLED"       x="103.5"   y="179.5"   link="1">SoloLED</control>
+        <control type="RedLED"                      y="262.5"   >pkLED</control>
+        <control type="GreenLED"                    y="290.5"   >sigLED</control>
+        <control type="Fader"           x="48.5"    y="622"     >fader</control>
+        <control type="SmallGreyButton" x="111"     y="445"     halo="haloDark">group 1-2</control>
+        <control type="SmallGreyButton"             y="510"     halo="haloDark">group 3-4</control>
+        <control type="SmallGreyButton"             y="577"     halo="haloDark">mas</control>
+    </moduleDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+        CONTROLS
+    ------------------------------------------------------------------------------------------- -->
+
+    <!---- Labels ---->
+    
+    <labelDef name="TopLabelMono"
+        w="55" h="27">
+        <texture file="venice_tex0.png" x0="791" y0="1" w="55" h="27" />
+        <texOffset dy="29"/>
+    </labelDef>
+    
+    <labelDef name="MidLabelMono"
+        w="58" h="27">
+        <texture file="venice_tex0.png" x0="848" y0="1" w="58" h="27" />
+        <texOffset dy="29"/>
+    </labelDef>
+    
+    <labelDef name="TopLabelStereo"
+        w="55" h="27">
+        <texture file="venice_tex0.png" x0="908" y0="1" w="55" h="27" />
+        <texOffset dy="29"/>
+    </labelDef>
+    
+    <labelDef name="MidLabelStereo"
+        w="58" h="27">
+        <texture file="venice_tex0.png" x0="965" y0="1" w="58" h="27" />
+        <texOffset dy="29"/>
+    </labelDef>
+    
+    
+    <!---- LEDs ---->
+
+    <controlDef name="RedLED" class="LED"
+        default="0.0"
+        mesh="venice_led.fim">
+        <color id="body" value="#900000"/>
+        <colorON id="body" value="#B00000"/>
+        <halo color="#FF3030" alpha="0.8"/>
+    </controlDef>
+    
+    <controlDef name="YellowLED" class="LED"
+        default="0.0"
+        mesh="venice_led.fim">
+        <color id="body" value="#808000"/>
+        <colorON id="body" value="#B0B000"/>
+        <halo color="#FFFF00" alpha="0.42"/>
+    </controlDef>
+    
+    <controlDef name="PhantomLED" class="LED"
+        default="0.0"
+        adjustable="1"
+        extend="1.5"
+        mesh="venice_led.fim">
+        <color id="body" value="#808000"/>
+        <colorON id="body" value="#B0B000"/>
+        <halo color="#FFFF00" alpha="0.42"/>
+    </controlDef>
+    
+    <controlDef name="GreenLED" class="LED"
+        default="0.0"
+        mesh="venice_led.fim">
+        <color id="body" value="#008000"/>
+    </controlDef>
+    
+    
+    <!---- Buttons ---->
+    
+    <controlDef name="WideGreyButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="venice_button_wide.fim">
+        <color id="body" value="buttonGray"/>
+    </controlDef>
+    
+    <controlDef name="SmallGreyButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="venice_button_small.fim">
+        <color id="body" value="buttonGray"/>
+    </controlDef>
+    
+    <controlDef name="EQButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="1.0"
+        mesh="venice_button_small.fim">
+        <color id="body" value="red"/>
+        <halo color="haloDark"/>
+    </controlDef>
+    
+    <controlDef name="MuteButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="venice_button_big.fim">
+        <color id="body" value="red"/>
+    </controlDef>
+    
+    
+    <!---- Knobs ---->
+    
+    <controlDef name="Gain" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="venice_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="EQFreq" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="venice_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="blue"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="EQLevel" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="venice_knob.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top"  value="blue"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="AUX" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="venice_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="knobLight"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="Pan" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="venice_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="knobDark"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+
+
+    <!---- Faders ---->
+
+    <controlDef name="Fader" class="Fader"
+        sMax="65.5"
+        default="0.0"
+        mesh="venice_fader.fim">
+        <color id="body" value="knobLight"/>
+        <color id="mark" value="#292526"/>
+    </controlDef>
+
+
+</layouts>

@@ -1,0 +1,1043 @@
+    2019.04.09.     FadeIn v1.4.0
+    ========================================================
+    - added iOS 11 compatibility
+        : updated project for Xcode 9.2
+        : changed deployment target to iOS 11
+        : fixed deprecations
+        : patched libraries, where needed
+        - fixed fullscreen issues
+        - fixed statusbar issues
+        - fixed MainScreen stage button image
+    - (temporarily) disabled About page
+    - disabled work-in-progress features
+        - AutoFollow button
+        - MasterSection test console: A&H GL2400
+
+
+    2016.11.15.     FadeIn v1.3.0
+    ========================================================
+    - added 64bit compatibility
+
+
+    2014.05.05.     FadeIn v1.2.2.3
+    ========================================================
+    + added ZoomHint bar, to display current Zoom Level while Zooming
+    - fixed scene moving horizontaly when returning from FaderView in Master
+    - fixed hidden AssistView & ControlInfo in a rare situatuion
+        : hide animation completion now checks for alpha==0, before setting hidden=YES
+    + added support for Labels
+        - uses Tag property of MainModule / LogicModule / ParentModule to determine texture
+        - can be used for channel numbers
+        - updated consoles with channel numbers:
+            Midas Venice, VeniceF
+
+
+    2014.04.04.     FadeIn v1.2.2.2
+    ========================================================
+    : redesigned the animation system
+        - movement and zoom are animated simultaneously
+        - moving to target location is independent of ScrollBounds (and Zoom)
+    : added drawable debug lines (midLines, scrollBounds, etc.)
+    - fixed some master-to-channel zoom related bugs
+    + added support for LogicModules
+        - an LM is like a Channel, but inside a MasterSection,
+        - LMs are allowed to have various sizes, and are not always vertical
+        - in XML: <moduleDef logic="1"...>
+        - LMs have a Scroll Direction
+            - (V) Vertical (default), (H) Horizontal, (A) AllDir
+            - in XML: <moduleDef scrollDir="H"...>
+        - when an LM is activated:
+            - InfoBar shows the name of the Active LM (and M in the QuickJump Button)
+            - other LMs (and anything else) are greyed out
+        - if there is no Active LM:
+            - InfoBar shows no name (but shows the M)
+            - all LMs (and anything else) are grayed out
+    + added MasterCloseup viewmode
+        - Tap on a LogicModule inside Master to zoom-in on it (or use Zoom)
+        - Tap QuickJump button to zoom-out to MasterSection viewmode (or use Zoom)
+        - when enabled:
+            - free Scroll in all directions (scroll bounds set to MasterModule bounds)
+                - Scroll can be restricted to one direction (to help staying in the active LogicModule)
+                - this restriction depends on the Active LogicModule (when the Scroll begun)
+                    - there is no Active LogicModule --> free Scroll
+                    - there is an Active LogicModule, and its ScrollDir matches
+                        and the starting direction of the Scroll --> restrict Scroll to ScrollDir
+            - ActiveLogicModule changes when a LogicModule reaches the center of the view
+                - InfoBar shows the name of ActiveLogicModule
+                - InforBar shows nothing if there is no LogicModule at center
+            - Tapping on a LogicModule activates it (centers on it)
+                - when Tapping outside any LogicModules it just moves there
+        - remembered on Exit
+    - changed the dummy MasterSection of A&H GL2400 to a more complicated one
+        - DELETE previous GL2400 Sessions & Favorites !!
+    + added Free viewmode
+        - can be enabled with a Toolbar button (F)
+        - when enabled:
+            - a button (F) appears above Lock button
+            - Lock button is locked and disabled
+            - all modules look like ActiveModules (no darkening & desaturation)
+            - Scrollbar is hidden
+            - ActiveModule changes when a MainModule reaches the center of the view
+                - InfoBar updates normally when ActiveModule changes
+                - InforBar shows nothing if there is no MainModule at center
+            - free Scroll in all directions (console bounds still apply)
+            - Tapping on a different Module activates it (centers on it, but still in FreeVM)
+            - extra ZoomStop (4ch wide) (even that lags on some consoles)
+        - can be disabled by the appeared (F) button or from the Toolbar
+        - when disabled:
+            - sets Channel or MasterSection viewmode (depending on ActiveModule)
+                - never sets MasterCloseup viewmode
+            - removes the extra ZoomStop, Zooms to closest one
+            - moves to horizontal center of ActiveModule
+                - if there is no ActiveModule: activates the closest MainModule
+            - removes the (F) button, enables the Lock button (but stays in Lock)
+        - remembered on Exit
+
+
+    2014.02.17.     FadeIn v1.2.2.1
+    ========================================================
+    - changed behaviour of Touches while animating
+        - WorldLocation of Touch is calculated in the finished animation state
+        - still can't select Controls while animating (same as before)
+    + added some support for Master Sections
+        - in XML: <mainModuleDef master="1"...>
+        - changing from Channel to Master, and Master to Channel is implemented
+            - when changing to Master, scene zooms out to fit width, hiding the Scrollbar
+            - saves parameters for Channels: zoom, y-position, channel name editing
+            - when Tapping to Master, temporarily saves inside/outside Tap Tresholds
+                for quickly skipping through the Master (disabled after 0.7 sec)
+        - included in QuickJump view
+        - Name is not editable
+        - navigation wihtin Master is not implemented yet, for now:
+            - you can scroll around horizontally or vertically (not both at the same time)
+            - bouncing back from the sides (not just from top/bottom)
+        - added a dummy MasterSection for A&H GL2400
+
+
+2013.11.10.     FadeIn v1.2.2
+========================================================
+- content related:
+    + added console: Allen & Heath GL2400
+    + added console: Allen & Heath GL2800
+    + added console: Allen & Heath GL2800M
+    + added console: Allen & Heath GL3800
+- XML related:
+    + Layouts can be grouped into sections in index.xml
+- various:
+    - fixed AddEventVC not saving SingleSession Name
+
+
+    2013.11.09.     FadeIn v1.2.1.2 BETA
+    ========================================================
+    + added console: Allen & Heath GL2800
+    + added console: Allen & Heath GL2800M
+    + added console: Allen & Heath GL3800
+    + Layouts can be grouped into sections in index.xml
+        - to help separate frame sizes with multiple layouts
+        - grouped A&H GL3800, Midas Verona
+
+
+    2013.11.03.     FadeIn v1.2.1.1 BETA
+    ========================================================
+    - fixed AddEventVC not saving SingleSession Name (if user taps NavBar Done before Keyboard Done)
+    + added console: Allen & Heath GL2400
+
+
+2013.10.28.     FadeIn v1.2.1
+========================================================
+- new features:
+    + added buttons for NotesVC & PhotosVC to change Active Channel
+- various:
+    + added support for iPhone5
+    - updated MainScreen & Default images for RetinaDisplay
+    - changed Menu/Settings/etc. bar-styles to black
+    - fixed iOS6/7 issues
+
+
+    2013.10.28.     FadeIn v1.2.1 BETA
+    ========================================================
+    - updated MainScreen & Default images for RetinaDisplay
+        - also updated non-retina MainScreen
+    - disabled autorotation for Photos (workaround for iPad rotation bug)
+
+
+    2013.10.25.     FadeIn v1.2.0.3 BETA
+    ========================================================
+    + About page now displays build number and 'BETA' text for BETA builds
+    - fixed crash when user continuosly takes Photos
+
+
+    2013.10.17.     FadeIn v1.2.0.1 BETA
+    ========================================================
+    - fixed Yamaha PM4000(M) Mute Safe LED color
+    - changed Menu/Settings/etc. bar-styles to black (since iOS6 hates the old grey)
+    - fixed LoadValuesVC on iOS6/7: TableView background was not black
+    - fixed Rotation issues on iOS6/7
+    - fixed TabBar visible in SoundCheckVC on iOS7
+    + added support for iPhone5:
+        - restructured AboutVC
+        - restructured MainScreenVC & added separate one for 4 inch devices
+        - reduced file size of MainScreen images
+        - added support for Scrollbar Images not filling the Scrollbar height (ie.: Venice on iPhone5)
+        - added support for Scrollbar images for 4 inch devices (...@4in.png) (updated existing Consoles)
+    + added buttons for NotesVC & PhotosVC to change Active Channel
+        - when Locked they skip Channels without Notes/Photos
+        - removed Done button in NotesVC
+        - changed Insert Toolbar to autohide
+
+
+2013.04.26.     FadeIn v1.2
+========================================================
+- content related:
+    + added console: Midas XL250
+    + added console: Yamaha PM3000
+    - fixed various errors in existing consoles
+    - updated visuals for all consoles
+- XML related:
+    - added exception-handling for missing FIM files
+    + added support for Switches with 3 (or more) states
+    - updated Button/LED Halo feature
+    + added <colorON...> support for LEDs & Buttons
+    + added support for greater than 1 link-distances in XML
+    + added support for KnobButtons (Knob including a pushbutton)
+- new features:
+    + added Knob Assist View
+    + added feature: Favorite Consoles
+- various:
+    - SCView now supports retina display
+    - updated SCView & Clipboard UI for retina display
+    + Default.png now fades out on startup (instead of just disapearring)
+    - restructured Settings
+
+
+    2013.04.26.     FadeIn v1.2 BETA
+    ========================================================
+    - finished console Midas XL250
+    - optimized meshes for console Midas VeniceF
+    - fixed meshes for Yamaha PM3000
+
+
+    2013.04.19.     FadeIn v1.1.1.7 BETA
+    ========================================================
+    - changed ON button color to orange in consoles Yamaha PM3500(M) and PM4000(M)
+    - almost finished console Midas XL250 (meshes still not optimized)
+    - updated remaining SCV images with retina display versions
+        - also updated the Help
+
+
+    2013.04.09.     FadeIn v1.1.1.6 BETA
+    ========================================================
+    + added support for greater than 1 link-distances in XML
+    + added support for KnobButtons (Knob including a pushbutton)
+        - needs a Linked LED
+        - isKnobButton: (Knob && linkedItem is LED)
+        - can be pushed by Tapping the Knob (like a Button, but regardless of DoubleTap setting)
+        - updated the Help
+    + added console: Midas XL250
+        - needs correct meshes, buttons, button-textures, colors
+    - updated several 3d meshes
+    + added feature: Favorite Consoles
+        - Favorites can be added in CustomDefaults
+        - removed on/off setting for CustomDefaults
+        - renamed CustomDefaults title from "Setup Defaults" to "Customize"
+        - updated the Help
+    - restructured Settings
+
+
+    2013.03.27.     FadeIn v1.1.1.5 BETA
+    ========================================================
+    - updated with retina display versions:
+        - footer_delete_button.png
+        - quickjump_button-active*.png
+        - all SoundcheckView icons (not the backgrounds/borders yet)
+    - finalized AssistView:
+        - horizontal center is Module center
+        - Settings switch "Skip unedited modules" no longer determines center
+    - added exception-handling for missing FIM files
+    + added support for Switches with 3 (or more) states
+    - updated Button/LED Halo feature
+        - 'hiddenHalo' attribute is no longer supported
+        - <color id="halo" .../> is no longer supported
+        - TypeDef useage: <halo type="hidden/rect/round" color="" alpha=""/>
+        - inline useage: halo="color=green, alpha=0.6"
+            - 'color=' can be omitted
+        - added separate textures for Buttons/LEDs (both rect & round)
+    - changed Color definitions to use 'value' for both ColorCodes and RGB values
+    + added <colorON...> support for LEDs
+        - also determines GL_EMISSION color
+    - updated/fixed several consoles:
+        - updated all existing consoles with the new features
+        - updated Texture & Scrollbars for all Midas consoles
+        - fixed LED colors on Yamaha PM4000 Group buttons
+        - fixed Soundcraft MH3 Stereo Scrollbar
+    + added console: Yamaha PM3000
+
+
+    2013.03.01.     FadeIn v1.1.1.4 BETA
+    ========================================================
+    - fixed halo colors for Midas Siena MIX PRE buttons 9-16
+    - fixed bug in Midas VeniceF: PRE EQ button was linked with EQLed or MON1 sometimes (strange)
+    - improved AssistView:
+        - fixed showing was not animated
+        - removed multiple position support (only top left now)
+        - DualKnob icon background is not final
+        - Settings switch "Skip unedited modules" now swaps horizontal center (ON: module, OFF: control)
+        - Settings switch "Knob Assist Window" now works as it should
+    + Default.png now fades out on startup (instead of just disapearring)
+
+
+    2013.01.31.     FadeIn v1.1.1.3 BETA
+    ========================================================
+    - fixed MainScreen buttons stucked in Highlight after interruption
+    + added border & overlay for AssistView (in top position only)
+    - AssistView can be disabled in Settings (default: ON)
+        - for now this switch is used to swap top/bottom position
+
+
+    2013.01.27.     FadeIn v1.1.1.2 BETA
+    ========================================================
+    : EAGLView is now based on GLKView
+        - fixed bug with iOS5 & retina display (concurrent display of multiple GLViews were blurred)
+        - implicitly supports retina displays (glViewport dimensions doubled, without any performance penalty)
+    + added Knob Assist View (just as a proof of concept for now)
+
+
+2013.01.19.     FadeIn v1.1.1
+========================================================
+- fixed missing Yamaha PM4000 label above Fader
+- fixed incorrect HPF knob used in Yamaha PM3500 & PM3500M
+
+
+2013.01.12.     FadeIn v1.1.0
+========================================================
+- content related:
+    + added Console: Midas Siena
+    + added Consoles: Soundcraft GB2, GB8
+    + added Consoles: Yamaha M2000, PM3500, PM3500M
+    + added multiple layouts for all Consoles
+    - fixed various errors in existing Consoles
+    - grouped Consoles by Maker in ConsoleList
+- XML related:
+    + added support for passive Console parts
+    + added support for Module Arrays in XML
+    + added default value for texture size: 1024*1024
+    + no longer need to give Height for each Layout separately
+    + added support for MainModule Styles
+    + added option to set separate colors for a Button when it's turned on
+    + added option to disable Halo for a Control
+    - changed XML root attribute: scale
+- new features:
+    + added support for locking DualKnobs together on first tap
+    + added Zoom feature
+    + added FirstRun Help
+- various:
+    + added support for DataBase Patches
+    - fixed various Clipboard bugs
+    - fixed various SCView bugs
+    - updated Help with new features
+
+
+    2013.01.12.     FadeIn v1.0.1.9 BETA
+    ========================================================
+    + added Console: Soundcraft GB8, Soundcraft GB2
+    - changed FirstRun Help to run only at first run, as intended
+    - fixed HPF default value for Consoles: PM3500, PM3500M
+
+
+    2013.01.11.     FadeIn v1.0.1.8 BETA
+    ========================================================
+    - grouped Consoles by Maker in ConsoleList
+    - changed XML root attribute: scale
+        - only scales positions and sizes
+        - does not scale Control attributes (ie.: Button zON/zOFF, Fader sMax)
+        - but does scale Label size
+    - redesigned rendering order, fixing some bugs
+    + added Console: Midas Siena
+    - changed min/max values of Knobs from 40/320 to 30/330 in Midas consoles
+    - fixed CH Copy/Paste not working between sytles (ie.: M2000 Mono/MonoLeft/MonoRight)
+    + added FirstRun Help
+        - shows at every run now, for testing purposes
+    - changed "Settings" text to "Settings / Help" in MainScreenHelp image
+
+
+    2013.01.06.     FadeIn v1.0.1.7 BETA
+    ========================================================
+    + added option to disable Halo for a Control
+        - uses <controlDef> attribute: hideHalo="1" (default value: 0)
+        - used with LEDButtons in Console: PM3500
+    + added option to set separate colors for a Button when it's turned on
+        - uses <colorON> attribute
+        - used with ON Button in Console: PM3500
+    + added Console: Yamaha PM3500
+    + added Help text about Zoom and Switches
+    + added Console: Yamaha PM3500M (needs correction)
+
+
+    2012.12.14.     FadeIn v1.0.1.5 BETA
+    ========================================================
+    + added support for MainModule Styles
+        - uses XML <mainModuleDef> attribute: styleOf="<BaseType>"
+        - value-data must be compatible with BaseType
+        - in XML, BaseType must be defined before Style
+    + no longer need to give Height for each Layout separately
+        - common Layout Dimension (ie.: Height for Consoles) can be given as a <layouts> attribute
+        - height="" for Layout dir="LeftRight"
+        - width="" for Layout dir="TopDown"
+        - concrete Layout Dimension (if any) takes precedence
+        - updated all Consoles
+    - restricted ZoomStops to: real, 2ch, 3ch
+    + added default value for texture size: 1024*1024
+        - fw="" and fh="" <texture> attributes are only required for different sizes
+        - updated all Consoles
+    - cleaned up ModuleType size & texture calculation
+        - fixed minor floating point math errors
+    - Modules next to each other should have the same height & texture height
+        - otherwise small artifacts may occur at edges
+        - updated Consoles: Verona, 
+    - fixed Modules on MainModule level, but without child Modules not rendering
+    + added support for using Default Type for ZoomStops
+        - so ZoomStops don't need to be based on first MainModule (but thats the default)
+        - can be set for all layouts only
+        - uses <layouts> attribute: zoomDef="<ModuleTypeName>"
+    - fixed minor typos in Consoles: PM4000, PM4000M
+    + added support for Switches
+    + added support for Labels (as Controls)
+    + added Console: Yamaha M2000
+
+
+    2012.12.01.     FadeIn v1.0.1.4 BETA
+    ========================================================
+    - fixed SessionDetailsVC not updating changed Artist names
+    - fixed ScenesListVC not updating changed Session data
+    - fixed bounding box for Knobs not updating with rotation
+        - mostly problem for non-square knobs (ie: PM4000 aux outer)
+    - SoundCheck view no longer accepts Touches outside SCView while Touches are processed inside
+    - Draging horizontally out of bounds of first/last Module is dampened
+        - same as Scroll dampening at top/bottom
+    + added Zoom feature
+        - continous Zoom, snaps to discrete Zoom values (ZoomStops) when Touch ends
+        - minimum Zoom: Real size
+        - maximum Zoom: (first) MainModule height
+        - default Zoom: (first) MainModule width * 2 (same as before)
+    - fixed saving SCView while animating may have saved out-of-bounds state
+
+
+    2012.11.22.     FadeIn v1.0.1.3 BETA
+    ========================================================
+    - fixed Soundcraft MH3 crash (xml was invalid)
+    - fixed PM4000M-44 not opening (layout name typo in xml)
+    - fixed DualKnobs selecting OuterKnob first, when OuterKnob is touched
+    + added support for locking DualKnobs together on first tap
+        - can be enabled in XML by specifying a 'dualLockedName' in typeDef of InnerKnob
+        - 1. tap: together, 2. tap: inner, 3. tap: outer
+        - locked ST Gains on Yamaha PM4000 & Midas VeniceF
+        - updated the Help page
+    : refactored code to use literals/boxing/subscription syntax
+    - fixed extra space at the top of some DetailVCs
+    - fixed some DetailVCs not updated correctly if related object changed while editing
+
+
+    2012.11.20.     FadeIn v1.0.1.2 BETA
+    ========================================================
+    + added support for Module Arrays in XML
+        - much easier to define Layouts
+        - converted all existing Consoles
+    - patch: renamed "Midas Verona 480" to "Midas Verona 400 (ST-last)"
+    + added Layouts for Midas Verona
+
+
+    2012.11.20.     FadeIn v1.0.1.1 BETA
+    ========================================================
+    - fixed Event/Session button (in AddEvent view) not fitting its cell correctly
+    - fixed incorrect initial Title in AddEvent view
+    + added support for passive Console parts (borders, etc)
+        + added borders for Verona modules
+    + added support for Patches (in AppDelegate)
+    + added support for multiple Layouts for Consoles
+    + added several Layouts for existing Consoles
+        Midas Venice, VeniceF
+        Soundcraft GB4, MH2, MH3
+        Yamaha PM4000, PM4000M
+    - patch: renames existing Console Layout instances (necessary to match the renamed Layouts)
+        renamed "Midas VeniceF-32" to "Midas VeniceF 32"
+        renamed "Yamaha PM4000" to "Yamaha PM4000-48"
+
+
+2012.10.04.     FadeIn v1.0.1
+========================================================
+- changed EBRE logo in About page to original
+
+
+    2012.10.03.     FadeIn v1.0.0.2 BETA
+    ========================================================
+    - changed EBRE logo in About page to transparent, notext version
+
+
+    2012.10.02.     FadeIn v1.0.0.1 BETA
+    ========================================================
+    : changed project to handle Beta builds separately
+    - restored Review/Buy button on About page, with proper links
+    + added Demo icons (57/114, 512) and also for About page
+    - renamed 'Demo' to 'FREE' in app name and About page
+    - modified Deployment Target to iOS 5.0
+
+
+2012.08.22.     FadeIn v1.0
+========================================================
+- changed the Add Event/Session/Scene animation to make the DetailsVC-push visible
+- removed Beta text on About page
+- temporarily removed Review/Buy button on About page (and moved Facebook button)
++ finalized & added AppIcons (HomeScreen: 57/114, iTunes: 512, About page: 72)
++ added @2x version of green add button
+- finalized CoreData Model
+    (NEEDS REINSTALL! If previous version was installed, remove it before install)
+
+
+2012.07.24.     FadeIn v0.9.7
+========================================================
++ added About page variant for Demo
++ current Channel Name is autoselected upon editing
+- fixed old bug: tapping outside Active Module rapidly didn't change channels properly
+- finished Help
+- Help is now context sensitive (MainScreen and SCV opens related Help pages)
+
+
+2012.07.02.     FadeIn v0.9.6
+========================================================
+- changed Notes style to black in SCView (to match overall SCView style)
+- moved Lock button to BottomLeft
+    - enlarged it a bit
+: rearanged SoundCheckVC code (split UI Actions into category)
++ added Insert Toolbar
++ added Photo support
+    (NEEDS REINSTALL! If previous version was installed, remove it before install)
+    - each Module can have (multiple) Photos attached
+    - button is disabled if device doesn't have camera
++ some groundwork for Inserted Module
+- fixed Midas Venice phantom LED not working
+- refined Channel Name display a bit (reduced TextField / Label differences)
++ added Reset Confirmation dialog for CH Reset
+    - can be disabled in Settings (default: ON)
+    - if enabled, always asks (regardless of content or Edit/EBO markers)
+- improved MainScreen Help image a bit
+- changing Module no longer dismisses Insert Toolbar or CHName TextField
+- updated Console: Midas Verona
++ added Console: Midas VeniceF
+: changed Developer to EBRE (new certificates, profiles, etc)
+- updated Console: Midas Venice (colored LED halos)
+- changed App Icon
+    - added highres icon
+    - need to add shine manually
+
+
+2012.03.29.     FadeIn v0.9.5
+========================================================
+: updated project for Xcode4
++ Facebook button works
+- removed History file from App Bundle
+- fixed slow swipe not updating SCView properly
++ Setup Defaults can be turned off in Settings (default: ON)
+- moved green Add button to the left side in DetailsVCs
+    - fixes long time bug: topmost Add button not responding properly
+- moved Close button to the right in Settings/Help/About
+    - this way Help (or Settings) can be closed anytime
+- upgraded Settings with new structure and explanations
+- turned on EQ buttons by default on all consoles
+x removed console: Yamaha PM4000 TEST
+x removed console: Audient Aztec
++ added Help
+    - only the main page & MainScreen Help are finished
+- disabled invalidating Continue when running a new version
+
+
+2012.02.11.     FadeIn v0.9.4
+========================================================
+- fixed pixel-alignment for ScrollBars
+- fixed Halo color override ignoring color codes
+- updated Console: Soundcraft MH2
+- updated Console: Soundcraft MH3
+- updated Console: Soundcraft GB4
++ added experimental @2x texture for Yamaha PM4000 (try: Yamaha PM4000 TEST)
+
+
+2012.01.25.     FadeIn v0.9.3
+========================================================
++ added Color codes for XML
+    - Colors can be defined in a central location
+    - these can be accesed using the 'code' attribute
++ added Value Icons for adjustable LEDs in InfoBar
+- renamed LED attribute 'hiddenButton' to 'adjustable' (updated XMLs)
++ updated various UI images with @2x variants
++ added Control attribute 'extend' which allows extension of TouchDetection area
+    - bounds of the Control are scaled by the value
+    - useful for small Controls (ie.: VCA LEDs on MH2/MH3)
+- improved Console load times
+    - ItemManager now reuses previously loaded MainModules
+    - all Consoles load almost as fast as it's Costum Defaults screen
+    - channel number doesn't really matter anymore
++ added DoubleTap gesture to adjust Buttons/LEDs
+    - can be turned off in Settings: 'Tap Adjusts Button'
++ added Console: Yamaha PM4000M
+- updated Console: Yamaha PM4000
+    
+
+
+2012.01.15.     FadeIn v0.9.2.2
+========================================================
++ added Console: Audient Aztec (far from finished)
+- fixed About page showing transparent StatusBar (in specific cases)
+
+
+2012.01.06.     FadeIn v0.9.2
+========================================================
+- added small LED (mh_led_small.fim) model for Consoles: MH2 & MH3
+- fixed MH2 Mute/Solo buttons sinking when pressed
+- renamed Back buttons to 'Close' (Notebook, CHNotes)
++ added new Settings (no longer need external library: MySettings)
++ added Help, About pages
+    ! Help is empty
+    ! About buttons: Facebook, Review do nothing
+x removed Version label from MainScreen
+- fixed MainScreen allowing multiple touches
+
+
+2011.11.29.     FadeIn v0.9.1.2
+========================================================
+- fixed Back button sometimes disappearing in Sessions/Artists/Venues Lists (iOS5)
+
+
+2011.11.27.     FadeIn v0.9.1.1
+========================================================
+- changed list name Events to Sessions
++ added Sessions/Artists/Venues TabBarItem icons
+- fixed not saving Continue after app receivied a Low Memory Warning
+
+
+2011.11.19.     FadeIn v0.9.1
+========================================================
+- set minimum required iOS to 4.0
+- removed [+] button from filtered lists (ie: Venue>Events List)
+- fixed Module EM not activating after clearing Notes (which had text loaded from other Scene)
+- SCView InfoBar displays orange border (instead of green) around Notes icon
+    if Active Module has not been Edited yet, but it's Notes has text
+    (ie: after Loading Values from another Scene)
+- SCView now handles Cancelled Touches
+- fixed errors in various Consoles:
+    - Midas Verona: incorrect bass freq, HPF(freq) default value, texture/xml/sb issues
+    - Soundcraft MH2: texture issues, EQ button default value
+    - Yamaha PM4000: ST AUX PAN default value
+    - Midas Venice: texture/srollbar redrawn
++ added Console: Soundcraft MH3 (needs ScrollBar)
+
+
+2011.10.27.     FadeIn v0.9.0
+========================================================
++ added Artists
++ added Venues
+- redesigned/recoded the Menu
+- finalized DataModel
+    (NEEDS REINSTALL! If previous version was installed, remove it before install)
+- fixed minor memory leaks
+- changed Continue behaviour:
+    - SAVE current state: only in SoundCheckView (when user pressed Home button, or Back button)
+    - CLEAR saved state:  only when user deleted the Object of currently saved state
+    - so Continue will always present the last displayed SoundCheckView if available (and build it's Menu Hierarchy)
+- fixed Channel Name Edit textfield overlaping green Notes icon
+- fixed SCView not releasing it's EAGLContext
+
+
+2011.07.28.     FadeIn v0.8.3
+========================================================
+- Default Value of LED follows Default Value of Linked Button
+- fixed crash after resuming App from BG and pressing Lock Button
+    - Lock Button images hadn't been retained, and were autoreleased upon entering BG (???)
++ added Console: Soundcraft MH2
+    - needs proper ScrollBar images
+    - Small Knob model is missing
+    - Button textures are missing
+    - Big Knob model has small holes
+    - colors should be finalized
+- removed dummy button (with Settings icon) from ToolBar
+
+
+2011.07.18.     FadeIn v0.8.2
+========================================================
+- disabled CHCopy/Paste of Channel Notes
++ finished graphic MainScreen
+
+
+2011.06.05.     FadeIn v0.8.1
+========================================================
+- pressing Home Button when Adding a (SingleSession) Event
+    no longer creates invalid Event (longtime bug)
+- pressing Back Button when Adding Notes in an Add Event/Session/Scene VC
+    no longer dissmisses the Add VC (and creates invalid Objects)
++ added graphic MainScreen
+    - WORK-IN-PROGRESS, just a proof-of-concept
++ added Default image to show during launch
+
+
+2011.06.04.     FadeIn v0.8.0
+========================================================
+- disabled AutoCorrection for Channel Name TextField
++ added Notes support for Events/Sessions/Scenes
++ added Notes support for SoundCheckView
+    - each Channel has its own Notes
+    - integrated to Copy/Paste/Reset (same logic as with Values)
+    - integrated to LoadValues (same logic as with Values)
+- fixed Lock not disabled Channel Name editing
+- made Module Button nicer
+
+
+2011.05.30.     FadeIn v0.7.9
+========================================================
+- fixed Soundcraft GB4 buttons
+: renamed TopView to InfoBar
++ added Channel Name support
+    - default Channel Name is the itemID of MainModule
++ added Notes Button to InfoBar
+    - Notes are stored for each MainModule
+    - WORK-IN-PROGRESS!! Notes Button does nothing yet
+
+
+2011.05.27.     FadeIn v0.7.8
+========================================================
+- fixed minor memory leaks
+- fixed Module with EM not updated upon a Paste
++ added Button Labels
+- fixed crash in SessionDetailsVC
+    - when going back from first Scene after an AddScene has been Canceled
+    - should make sure no corrupt data left:
+    (NEEDS REINSTALL! If previous version was installed, remove it before install)
+- newly created QuickScene is deleted if pressing Back button from QuickScene > CustomDefaults
+- fixed Texture Coordinate calculation
+
+
+2011.05.04.     FadeIn v0.7.7
+========================================================
++ added optional 'hiddenButton' attribute to LEDs in XML
+    if set to '1' a Hidden Button is created above the LED to accept Touches
+    usable for LEDs which don't have an assigned Button (ie.: Midas Venice +48V LED)
++ added a Hidden Button for 'Midas Venice +48V LED'
+    (NEEDS REINSTALL! If previous version was installed, remove it before install)
+x removed grey [CH] icon from the top of Channel ToolBar
++ added EditedByOthers Marker
+    - indicates that someone had already Edited the MainModule in an other Scene
+    - displayed in place of Edit Marker (in TopView & QuickJump)
+    - currently the Marker is orange (not final)
+x removed 'Edit Markers' option from LoadValues function
+    Load does not copy EMs
+    Reset does clear EMs
+- disabled Copy Button if Active Module has no Edit or EBO Marker
+x removed Touch/Untouch Button
++ added Custom Defaults function
+    (NEEDS REINSTALL! If previous version was installed, remove it before install)
+    - shows the CD Screen for the first load of a given Equipment in a given Session
+    - shows a MainModule for each MainModule Type of the given Equipment
+        - a 'Custom Defaults' Layout must be added to XML
+    - the given Equipment will have the Customized Default Values in all Scenes of the given Session
+    - these Custom Defaults can not be changed later
+    - Reset functions will reset to these Values
+    - Custom Defaults are carried over to the next Session for a given Event (if the Equipment is carried over)
+
+
+2011.04.26.     FadeIn v0.7.6
+========================================================
++ added option to Settings to Disable Unmarked Modules when Swiping, if SCView is Locked
+    - also Disable on any other enabled Channel-changing gesture
+    - does not Disable changing from QuickJump
+    - does not Disable if no Module has been Marked
+    - default value: ON
++ added CH Button to ToolBar (activates Channel ToolBar)
++ added Copy/Paste/Reset Buttons to Channel ToolBar
++ added Touch/Untouch Button to Channel ToolBar (sets/resets Marker of Active Module)
++ added App Icon (not final!)
+
+
+2011.04.24.     FadeIn v0.7.5
+========================================================
++ added support for Knobs with discrete values (rotary switches)
+- fixed Continued SCView stuck in FaderZoomOut
+- using UI outside SCView now Deselects Control (fixes stucked FaderZoomOut)
+     Touch on ScrollBar
+     QuickJump / Settings / LoadValues
+- improved Scrolling performance (by pre-scaling ScrollBar image sizes)
+- fixed tapping left to Active Module during FaderZoomOut swipes to next Channel
++ finished Screen Pitch support
+- fixed Halo Z-Fighting issues
+- added 4 LEDs to Midas Verona (decoration only)
+    (NEEDS REINSTALL! If previous version was installed, remove it before install)
++ inactive Modules (Textures and Controls also) are Desaturated (and darkened)
+- fixed crash when a Color of a Control was undefined in XML
+    now Color defaults to white, and sends a Warning
++ Halo Color now customizable from XML for each Control
+- made nicer Halo Textures & HaloOffset is now constant for Buttons
+x removed Enable/Disable option from Settings (now always Enabled)
+x removed TopView options from Beta Settings (fixed values to 50 @ alpha=0.8)
++ finished Yamaha PM4000
+- fixed ScrollBar Highlight not updating when changing from nonSB Module
+- added red borders to Lock Icon when locked
+- improved OpenGL Lightning (moved position off-Y-axis)
+- changed ItemLink logic
+    Controls in XML now can Link only to the previous Control (in the same Module)
+    no need to specify Link Target (link="" is enough)
+    only the later Control can Link in XML (two-way Link is established during setup)
+    improved SCView LoadTime (~0.2sec on PM4000 @ iTouch3G)
++ added Icons in TopView for DualKnobs (inner/outer) and Buttons (on/off)
+- made (Bastard) ScrollBar background a bit darker (3.4 -> 2.4)
+
+
+2011.03.29.     FadeIn v0.7.4
+========================================================
+- changed Edit Marker behaviour when Adjusting
+    - turns on immediately when Adjustment begans (first Touches Moved)
+    - turns on only if there was any Adjustment (if had been a Touches Moved)
+- Options in Load Values function don't reset on Source Change
+    if the User had already changed them
++ in XMLs, redundant Module width/height can now be ommited
+    if its derivable from its Children Modules or Parent Module
+- fixed FaderZoomOut falling under TopView
+- ScrollBar Highlight now excludes area covered by TopView
+- fixed Button/LED Halo issues on old devices (decreased zFar, increased zOffset)
++ added Screen Pitch support (work-in-progress, not available yet)
+
+
+2011.02.28.     FadeIn v0.7.3.1
+========================================================
++ added Options to Load Values function
+    - Names (just a dummy), Values, Markers
+
+
+2011.02.25.     FadeIn v0.7.3
+========================================================
++ QuickJump also uses Edit Markers
+- fixed SessionDetailsVC not updating when Scene changed
++ Continue restores selection in DetailsVCs
++ added Load Values from Scene (or Reset to Default) function
+    - sets all Values of current Equipment
+    - Load does not copy Edit Markers
+    - Reset does clear Edit Markers
+    - Button is disabled if SCView is Locked
+    - shows Confirmation Dialog if Scene had been Edited already
+
+
+2011.01.19.     FadeIn v0.7.2
+========================================================
++ added QuickJump to SCView
+- changed Console XMLs to support QuickJump
+: reworked DetalisVCs (added common superclass, etc.)
++ various minor improvements in DetailsVCs
+- fixed DetailsVC SectionHeaders issues
++ TopView indicates whether Channel has been Edited or not
+: renamed some Scene & Equipment attributes in the DataModel
+    (NEEDS REINSTALL! If previous version was installed, remove it before install)
+
+! EventList does not update if Event Date changed & it should reorder the list
+
+
+2011.01.15.     FadeIn v0.7.1
+========================================================
+: added EquipmentInScene Entity to store SCView related data
+    - redesigned Scene/Equipment/etc
+    (NEEDS REINSTALL! If previous version was installed, remove it before install)
++ each SCView saves it's last used state (on Exit or BackButton)
++ expanded Continue function:
+    - restores complete View Hierarchy if App did exit
+    - restores last used SCView (with complete View Hierarchy) if user navigated back to MainScreen
+    - disabled if App did exit from MainScreen
+    - disabled if App has been updated to a new version (to avoid ManagedObjectID inconsistencies)
++ added Version Update detection
+- when locked, allows Dragging when Touching the Selected Control again
+- fixed various FaderView issues (including stuck FaderView when Locked)
+- fixed some minor Touch Handling issues in SCView
+
+
+2011.01.14.     FadeIn v0.7.0
+========================================================
+: centralized Core Date moContext save methods & moContext access to AppDelegate
+- Notebook re-opens faster (now stored in a property)
+- when adding Event/Session the default option is changed to Session
++ added AutoLock on closing Application
++ added Continue function
+
+
+2011.01.04.     FadeIn v0.6.9
+========================================================
++ added separate icons to ToolBar button in TopView when ToolBar is shown/hidden
+- changed DualKnob Adjust/Select logic (now also Adjusts after some delay)
++ added Lock function (per Scene)
+    - moved 'locked' attribute to Scene (from MainModule)
+    - removed old DataModels
+        (NEEDS REINSTALL! If previous version was installed, remove it before install)
+        (WARNING! rename xcdatamodel BEFORE setting it as current version, otherwise it crashes)
++ added AutoLock on exit SCView via BackButton
+
+
+2010.11.29.     FadeIn v0.6.8
+========================================================
++ added Core Data versioning & Automatic Model Migration support
+: added 'locked' & 'used' attributes to MainModules
+- Touches on TopView no longer control SCView (TopView is no longer a sublayer of SCView)
++ added ToolBar to SCView
++ added Settings to SCView (changes take place instantly)
++ added Cancel option to Settings
++ added TopView transparency parameters to Settings (Beta)
++ added ToolBar transparency parameters to Settings (Beta)
+- fixed Settings persistency issues
+
+
+2010.11.23.     FadeIn v0.6.7
+========================================================
+- fixed ScrollBar on Left messing up TopView
+: reworked Item/Type classes
+: changed Base SDK to iOS 4.1, Deployment Target to iOS 3.1.2
+- fixed crash when Adding Event/Session/Scene (setEditing crashed in iOS 4.x, but not in iOS 3.1.x)
++ added Version label to MainScreen
+- changed Add Accessory buttons to green
+
+
+2010.10.31.     FadeIn v0.6.6
+========================================================
++ added Settings to MainScreen (has persistence bugs!)
+
+
+2010.10.23.     FadeIn v0.6.5
+========================================================
++ added console: Soundcraft GB4
+
+
+2010.10.18.     FadeIn v0.6.4
+========================================================
+: reworked InfoBar/TopView (no XIB file)
++ transparent TopView
++ Quick Scene creation from MainScreen (by selecting Equipment)
+
+! TopView background image should have less contrast
+! Touches on TopView shouldn't control SCView
+
+
+2010.10.08.     FadeIn v0.6.3
+========================================================
+- fixed TextField issues
+- set static Title for Add screens
+- various Menu improvements
+- adding an Equipment to a Session, also adds it to existing Scenes
++ adding a Session to an Event, default Equipment is added from previous Session
+- fixed Session/Scene/Equipment ordering
++ added Halo to pressed Buttons & LEDs (needs tuning, proper images)
++ added console: Midas Venice 320
+
+
+2010.07.10.     FadeIn v0.6.2
+========================================================
++ added console: Yamaha PM4000
+! crash on XML/FIM color id differencies
+? textFields may have bugs (work-in-progress)
+! crash on First Run, when pressing '+' (AddEvent)
+
+
+2010.06.25.     FadeIn v0.6.1
+========================================================
+- fixed incorrect Verona width
+- optimized Item Management
+- fixed crash when exiting SoundCheckView while a timer is running (eg.: animating)
+
+
+2010.06.25.     FadeIn v0.6.0
+========================================================
++ added Database support
++ added the Notebook (needs a better name)
+    (contains Events, Sessions, etc.)
++ added Equipment selection (currently Consoles only)
+- changed XML structure
+
+? Scene Title doesn't work
+? Scene/Equipment ordering doesn't work
+! pushing a Screen while Keyboard is visible messes up scrolling
+! pressing Done while textField is offscreen sets Name to nil
+! ListScreen inserts new row while pushing AddScreen (maybe OK?)
+! AddScreen.title updates on Name change (maybe OK?)
+! Delete Confirmation Button is on the same spot as the Delete Button (dangerous?)
+? Venues
+? Notes
+? pressing Home Button while adding/editing
+? DateInterval validation
+? Horizontal orientation ??
+
+
+2010.06.02.     FadeIn v0.5.4
+========================================================
+- fixed incorrect touch detection in SoundCheckView
+
+
+2010.05.31.     FadeIn v0.5.3
+========================================================
+? work-in-progress build !!!
++ added (dummy) MainScreen
+    (Quick Scene does nothing)
++ added new models for console: Midas Verona
+    (added buttons, big knobs)
+    (reduced polycount)
++ SoundCheckView (dummy) info button goes back to MainScreen
+
+! no Texture support for Buttons
+! SoundCheckView lightning issues
+! incorrect touch detection in SoundCheckView
+    (control touch bounds are slided down)
+! crash on going back to MainScreen while SoundCheckView is animating
+! crash on going back to MainScreen while SoundCheckView is FaderZooming
+
+
+2010.04.11.     FadeIn v0.5.2
+========================================================
+- refined Bouncing (doesn't stop at turning point)
+- Fader adjusts only if Touching the Fader, not the Fader Track
+    (preventing accidental adjustment, when user wants to deselect)
+    (Fader is selected as before (also by Touching Fader Track))
++ in FaderView, Touching anything inside the Active Module (excluding the Fader, including the Fader Track)
+    deselects the Fader, Zooms in to Touch,
+    and does NOT perform new selection (but performs drag, scroll, etc.)
++ in FaderView, Touching outside the Active Module
+    deselects the Fader, Zooms in to Touch,
+    and performs drag, swipe, etc.
++ added different color for adjust in TopView
+    (to mark difference: selected vs. adjusting)
+- Touching on a Control while Scrolling no longer selects it
+    (preventing accidental selection or adjustment)
+
+! Channel Swipe needs complete redesign
+
+
+2010.04.09.     FadeIn v0.5.1
+========================================================
+: redesigned View/Controller Hierarchy
+- ScrollBar Highlight done properly
++ SoundCheckView actions update ScrollBar
+- resolved some Scrolling, Bouncing issues
+x removed Control Value display in TopView
++ added Button, LED support
++ added basic Zoom support (user can't Zoom, yet)
++ added automatic Fader ZoomIn/Out
+- distinct Fader Deselect Delay
+
+? Channel Swipe
+! LED on/off is just for indication
+! Channel changing is buggy, incomplete
+! Fader Zoom has issues
+
+
+2010.04.03.     FadeIn v0.5.0
+========================================================
++ first on-device release (internal)
+
+
+
+
+Legend:
+----------------------
++ added
+- modified/fixed
+x removed
+: internal change / ground work
+? work-in-progress
+! known issue

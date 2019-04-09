@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layouts type="Console" scale="0.20285714" height="2343" bgcolor="#1F3B4F" inactiveColor="0.988771 0.962500 0.875769">
+    <!-- scale: 28.4mm / 140px-->
+
+    <layoutDef name="Custom Defaults" dir="LeftRight">
+        <mainModule type="CHMono" id="cd__CHMono">MONO</mainModule>
+        <mainModule type="CHStereo" id="cd__CHStereo">STEREO</mainModule>
+    </layoutDef>
+    
+    <colors 
+        knobDark="#58585E"
+        knobLight="#B0B0B6"
+        buttonGray="#DADBDC"
+        red="#ED232A"
+        black="#363636"
+        white="#FFFFFF"
+        auxGreen="#77FF99"
+        auxBlue="#99D3FF"
+        yellow="#FFFF8C"
+        haloLight="#FFFFFF"
+        haloDark="#000000"
+    />
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        CONSOLE LAYOUTS
+    ------------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Soundcraft GB2 16CH" dir="LeftRight">
+    
+        <group>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModule type="CHStereo" id="ste1">STE1</mainModule>
+            <mainModule type="CHStereo" id="ste2">STE2</mainModule>
+        </group>
+        
+        <!--
+         <group>
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Soundcraft GB2 24CH" dir="LeftRight">
+    
+        <group>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="17" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModule type="CHStereo" id="ste1">STE1</mainModule>
+            <mainModule type="CHStereo" id="ste2">STE2</mainModule>
+        </group>
+        
+        <!--
+         <group>
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Soundcraft GB2 32CH" dir="LeftRight">
+    
+        <group>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="17" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModule type="CHStereo" id="ste1">STE1</mainModule>
+            <mainModule type="CHStereo" id="ste2">STE2</mainModule>
+        </group>
+        
+        <!--
+         <group>
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+        
+        <group>
+            <mainModuleArray type="CHMono" start="25" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        
+    </layoutDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+        MAIN MODULES
+    ------------------------------------------------------------------------------------------- -->
+    
+    <mainModuleDef name="CHMono" width="140" dir="TopDown">
+        <scrollbar file="gb2_sb_mono.png"/>
+        <module type="CH_Top-EQ_Mono" />
+        <module type="CH_Routing_Mono" />
+        <module type="CH_Fader_Mono" />
+    </mainModuleDef>
+    
+    <mainModuleDef name="CHStereo" width="153" dir="TopDown">
+        <scrollbar file="gb2_sb_stereo.png"/>
+        <module type="CH_Top-EQ_Stereo" />
+        <module type="CH_Routing_Stereo" />
+        <module type="CH_Fader_Stereo" />
+    </mainModuleDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+        MODULES
+    ------------------------------------------------------------------------------------------- -->
+    <!-- Textures:  TopLeft origin !! -->
+
+    <moduleDef name="CH_Top-EQ_Mono" height="967" tileDir="TopDown">
+        <texture file="gb2_tex0.png" x0="0" y0="0" w="140" h="967" />
+
+        <control type="SmallButton" x="100.5" y="154.5" colors="body=red" halo="haloLight">48V</control>
+        <control type="OrangeLED" x="125" y="180" link="1">PhantomLED</control>
+        <control type="SmallButton" x="100.5" y="205.5" halo="haloLight">PHASE</control>
+        <control type="SmallButton" y="342.5" halo="haloLight">HPF</control>
+        <control type="Gain" x="74" y="273">MIC GAIN</control>
+        
+        <control type="EQLevel" x="75" y="411">HF</control>
+        <group>
+            <control type="EQFreq" y="509">HI MID (Hz)</control>
+            <control type="EQLevel" y="598">HI MID (dB)</control>
+        </group>
+        <group>
+            <control type="EQFreq" y="696">LO MID (Hz)</control>
+            <control type="EQLevel" y="785">LO MID (dB)</control>
+        </group>
+        <control type="EQLevel" y="882">LF</control>
+        <control type="EQButton" x="100.5" y="945.5" >EQ</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Top-EQ_Stereo" height="967" tileDir="TopDown">
+        <texture file="gb2_tex0.png" x0="426" y0="0" w="153" h="967" />
+
+        <control type="SmallButton" x="100.5" y="154.5" colors="body=red" halo="haloLight">48V</control>
+        <control type="OrangeLED" x="125" y="180" link="1">PhantomLED</control>
+        <control type="SmallButton" x="100.5" y="205.5" halo="haloLight">PHASE</control>
+        <control type="SmallButton" y="341.5">LINE TO...</control>
+        <control type="Gain" x="74" y="273">MIC GAIN</control>
+        <control type="Gain" x="75" y="399">LINE</control>
+        <control type="SmallButton" x="100.5" y="466.5" halo="haloLight">MONO L</control>
+        <control type="SmallButton" y="517.5" halo="haloLight">MONO R</control>
+        
+        <control type="EQLevel" x="75" y="591">HF</control>
+        <control type="EQLevel" dy="97">HM</control>
+        <control type="EQLevel" dy="97">LM</control>
+        <control type="EQLevel" dy="97">LF</control>
+        <control type="EQButton" x="100.5" y="945.5" >EQ</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Routing_Mono" height="672" tileDir="TopDown">
+        <texture file="gb2_tex0.png" x0="142" y0="0" w="140" h="672" />
+
+        <control type="SmallButton" x="100.5" y="200.5">AUX 3-4 PRE</control>
+        <control type="AUX" x="75" y="41.5" colors="top=auxGreen">AUX1</control>
+        <control type="AUX" dy="89" colors="top=auxGreen">AUX2</control>
+        <control type="AUX" y="263.5" colors="top=auxBlue">AUX3</control>
+        <control type="AUX" dy="89" colors="top=auxBlue">AUX4</control>
+        <control type="AUX" dy="89" colors="top=buttonGray">AUX5</control>
+        <control type="AUX" dy="89" colors="top=buttonGray">AUX6</control>
+
+        <control type="Pan" y="631">PAN</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Routing_Stereo" height="672" tileDir="TopDown">
+        <texture file="gb2_tex0.png" x0="581" y0="0" w="153" h="672" />
+
+        <control type="SmallButton" x="100.5" y="200.5">AUX 3-4 PRE</control>
+        <control type="AUX" x="75" y="41.5" colors="top=auxGreen">AUX1</control>
+        <control type="AUX" dy="89" colors="top=auxGreen">AUX2</control>
+        <control type="AUX" y="263.5" colors="top=auxBlue">AUX3</control>
+        <control type="AUX" dy="89" colors="top=auxBlue">AUX4</control>
+        <control type="AUX" dy="89" colors="top=buttonGray">AUX5</control>
+        <control type="AUX" dy="89" colors="top=buttonGray">AUX6</control>
+        
+        <control type="Pan" y="631">BAL</control>
+    </moduleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <moduleDef name="CH_Fader_Mono" height="704" tileDir="TopDown">
+        <texture file="gb2_tex0.png" x0="284" y0="0" w="140" h="704" />
+        
+        <control type="SmallButton" x="100.5" y="35.5" colors="body=red">MUTE</control>
+        <control type="RedLED" x="125" y="67" link="1">MUTE_LED</control>
+        <control type="Fader" x="43" y="585">FADER</control>
+        <control type="SmallButton" x="100.5" y="117.5">1-2</control>
+        <control type="SmallButton" dy="57">3-4</control>
+        <control type="SmallButton" dy="57">MIX</control>
+
+        <control type="RedLED" x="125" y="276">PK_LED</control>
+        <control type="GreenLED" y="301">SIG_LED</control>
+        <control type="RedLED" y="339">PFL_LED</control>
+        <control type="SmallButton" x="100.5" y="364.5" link="1">PFL</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Fader_Stereo" height="704" tileDir="TopDown">
+        <texture file="gb2_tex0.png" x0="736" y0="0" w="153" h="704" />
+        
+        <control type="SmallButton" x="100.5" y="35.5" colors="body=red">MUTE</control>
+        <control type="RedLED" x="125" y="67" link="1">MUTE_LED</control>
+        <control type="Fader" x="43" y="585"
+            colors="body=#2170BF, mark=#242424">FADER</control>
+        <control type="SmallButton" x="100.5" y="117.5">1-2</control>
+        <control type="SmallButton" dy="57">3-4</control>
+        <control type="SmallButton" dy="57">MIX</control>
+        
+        <control type="RedLED" x="125" y="276">PK_LED</control>
+        <control type="GreenLED" y="301">SIG_LED</control>
+        <control type="RedLED" y="339">PFL_LED</control>
+        <control type="SmallButton" x="100.5" y="364.5" link="1">PFL</control>
+    </moduleDef>
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        CONTROLS
+    ------------------------------------------------------------------------------------------- -->
+
+    <!---- LEDs ---->
+
+    <controlDef name="RedLED" class="LED"
+        default="0.0"
+        mesh="gb_led.fim">
+        <color id="body" value="#A00000"/>
+        <colorON id="body" value="#B80000"/>
+        <halo color="#FF0000" alpha="0.7"/>
+    </controlDef>
+    
+    <controlDef name="OrangeLED" class="LED"
+        default="0.0"
+        mesh="gb_led.fim">
+        <color id="body" value="#CC6600"/>
+        <colorON id="body" value="#FF6400"/>
+        <halo color="#FF7400" alpha="0.7"/>
+    </controlDef>
+    
+    <controlDef name="GreenLED" class="LED"
+        default="0.0"
+        mesh="gb_led.fim">
+        <color id="body" value="#008000"/>
+    </controlDef>
+    
+
+    <!---- Buttons ---->
+    
+    <controlDef name="SmallButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="gb_button.fim">
+        <color id="body" value="buttonGray"/>
+        <halo color="haloDark"/>
+    </controlDef>
+    
+    <controlDef name="EQButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="1.0"
+        mesh="gb_button.fim">
+        <color id="body" value="buttonGray"/>
+        <halo color="haloDark"/>
+    </controlDef>
+    
+
+    <!---- Knobs ---->
+    
+    <controlDef name="Gain" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="gb_knob.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top"  value="red"/>
+        <color id="mark" value="knobDark"/>
+    </controlDef>
+    
+    <controlDef name="EQFreq" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="gb_knob.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top"  value="white"/>
+        <color id="mark" value="knobDark"/>
+    </controlDef>
+    
+    <controlDef name="EQLevel" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="gb_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="black"/>
+        <color id="mark" value="knobLight"/>
+    </controlDef>
+    
+    <controlDef name="AUX" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="gb_knob.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top"  value="black"/>
+        <color id="mark" value="knobDark"/>
+    </controlDef>
+    
+    <controlDef name="Pan" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="gb_knob.fim">
+        <color id="body" value="knobDark"/>
+        <color id="top"  value="yellow"/>
+        <color id="mark" value="knobDark"/>
+    </controlDef>
+    
+
+    <!---- Faders ---->
+
+    <controlDef name="Fader" class="Fader"
+        sMax="100.0"
+        default="0.0"
+        mesh="gb_fader.fim">
+        <color id="body" value="black"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+
+
+</layouts>

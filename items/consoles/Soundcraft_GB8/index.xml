@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Soundcraft" product="GB8" file="soundcraft_gb8.xml">
+    <layout name="Soundcraft GB8 16CH" desc="[ 8M ][ 4ST ][ Master ][ 8M ]"/>
+    <layout name="Soundcraft GB8 24CH" desc="[ 24M ][ 4ST ][ Master ]"/>
+    <layout name="Soundcraft GB8 32CH" desc="[ 24M ][ 4ST ][ Master ][ 8M ]"/>
+    <layout name="Soundcraft GB8 40CH" desc="[ 24M ][ 4ST ][ Master ][ 16M ]"/>
+    <layout name="Soundcraft GB8 48CH" desc="[ 32M ][ 4ST ][ Master ][ 16M ]"/>
+</equipment>

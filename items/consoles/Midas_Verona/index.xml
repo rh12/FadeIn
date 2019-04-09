@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Midas" product="Verona" file="midas_verona.xml">
+    <group>
+        <layout name="Midas Verona 240" desc="[ 16M ][ 8ST ][ Master ]"/>
+        <layout name="Midas Verona 240 (24M)" desc="[ 24M ][ Master ]"/>
+    </group>
+    <group>
+        <layout name="Midas Verona 320" desc="[ 16M ][ Master ][ 8ST ][ 8M ]"/>
+        <layout name="Midas Verona 320 (ST-last)" desc="[ 16M ][ Master ][ 8M ][ 8ST ]"/>
+    </group>
+    <group>
+        <layout name="Midas Verona 400" desc="[ 24M ][ Master ][ 8ST ][ 8M ]"/>
+        <layout name="Midas Verona 400 (ST-last)" desc="[ 24M ][ Master ][ 8M ][ 8ST ]"/>
+    </group>
+    <group>
+        <layout name="Midas Verona 480" desc="[ 24M ][ Master ][ 8ST ][ 16M ]"/>
+        <layout name="Midas Verona 480 (ST-last)" desc="[ 24M ][ Master ][ 16M ][ 8ST ]"/>
+    </group>
+    <group>
+        <layout name="Midas Verona 560" desc="[ 24M ][ Master ][ 8ST ][ 24M ]"/>
+    </group>
+    <group>
+        <layout name="Midas Verona 640" desc="[ 32M ][ Master ][ 8ST ][ 24M ]"/>
+    </group>
+</equipment>

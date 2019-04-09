@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Midas" product="Siena" file="midas_siena.xml">
+    <layout name="Midas Siena 240" desc="[ 24M ][ Master ]"/>
+    <layout name="Midas Siena 320" desc="[ 24M ][ Master ][ 8M ]"/>
+    <layout name="Midas Siena 400" desc="[ 24M ][ Master ][ 16M ]"/>
+    <layout name="Midas Siena 480" desc="[ 24M ][ Master ][ 24M ]"/>
+    <layout name="Midas Siena 560" desc="[ 24M ][ Master ][ 32M ]"/>
+    <layout name="Midas Siena 640" desc="[ 32M ][ Master ][ 32M ]"/>
+</equipment>

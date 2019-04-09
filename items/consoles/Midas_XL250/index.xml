@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Midas" product="XL250" file="midas_xl250.xml">
+    <layout name="Midas XL250" desc="[ 24M ][ Master ][ 20M ][ 4ST ]"/>
+</equipment>

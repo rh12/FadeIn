@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layouts type="Console" scale="0.18571429" height="2834">
+    <!-- scale: 26mm / 140px -->
+
+    <layoutDef name="Custom Defaults" dir="LeftRight">
+        <mainModule type="CHMono" id="cd__CHMono">MONO</mainModule>
+        <mainModule type="CHStereo" id="cd__CHStereo">STEREO</mainModule>
+    </layoutDef>
+    
+    <colors 
+        knobLight="#D0D2D4"
+        buttonGray="#DADBDC"
+        darkGray="#606060"
+        pflGray="#C2C3C4"
+        black="#363636"
+        white="#FFFFFF"
+        red="#ED132A"
+        phantomRed="#CD030A"
+        lightBlue="#6FBFFF"
+        green="#009516"
+        blue="#0072C8"
+        yellow="#FAE52E"
+        brown="#784420"
+        haloLight="#FFFFFF"
+        haloDark="#000000"
+    />
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        CONSOLE LAYOUTS
+    ------------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Allen & Heath GL2800-824" dir="LeftRight">
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="9" count="6" id="ch*">*</mainModuleArray>
+            <mainModuleArray type="CHStereo" start="15" count="2" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+             <mainModule type="MasterSection">M</mainModule>
+             <module type="EdgeRight"/>
+         </group>
+         -->
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="17" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <layoutDef name="Allen & Heath GL2800-832" dir="LeftRight">
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="9" count="6" id="ch*">*</mainModuleArray>
+            <mainModuleArray type="CHStereo" start="15" count="2" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+             <mainModule type="MasterSection">M</mainModule>
+             <module type="EdgeRight"/>
+         </group>
+         -->
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="17" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="25" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <layoutDef name="Allen & Heath GL2800-840" dir="LeftRight">
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="17" count="6" id="ch*">*</mainModuleArray>
+            <mainModuleArray type="CHStereo" start="23" count="2" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+             <mainModule type="MasterSection">M</mainModule>
+             <module type="EdgeRight"/>
+         </group>
+         -->
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="25" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="33" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <layoutDef name="Allen & Heath GL2800-848" dir="LeftRight">
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="17" count="6" id="ch*">*</mainModuleArray>
+            <mainModuleArray type="CHStereo" start="23" count="2" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+             <mainModule type="MasterSection">M</mainModule>
+             <module type="EdgeRight"/>
+         </group>
+         -->
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="25" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="33" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="41" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <layoutDef name="Allen & Heath GL2800-856" dir="LeftRight">
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="17" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="25" count="6" id="ch*">*</mainModuleArray>
+            <mainModuleArray type="CHStereo" start="31" count="2" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+        <!--
+         <group>
+             <mainModule type="MasterSection">M</mainModule>
+             <module type="EdgeRight"/>
+         </group>
+         -->
+        
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="33" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="41" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        <group>
+            <module type="EdgeLeft"/>
+            <mainModuleArray type="CHMono" start="49" count="8" id="ch*">*</mainModuleArray>
+            <module type="EdgeRight"/>
+        </group>
+        
+    </layoutDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+        MAIN MODULES
+    ------------------------------------------------------------------------------------------- -->
+    
+    <mainModuleDef name="CHMono" width="140" dir="TopDown">
+        <scrollbar file="gl2800_sb_mono.png"/>
+        <module type="CH_Top&EQ_Mono" />
+        <module type="CH_Routing_Mono" />
+        <module type="CH_Fader_Mono" />
+    </mainModuleDef>
+    
+    <mainModuleDef name="CHStereo" width="167" dir="TopDown">
+        <scrollbar file="gl2800_sb_stereo.png"/>
+        <module type="CH_Top&EQ_Stereo" />
+        <module type="CH_Routing_Stereo" />
+        <module type="CH_Fader_Stereo" />
+    </mainModuleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="EdgeLeft" width="60">
+        <texture file="gl2800_tex1.png" x0="0" y0="0" w="60" h="880" />
+        <texture file="gl2800_tex1.png" x0="104" y0="0" w="60" h="1024" />
+        <texture file="gl2800_tex1.png" x0="0" y0="882" w="60" h="136" />
+        <texture file="gl2800_tex1.png" x0="208" y0="0" w="60" h="794" />
+    </moduleDef>
+    
+    <moduleDef name="EdgeRight" width="40">
+        <texture file="gl2800_tex1.png" x0="62" y0="0" w="40" h="880" />
+        <texture file="gl2800_tex1.png" x0="166" y0="0" w="40" h="1024" />
+        <texture file="gl2800_tex1.png" x0="62" y0="882" w="40" h="136" />
+        <texture file="gl2800_tex1.png" x0="270" y0="0" w="40" h="794" />
+    </moduleDef>
+
+    <!-- ------------------------------------------------------------------------------------------
+        MODULES
+    ------------------------------------------------------------------------------------------- -->
+    <!-- Textures:  TopLeft origin !! -->
+
+    <moduleDef name="CH_Top&EQ_Mono" height="880" tileDir="TopDown">
+        <texture file="gl2800_tex0.png" x0="0" y0="0" w="140" h="880" />
+
+        <control type="GrayButton"      x="51.5"    y="51"      colors="body=phantomRed">+48V</control>
+        <control type="GrayButton"                  y="105"     >POLARITY</control>
+        <control type="GrayButton"                  y="159"     >LINE (PAD)</control>
+        <control type="GrayButton"                  y="299"     >HPF</control>
+        <control type="Gain"            x="70"      y="229.5"   >GAIN</control>
+        
+        <control type="EQLevel"         x="70"      y="369.5"   >HF</control>
+        <group>
+            <control type="EQFreq"                  y="453"     >HM (Hz)</control>
+            <control type="EQLevel"                 y="536.5"   >HM (dB)</control>
+        </group>
+        <group>
+            <control type="EQFreq"                  y="620"     >LM (Hz)</control>
+            <control type="EQLevel"                 y="703.5"   >LM (dB)</control>
+        </group>
+        <control type="EQLevel"                     y="787.5"   >LF</control>
+        <control type="EQButton"        x="51.5"    y="852"     >EQ IN</control>
+    </moduleDef>
+    
+    
+    <moduleDef name="CH_Top&EQ_Stereo" height="880" tileDir="TopDown">
+        <texture file="gl2800_tex0.png" x0="142" y0="0" w="167" h="880" />
+        
+        <control type="GrayButton"      x="59.5"    y="51"      colors="body=phantomRed">+48V</control>
+        <control type="GrayButton"                  y="105"     >POLARITY</control>
+        <control type="GrayButton"                  y="159"     >LINE (PAD)</control>
+        <control type="GrayButton"                  y="299"     >HPF</control>
+        <control type="Gain"            x="78"      y="229.5"   >GAIN</control>
+        <control type="Gain"                        y="385.5"   >STEREO GAIN</control>
+        
+        <control type="EQLevel"         x="78"      y="496.5"   >HF</control>
+        <control type="EQLevel"                     y="593"     >HM</control>
+        <control type="EQLevel"                     y="690.5"   >LM</control>
+        <control type="EQLevel"                     y="787.5"   >LF</control>
+        <control type="EQButton"        x="59.5"    y="852"     >EQ IN</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Routing_Mono" height="1160" tileDir="TopDown">
+        <texture file="gl2800_tex0.png" x0="311" y0="0" w="140" h="1024" />
+        <texture file="gl2800_tex0.png" x0="0" y0="882" w="140" h="136" />
+
+        <control type="AUX"             x="70"      y="45"      colors="top=darkGray">AUX 1</control>
+        <control type="AUX"                         y="128.5"   colors="top=darkGray">AUX 2</control>
+        <control type="AUX"                         y="218"     colors="top=black">AUX 3</control>
+        <control type="AUX"                         y="301.5"   colors="top=black">AUX 4</control>
+        <control type="AUX"                         y="431"     colors="top=lightBlue">AUX 5</control>
+        <control type="AUX"                         y="514.5"   colors="top=lightBlue">AUX 6</control>
+        <control type="AUX"                         y="598"     >AUX 7</control>
+        <control type="AUX"                         y="681.5"   >AUX 8</control>
+        <control type="AUX"                         y="816"     colors="top=yellow">AUX 9-10</control>
+        <control type="Pan"                         y="905.5"   >AUX PAN</control>
+        
+        <control type="SmallBlueButton" x="51"      y="172"     >PRE-EQ</control>
+        <control type="GrayButton"      x="51.5"    y="366.5"   >AUX 1-4 PRE</control>
+        <control type="GrayButton"                  y="746.5"   >AUX 5-8 PRE</control>
+        <control type="GrayButton"                  y="975.5"   >AUX 9-10 PRE</control>
+
+        <control type="Pan"             x="70"      y="1048.5"  >PAN</control>
+        <control type="MuteButton"      x="52.5"    y="1129.5"  >MUTE</control>
+        <control type="MuteLED"         x="20.5"                link="1">MuteLED</control>
+    </moduleDef>
+    
+    <moduleDef name="CH_Routing_Stereo" height="1160" tileDir="TopDown">
+        <texture file="gl2800_tex0.png" x0="453" y0="0" w="167" h="1024" />
+        <texture file="gl2800_tex0.png" x0="142" y0="882" w="167" h="136" />
+        
+        <control type="AUX"         x="78"      y="45"      colors="top=darkGray">AUX 1</control>
+        <control type="AUX"                     y="128.5"   colors="top=darkGray">AUX 2</control>
+        <control type="AUX"                     y="218"     colors="top=black">AUX 3</control>
+        <control type="AUX"                     y="301.5"   colors="top=black">AUX 4</control>
+        <control type="AUX"                     y="431"     colors="top=lightBlue">AUX 5</control>
+        <control type="AUX"                     y="514.5"   colors="top=lightBlue">AUX 6</control>
+        <control type="AUX"                     y="598"     >AUX 7</control>
+        <control type="AUX"                     y="681.5"   >AUX 8</control>
+        <control type="AUX"                     y="816"     colors="top=yellow">AUX 9-10</control>
+        <control type="Pan"                     y="905.5"   >AUX BAL</control>
+        
+        <control type="GrayButton"  x="59.5"    y="366.5"   >AUX 1-4 PRE</control>
+        <control type="GrayButton"              y="746.5"   >AUX 5-8 PRE</control>
+        <control type="GrayButton"              y="975.5"   >AUX 9-10 PRE</control>
+        
+        <control type="Pan"         x="78"      y="1048.5"  >BAL</control>
+        <control type="MuteButton"  x="60.5"    y="1129.5"  >MUTE</control>
+        <control type="MuteLED"     x="28.5"                link="1">MuteLED</control>
+    </moduleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <moduleDef name="CH_Fader_Mono" height="794" tileDir="TopDown">
+        <texture file="gl2800_tex0.png" x0="715" y0="0" w="140" h="794" />
+        
+        <control type="PFLButton"       x="51.5"    y="33.5"    >PFL</control>
+        <control type="YellowLED"       x="19"                  link="1">PFL_LED</control>
+        
+        <control type="RedSignalLED"    x="46"      y="98"      >PK_LED</control>
+        <control type="YellowSignalLED"             dy="14.5"   >+6_LED</control>
+        <control type="GreenSignalLED"              dy="14.5"   >0_LED</control>
+        <control type="GreenSignalLED"              dy="14.5"   >SIG_LED</control>
+        
+        <control type="GrayButton"      x="51.5"    y="215"     halo="haloDark">M</control>
+        <control type="GrayButton"                  dy="54"     colors="body=white" halo="haloDark">L-R</control>
+        <control type="GrayButton"                  dy="54"     halo="haloDark">1-2</control>
+        <control type="GrayButton"                  dy="54"     halo="haloDark">3-4</control>
+        <control type="GrayButton"                  dy="54"     halo="haloDark">5-6</control>
+        <control type="GrayButton"                  dy="54"     halo="haloDark">7-8</control>
+        <control type="GrayButton"                  y="582"     colors="body=white" halo="haloDark">M1</control>
+        <control type="GrayButton"                  dy="54"     colors="body=white" halo="haloDark">M2</control>
+        <control type="GrayButton"                  dy="54"     colors="body=white" halo="haloDark">M3</control>
+        <control type="GrayButton"                  dy="54"     colors="body=white" halo="haloDark">M4</control>
+        
+        <control type="Fader"           x="102.5"   y="698"     >FADER</control>
+    </moduleDef>
+
+    <moduleDef name="CH_Fader_Stereo" height="794" tileDir="TopDown">
+        <texture file="gl2800_tex0.png" x0="857" y0="0" w="167" h="794" />
+        
+        <control type="PFLButton"       x="59.5"    y="33.5"    >PFL</control>
+        <control type="YellowLED"       x="27"                  link="1">PFL_LED</control>
+        
+        <control type="RedSignalLED"    x="54"      y="98"      >PK_LED</control>
+        <control type="YellowSignalLED"             dy="14.5"   >+6_LED</control>
+        <control type="GreenSignalLED"              dy="14.5"   >0_LED</control>
+        <control type="GreenSignalLED"              dy="14.5"   >SIG_LED</control>
+        
+        <control type="GrayButton"      x="59.5"    y="215"     halo="haloDark">M</control>
+        <control type="GrayButton"                  dy="54"     colors="body=white" halo="haloDark">L-R</control>
+        <control type="GrayButton"                  dy="54"     halo="haloDark">1-2</control>
+        <control type="GrayButton"                  dy="54"     halo="haloDark">3-4</control>
+        <control type="GrayButton"                  dy="54"     halo="haloDark">5-6</control>
+        <control type="GrayButton"                  dy="54"     halo="haloDark">7-8</control>
+        <control type="GrayButton"                  y="582"     colors="body=white" halo="haloDark">M1</control>
+        <control type="GrayButton"                  dy="54"     colors="body=white" halo="haloDark">M2</control>
+        <control type="GrayButton"                  dy="54"     colors="body=white" halo="haloDark">M3</control>
+        <control type="GrayButton"                  dy="54"     colors="body=white" halo="haloDark">M4</control>
+        
+        <control type="Fader"           x="129.5"   y="698"     colors="body=lightBlue, mark=black">FADER</control>
+    </moduleDef>
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        CONTROLS
+    ------------------------------------------------------------------------------------------- -->
+
+    <!---- LEDs ---->
+
+    <controlDef name="YellowLED" class="LED"
+        default="0.0"
+        mesh="gl_led.fim">
+        <color id="body" value="#808000"/>
+        <colorON id="body" value="#B0B000"/>
+        <halo color="#FFFF00" alpha="0.7"/>
+    </controlDef>
+    
+    <controlDef name="RedLED" class="LED"
+        default="0.0"
+        mesh="gl_led.fim">
+        <color id="body" value="#A00000"/>
+        <colorON id="body" value="#B80000"/>
+        <halo color="#FF0000" alpha="0.7"/>
+    </controlDef>
+    
+    <controlDef name="GreenLED" class="LED"
+        default="0.0"
+        mesh="gl_led.fim">
+        <color id="body" value="#008000"/>
+        <colorON id="body" value="#00B800"/>
+        <halo color="#00FF00" alpha="0.6"/>
+    </controlDef>
+    
+    <controlDef name="MuteLED" class="LED"
+        default="0.0"
+        mesh="gl_led_mute.fim">
+        <color id="body" value="#A00000"/>
+        <colorON id="body" value="#B80000"/>
+        <halo type="rect" color="#FF0000" alpha="0.7"/>
+    </controlDef>
+    
+    <controlDef name="RedSignalLED" class="LED"
+        default="0.0"
+        mesh="gl_led_signal.fim">
+        <color id="body" value="#A00000"/>
+    </controlDef>
+    
+    <controlDef name="YellowSignalLED" class="LED"
+        default="0.0"
+        mesh="gl_led_signal.fim">
+        <color id="body" value="#808000"/>
+    </controlDef>
+    
+    <controlDef name="GreenSignalLED" class="LED"
+        default="0.0"
+        mesh="gl_led_signal.fim">
+        <color id="body" value="#008000"/>
+    </controlDef>
+    
+    <controlDef name="2trkLED" class="LED"
+        default="0.0"
+        mesh="gl_led_mute.fim">
+        <color id="body" value="#008000"/>
+        <colorON id="body" value="#00B800"/>
+        <halo type="rect" color="#00FF00" alpha="0.6"/>
+    </controlDef>
+    
+
+    <!---- Buttons ---->
+    
+    <controlDef name="GrayButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="gl_button.fim">
+        <color id="body" value="buttonGray"/>
+    </controlDef>
+    
+    <controlDef name="EQButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="1.0"
+        mesh="gl_button.fim">
+        <color id="body" value="white"/>
+    </controlDef>
+    
+    <controlDef name="MuteButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="gl_button_wide.fim">
+        <color id="body" value="white"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="PFLButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="gl_button_pfl.fim">
+        <color id="body" value="pflGray"/>
+        <halo type="hidden" color="haloDark"/>
+    </controlDef>
+    
+    <controlDef name="SmallBlueButton" class="Button"
+        zON="-4.0" zOFF="-4.0"
+        default="0.0"
+        extend="2.0"
+        mesh="gl_button_small.fim">
+        <color id="body" value="blue"/>
+    </controlDef>
+    
+
+    <!---- Knobs ---->
+    
+    <controlDef name="Gain" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="gl_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="red"/>
+        <color id="mark" value="knobLight"/>
+    </controlDef>
+    
+    <controlDef name="EQLevel" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="gl_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="lightBlue"/>
+        <color id="mark" value="knobLight"/>
+    </controlDef>
+    
+    <controlDef name="EQFreq" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="gl_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="green"/>
+        <color id="mark" value="knobLight"/>
+    </controlDef>
+    
+    <controlDef name="AUX" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="30.0"
+        mesh="gl_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="blue"/>
+        <color id="mark" value="knobLight"/>
+    </controlDef>
+    
+    <controlDef name="Pan" class="Knob"
+        fiMin="30.0"
+        fiMax="330.0"
+        default="180.0"
+        mesh="gl_knob.fim">
+        <color id="body" value="knobLight"/>
+        <color id="top"  value="brown"/>
+        <color id="mark" value="knobLight"/>
+    </controlDef>
+    
+
+    <!---- Faders ---->
+
+    <controlDef name="Fader" class="Fader"
+        sMax="100.0"
+        default="0.0"
+        mesh="gl_fader.fim">
+        <color id="body" value="black"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+
+
+</layouts>

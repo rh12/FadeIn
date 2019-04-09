@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Soundcraft" product="MH3" file="soundcraft_mh3.xml">
+    <layout name="Soundcraft MH3 24CH" desc="[ 16M ][ 4ST ][ Master ][ 8M ]"/>
+    <layout name="Soundcraft MH3 32CH" desc="[ 24M ][ 4ST ][ Master ][ 8M ]"/>
+    <layout name="Soundcraft MH3 40CH" desc="[ 24M ][ 4ST ][ Master ][ 16M ]"/>
+    <layout name="Soundcraft MH3 48CH" desc="[ 24M ][ 4ST ][ Master ][ 24M ]"/>
+    <layout name="Soundcraft MH3 56CH" desc="[ 32M ][ 4ST ][ Master ][ 24M ]"/>
+</equipment>

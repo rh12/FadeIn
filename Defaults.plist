@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>touchInsideSwipes</key>
+	<true/>
+	<key>touchOutsideSwipes</key>
+	<true/>
+	<key>tapChangesModule</key>
+	<true/>
+	<key>touchInsideScrolls</key>
+	<true/>
+	<key>touchOutsideScrolls</key>
+	<true/>
+	<key>scrollbarOnLeft</key>
+	<false/>
+	<key>disableUnmarked</key>
+	<true/>
+	<key>showAssistView</key>
+	<true/>
+	<key>doubleTapAdjusts</key>
+	<true/>
+	<key>chResetConfirmation</key>
+	<true/>
+</dict>
+</plist>

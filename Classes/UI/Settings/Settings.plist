@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>sections</key>
+	<array>
+		<dict>
+			<key>sectionHeader</key>
+			<string></string>
+			<key>sectionFooter</key>
+			<string></string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>cellType</key>
+					<string>page</string>
+					<key>cellTitle</key>
+					<string>Navigation</string>
+					<key>sections</key>
+					<array>
+						<dict>
+							<key>sectionHeader</key>
+							<string>Change Module</string>
+							<key>sectionFooter</key>
+							<string>Change module when swiping horizontally from inside or outside, or when tapping outside the Active Module.</string>
+							<key>rows</key>
+							<array>
+								<dict>
+									<key>cellType</key>
+									<string>check</string>
+									<key>cellKey</key>
+									<string>touchInsideSwipes</string>
+									<key>cellTitle</key>
+									<string>Swipe from inside</string>
+								</dict>
+								<dict>
+									<key>cellType</key>
+									<string>check</string>
+									<key>cellKey</key>
+									<string>touchOutsideSwipes</string>
+									<key>cellTitle</key>
+									<string>Swipe from outside</string>
+								</dict>
+								<dict>
+									<key>cellType</key>
+									<string>check</string>
+									<key>cellKey</key>
+									<string>tapChangesModule</string>
+									<key>cellTitle</key>
+									<string>Tap outside</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>sectionHeader</key>
+							<string>Scroll Module</string>
+							<key>sectionFooter</key>
+							<string>Scroll module when swiping vertically inside or outside the Active Module.</string>
+							<key>rows</key>
+							<array>
+								<dict>
+									<key>cellType</key>
+									<string>check</string>
+									<key>cellKey</key>
+									<string>touchInsideScrolls</string>
+									<key>cellTitle</key>
+									<string>Scroll inside</string>
+								</dict>
+								<dict>
+									<key>cellType</key>
+									<string>check</string>
+									<key>cellKey</key>
+									<string>touchOutsideScrolls</string>
+									<key>cellTitle</key>
+									<string>Scroll outside</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>sectionHeader</key>
+							<string></string>
+							<key>sectionFooter</key>
+							<string>When the console is Locked, changing module jumps over unedited modules.</string>
+							<key>rows</key>
+							<array>
+								<dict>
+									<key>cellType</key>
+									<string>switch</string>
+									<key>cellKey</key>
+									<string>disableUnmarked</string>
+									<key>cellTitle</key>
+									<string>Skip unedited modules</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>sectionHeader</key>
+			<string></string>
+			<key>sectionFooter</key>
+			<string></string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>cellType</key>
+					<string>page</string>
+					<key>cellTitle</key>
+					<string>Controls</string>
+					<key>sections</key>
+					<array>
+						<dict>
+							<key>sectionHeader</key>
+							<string></string>
+							<key>sectionFooter</key>
+							<string>Shows Assist Window when selecting or adjusting knobs.</string>
+							<key>rows</key>
+							<array>
+								<dict>
+									<key>cellType</key>
+									<string>switch</string>
+									<key>cellKey</key>
+									<string>showAssistView</string>
+									<key>cellTitle</key>
+									<string>Knob Assist Window</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>sectionHeader</key>
+							<string></string>
+							<key>sectionFooter</key>
+							<string>The selected button can be adjusted by tapping on it again.</string>
+							<key>rows</key>
+							<array>
+								<dict>
+									<key>cellType</key>
+									<string>switch</string>
+									<key>cellKey</key>
+									<string>doubleTapAdjusts</string>
+									<key>cellTitle</key>
+									<string>Tap adjusts button</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>sectionHeader</key>
+			<string></string>
+			<key>sectionFooter</key>
+			<string></string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>cellType</key>
+					<string>switch</string>
+					<key>cellKey</key>
+					<string>scrollbarOnLeft</string>
+					<key>cellTitle</key>
+					<string>Scrollbar on Left</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>sectionHeader</key>
+			<string></string>
+			<key>sectionFooter</key>
+			<string>Resetting a module asks for confirmation.</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>cellType</key>
+					<string>switch</string>
+					<key>cellKey</key>
+					<string>chResetConfirmation</string>
+					<key>cellTitle</key>
+					<string>Reset Confirmation</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

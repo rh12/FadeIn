@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Yamaha" product="PM3500M" file="yamaha_pm3500m.xml">
+    <layout name="Yamaha PM3500M-44" desc="[ 28M ][ Master ][ 16M ]"/>
+    <layout name="Yamaha PM3500M-52" desc="[ 28M ][ Master ][ 24M ]"/>
+</equipment>

@@ -1,0 +1,189 @@
+<1.4 BUGS:
+=============
+! Help, images may disappear
+    - specific Help page was displayed before (so image had been loaded)
+    - after loading FadeIn from background
+    - image was cleared from cache behind the back of webview?
+! rapidly selecting a button and another may leave InfoBar in invalid state
+    - cInfoView is hidden but mInfoView has not shown
+    - OR the other way around
+    - occures rarely, cant reproduce consistently
+        - slow motion does not help
+        - calling NSLog-s here and there makes it very rare
+! MH2 & MH3 M-ST texture float issue: top & eq
+! MH2 & MH3 button colors
+
+
+_______________
+|  1.4 TODO   |  (ignore 1.3 wip features, for now)
+===============
+! disappearing navBar
+    - reach SCVC through Notebook, go back
+    - Continue to notebook-reached-SCVC, go back -> noNavBar
+! photobrowser full-screen - safe area issue
+? all textures should be x2:
+- Textures
+    - when loading a tex file, there is a @2x version: store it somewhere
+        (or store every file dimension in a texSizeArray)
+    - in XML <texture ... x0="" also set 2x0=""
+    - when loading equipment save the relevant x0 value (x0 or 2x0),
+        depending on the stored @2x.png availability
+    - w="" and h="" values should simply be doubled for @2x
+        NO!! button textures are already big, so check for 2w and 2h, and double if not found
+    - thats all that is needed for @2x support
+- about page
+- iphoneX support
+
+
+_______________
+|  1.3 TODO   |
+===============
+
+MASTER SECTION:
+===============
+- updateLayout flickers sometimes when showing/hiding Scrollbar
+
+- Scroll restrict idea:
+    - Scroll can be restricted to one direction (to help staying in the active LogicModule)
+        - if after the activation of a LogicModule
+            - some small time passed without Scrolling
+            - a Control on it was selected
+            - there was a Zoom gesture
+        - or if the LogicModule was activated by
+            - Zooming or Tapping on it
+            - Continuing a saved Scene
+
+
+- PM3000
+    - Knob small/big foltos
+- Favorites:
+    - should display before using (or blue arrow it)
+    - should be able to edit Favorite CDs later
+
+
+RETINA DISPLAY:
+===============
+- UPDATE FACEBOOK IMAGES
+
+
+_______________
+|  1.x TODO   |
+===============
+
+- CoreData
+    - exception handling (in AppDelegate)
+
+    SCVIEW OPENGL
+- OpenGL optimizaton:
+    - animation: should use timeframe of displayLink to calculate position???
+    - multitexture: binding/enabling/disabling may need revision?
+- Labels
+- ItemLabels
+    - should improve inactive desaturation (add dominantColor attribute in XML?)
+? conditional XML (could check for tags in parent module)
+
+    SCVIEW
+- Pitch UI
+- Motion Detection (iPhone/iPod 4+ only)
+
+    SCVIEW HUD
+- Dropdown menu:
+    - Change Equipment
+    - Pitch
+- QuickJump facelift
+    - Button images should match InfoBar
+    - Highlighted Module text should be nicer
+    - Buttons should display Notes (?)
+- LoadValues
+    - general facelift
+    ? should not show current Scene
+    ? default Scene should be previous (or Reset, if there is no previous Scene)
+
+
+PERFORMANCE:
+=============
+- laggy on scrolling (animation) but not when draging the SB
+    - SB update takes time (redraw, not the calculation)
+    - propably too much vertex (VBOs?)
+- slow QuickJump display
+- when Zoomed out, should use smaller models (and maybe textures)
+
+
+RETINA DISPLAY:
+===============
+- Textures
+    - when loading a tex file, there is a @2x version: store it somewhere
+        (or store every file dimension in a texSizeArray)
+    - in XML <texture ... x0="" also set 2x0=""
+    - when loading equipment save the relevant x0 value (x0 or 2x0),
+        depending on the stored @2x.png availability
+    - w="" and h="" values should simply be doubled for @2x
+        NO!! button textures are already big, so check for 2w and 2h, and double if not found
+    - thats all that is needed for @2x support
+
+
+CLIPBOARD:
+==========
+? DateInterval validation
+? Landscape orientation
+? expand Artist Entity: Artist(name, photo, notes, (iPhone contacts)crew/contacts/artists)
+- import/export
+    ? whole DB
+    ? individual Events/Sessions/Scenes/Venues/etc)
+    ? for backup
+    ? for sharing with friends (email, wifi, etc?)
+- copy/move scenes, sessions (maybe move only???)
+    - in Edit mode
+    - press parent session/event row
+    - show action sheet with: copy/move/cancel
+    - show modal Events List with cancel/done button in NavBar
+        maybe jump to / mark current parent
+    - for Sessions:
+        select marks/unmarks the row
+    - for Scenes:
+        Event rows have gray Detail arrow on right, select pushes Sessions List (and unmarks any row)
+        Session row select marks/unmarks the row
+    ? if parent becomes empty ask to erase it
+    - after copy/move rebuild NavigationStack
+    ? exit Edit mode
+
+
+SCVIEW:
+=======
+    SCVIEW HUD
+- display differences from last (?) Scene, Control by Control
+    - show on InfoBar.Channel per Module
+    - show on Scrollbar per Control
+    - show on SCView per Control (???)
+- Channel Name editing
+    - Landscape orientation
+        - TextField rotating accordingly
+    - External keyboard
+        - will (may?) use Landscape, but wont show Keyboard
+        - need to place stuff accordingly
+
+    SCVIEW
+? Channel Swipe
+    - if finger is stopped (drag): late treshold, if not stopped (swipe): early treshold
+? SCView Locked, controls accept touches as if adjusted
+? Console Borders
+
+    INSERT
+- in place of Notes button:
+    - dropdown button
+    - for Linked Equipment:
+        - maybe only Link back button?
+        - how to decide:
+            Console or Rack by class
+- Link:
+    - long press to Edit???
+
+
+======================
+  DUNNO:
+======================
+
+DEMO:
+=============
+- calcDimensionsForModuleDef doesn't count with DemoLimit
+- moduleArray doesn't care about DemoLimit

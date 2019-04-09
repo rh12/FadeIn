@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layouts type="Console" scale="0.21" height="2962" bgcolor="#1F3B4F" inactiveColor="#DDDDDD">
+    <!-- scale: 29.4mm / 140px-->
+
+    <layoutDef name="Custom Defaults" dir="LeftRight">
+        <mainModule type="CHMono" id="cd__CHMono">MONO</mainModule>
+    </layoutDef>
+    
+    <colors 
+        black="#464646"
+        white="#F0F0CA"
+        yellow="#FAE660"
+        grey="#A0A08E"
+        green="#7BCCA6"
+        blue="#7A94C4"
+        red="#FF4657"
+    />
+    
+
+    <!-- ------------------------------------------------------------------------------------------
+        CONSOLE LAYOUTS
+    ------------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Yamaha PM3500M-44" dir="LeftRight">
+    
+        <group>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="17" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="25" count="4" id="ch*">*</mainModuleArray>
+        </group>
+        
+        <!--
+         <group>
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+         
+        <group>
+            <mainModuleArray type="CHMono" start="29" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="37" count="8" id="ch*">*</mainModuleArray>
+        </group>
+
+    </layoutDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <layoutDef name="Yamaha PM3500M-52" dir="LeftRight">
+    
+        <group>
+            <mainModuleArray type="CHMono" start="1" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="9" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="17" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="25" count="4" id="ch*">*</mainModuleArray>
+        </group>
+        
+        <!--
+         <group>
+         <mainModule type="MasterSection">M</mainModule>
+         </group>
+         -->
+         
+        <group>
+            <mainModuleArray type="CHMono" start="29" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="37" count="8" id="ch*">*</mainModuleArray>
+        </group>
+        <group>
+            <mainModuleArray type="CHMono" start="45" count="8" id="ch*">*</mainModuleArray>
+        </group>
+
+    </layoutDef>
+    
+    
+    <!-- ------------------------------------------------------------------------------------------
+        MAIN MODULES
+    ------------------------------------------------------------------------------------------- -->
+    
+    <mainModuleDef name="CHMono" width="140" dir="TopDown">
+        <scrollbar file="pm3500m_sb_mono.png"/>
+        <module type="CH_Top" />
+        <module type="CH_EQ" />
+        <module type="CH_AUX" />
+        <module type="CH_GRP" />
+        <module type="CH_On" />
+        <module type="CH_Fader" />
+    </mainModuleDef>
+
+
+    <!-- ------------------------------------------------------------------------------------------
+        MODULES
+    ------------------------------------------------------------------------------------------- -->
+    <!-- Textures:  TopLeft origin !! -->
+    
+    <moduleDef name="CH_Top" height="231" tileDir="TopDown">
+        <texture file="pm3500m_tex0.png" x0="0" y0="0" w="140" h="231" />
+        
+        <control type="PhantomButton"           x="38.5"    y="78"      >+48V</control>
+        <control type="Gain"                    x="86.5"    y="136.5"   >GAIN</control>
+        <control type="LeftOrangeLEDButton"     x="38.5"    y="200"     >PAD</control>
+        <control type="RightOrangeLEDButton"    x="99.5"                >PHASE</control>
+    </moduleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->    
+    
+    <moduleDef name="CH_EQ" height="851" tileDir="TopDown">
+        <texture file="pm3500m_tex0.png" x0="142" y0="0" w="140" h="851" />
+        
+        <group>
+            <control type="SmallButton"     x="112"     y="36"      colors="body=green">HI (Shelf)</control>
+            <control type="EQ_Q"            x="58"      y="35.5"    >HI Q</control>
+            <control type="EQFreq"          x="75"      dy="84"     >HI (Hz)</control>
+            <control type="EQGain"                                  link="1">HI (dB)</control>
+        </group>
+        <group>
+            <control type="EQ_Q"            x="58"      y="208.5"   >HI-MID Q</control>
+            <control type="EQFreq"          x="75"      dy="84"     >HI-MID (Hz)</control>
+            <control type="EQGain"                                  link="1">HI-MID (dB)</control>
+        </group>
+        <group>
+            <control type="EQ_Q"            x="58"      y="381.5"   >LO-MID Q</control>
+            <control type="EQFreq"          x="75"      dy="84"     >LO-MID (Hz)</control>
+            <control type="EQGain"                                  link="1">LO-MID (dB)</control>
+        </group>
+        <group>
+            <control type="SmallButton"     x="112"     y="555"     colors="body=green">LO (Shelf)</control>
+            <control type="EQ_Q"            x="58"      y="554.5"   >LO Q</control>
+            <control type="EQFreq"          x="75"      dy="84"     >LO (Hz)</control>
+            <control type="EQGain"                                  link="1">LO (dB)</control>
+        </group>
+        
+        <control type="EQButton"                x="38.5"    y="706"     >EQ</control>
+        <control type="RightOrangeLEDButton"    x="99.5"                >INSERT</control>
+        <control type="HPFFreq"                 x="58.5"    y="772.5"   >HPF (Hz)</control>
+        <control type="LeftGreenLEDButton"      x="38.5"    y="833"     colors="body=green">HPF</control>
+    </moduleDef>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_AUX" height="438" tileDir="TopDown">
+        <texture file="pm3500m_tex0.png" x0="0" y0="233" w="140" h="438" />
+        
+        <control type="AUXOuter"    x="81.5"    y="40.5"    >AUX 2</control>
+        <control type="AUXInner"                            link="1">AUX 1</control>
+        <control type="AUXButton"   x="38.5"    dy="52.5"   >AUX 1-2 ON</control>
+        <control type="SmallButton" x="113"                 >AUX 1-4 PRE</control>
+        
+        <control type="AUXOuter"    x="81.5"    dy="56.5"   >AUX 4</control>
+        <control type="AUXInner"                            link="1">AUX 3</control>
+        <control type="AUXButton"   x="38.5"    dy="52.5"   >AUX 3-4 ON</control>
+        <control type="SmallButton" x="113"                 colors="body=red">AUX 1-4 ST</control>
+        
+        <control type="AUXOuter"    x="81.5"    dy="56.5"   colors="mark=white">AUX 6</control>
+        <control type="AUXInner"                            link="1" colors="mark=white">AUX 5</control>
+        <control type="AUXButton"   x="38.5"    dy="52.5"   >AUX 5-6 ON</control>
+        <control type="SmallButton" x="113"                 >AUX 5-8 PRE</control>
+        
+        <control type="AUXOuter"    x="81.5"    dy="56.5"   colors="mark=white">AUX 8</control>
+        <control type="AUXInner"                            link="1" colors="mark=white">AUX 7</control>
+        <control type="AUXButton"   x="38.5"    dy="52.5"   >AUX 7-8 ON</control>
+        <control type="SmallButton" x="113"                 colors="body=red">AUX 5-8 ST</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_GRP" height="734" tileDir="TopDown">
+        <texture file="pm3500m_tex0.png" x0="284" y0="0" w="140" h="734" />
+
+        <control type="AUXOuter"            x="81.5"    y="50.5"    colors="body=grey">GRP 2</control>
+        <control type="AUXInner"                                    link="1" colors="body=grey">GRP 1</control>
+        <control type="LeftOrangeLEDButton" x="38.5"    dy="52.5"   >GRP 1-2 ON</control>
+        <control type="SmallButton"         x="113"                 >GRP 1-4 PRE</control>
+        
+        <control type="AUXOuter"            x="81.5"    dy="56.5"   colors="body=grey">GRP 4</control>
+        <control type="AUXInner"                                    link="1" colors="body=grey">GRP 3</control>
+        <control type="LeftOrangeLEDButton" x="38.5"    dy="52.5"   >GRP 3-4 ON</control>
+        <control type="SmallButton"         x="113"                 colors="body=red">GRP 1-4 ST</control>
+        
+        <control type="Group"               x="74.5"    dy="52.5"   >GRP 5</control>
+        <control type="LeftOrangeLEDButton" x="38.5"    dy="46.5"   >GRP 5 ON</control>
+        <control type="SmallButton"         x="113"                 >GRP 5 PRE</control>
+        
+        <control type="Group"               x="74.5"    dy="47.5"   >GRP 6</control>
+        <control type="LeftOrangeLEDButton" x="38.5"    dy="46.5"   >GRP 6 ON</control>
+        <control type="SmallButton"         x="113"                 >GRP 6 PRE</control>
+        
+        <control type="Group"               x="74.5"    dy="47.5"   >GRP 7</control>
+        <control type="LeftOrangeLEDButton" x="38.5"    dy="46.5"   >GRP 7 ON</control>
+        <control type="SmallButton"         x="113"                 >GRP 7 PRE</control>
+        
+        <control type="Group"               x="74.5"    dy="47.5"   >GRP 8</control>
+        <control type="LeftOrangeLEDButton" x="38.5"    dy="46.5"   >GRP 8 ON</control>
+        <control type="SmallButton"         x="113"                 >GRP 8 PRE</control>
+        
+        <control type="STOuter"             x="74.5"    dy="56.5"   >ST PAN</control>
+        <control type="AUXInner"                                    link="1" colors="body=white">ST LVL</control>
+        <control type="LeftOrangeLEDButton" x="38.5"    dy="52.5"   colors="body=red">ST ON</control>
+    </moduleDef>
+    
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_On" height="101" tileDir="TopDown">
+        <texture file="pm3500m_tex0.png" x0="0" y0="673" w="140" h="101" />
+        
+        <control type="GreenLED"    x="106"     y="10.5"    >LED-check</control>
+        <control type="OnButton"    x="98"      y="57"      >ON</control>
+        
+        <control type="RedLED"      x="33.5"    y="23"      >L1</control>
+        <control type="OrangeLED"               dy="24"     >L2</control>
+        <control type="GreenLED"                dy="24"     >L3</control>
+    </moduleDef>
+        
+    <!-- -------------------------------------------------------------------------------------- -->
+    
+    <moduleDef name="CH_Fader" height="607" tileDir="TopDown">
+        <texture file="pm3500m_tex0.png" x0="426" y0="0" w="140" h="607" />
+        
+        <control type="FaderRight"              x="37"      y="429.5"   >FADER</control>
+        
+        <control type="RightOrangeLEDButton"    x="100.5"   y="114"     colors="body=white" texOffset="1">VCA 1</control>
+        <control type="RightOrangeLEDButton"                dy="35"     colors="body=white" texOffset="2">VCA 2</control>
+        <control type="RightOrangeLEDButton"                dy="35"     colors="body=white" texOffset="3">VCA 3</control>
+        <control type="RightOrangeLEDButton"                dy="35"     colors="body=white" texOffset="4">VCA 4</control>
+        <control type="RightOrangeLEDButton"                dy="35"     colors="body=white" texOffset="5">VCA 5</control>
+        <control type="RightOrangeLEDButton"                dy="35"     colors="body=white" texOffset="6">VCA 6</control>
+        <control type="RightOrangeLEDButton"                dy="35"     colors="body=white" texOffset="7">VCA 7</control>
+        <control type="RightOrangeLEDButton"                dy="35"     colors="body=white" texOffset="8">VCA 8</control>
+        
+        <control type="CueButton"               x="98"      y="428"     >CUE</control>
+    </moduleDef>
+    
+
+    <!-- ------------------------------------------------------------------------------------------
+        CONTROLS
+    ------------------------------------------------------------------------------------------- -->
+
+    <!---- LEDs ---->
+
+    <controlDef name="RedLED" class="LED"
+        default="0.0"
+        mesh="pm3500_led.fim">
+        <color id="body" value="#900000"/>
+    </controlDef>
+    
+    <controlDef name="OrangeLED" class="LED"
+        default="0.0"
+        mesh="pm3500_led.fim">
+        <color id="body" value="#B04600"/>
+    </controlDef>
+    
+    <controlDef name="GreenLED" class="LED"
+        default="0.0"
+        mesh="pm3500_led.fim">
+        <color id="body" value="#007000"/>
+    </controlDef>
+    
+    
+    <!---- Buttons ---->
+    
+    <controlDef name="LeftGreenLEDButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="pm3500_button.fim">
+        <texture file="pm3500m_tex0.png" x0="568" y0="1" w="74" h="48" />
+        <texOffset dy="50" dxON="76"/>
+        <color id="body" value="grey"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="RightGreenLEDButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="pm3500_button.fim">
+        <texture file="pm3500m_tex0.png" x0="568" y0="151" w="74" h="48" />
+        <texOffset dy="50" dxON="76"/>
+        <color id="body" value="grey"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="LeftOrangeLEDButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="pm3500_button.fim">
+        <texture file="pm3500m_tex0.png" x0="568" y0="101" w="74" h="48" />
+        <texOffset dy="50" dxON="76"/>
+        <color id="body" value="grey"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="RightOrangeLEDButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="pm3500_button.fim">
+        <texture file="pm3500m_tex0.png" x0="568" y0="251" w="74" h="48" />
+        <texOffset dy="50" dxON="76"/>
+        <color id="body" value="grey"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="PhantomButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="pm3500_button.fim">
+        <texture file="pm3500m_tex0.png" x0="568" y0="51" w="74" h="48" />
+        <texOffset dy="50" dxON="76"/>
+        <color id="body" value="yellow"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="AUXButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="pm3500_button.fim">
+        <texture file="pm3500m_tex0.png" x0="568" y0="101" w="74" h="48" />
+        <texOffset dy="50" dxON="76"/>
+        <color id="body" value="blue"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="EQButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="1.0"
+        mesh="pm3500_button.fim">
+        <texture file="pm3500m_tex0.png" x0="568" y0="1" w="74" h="48" />
+        <texOffset dy="50" dxON="76"/>
+        <color id="body" value="green"/>
+        <halo type="hidden"/>
+    </controlDef>
+    
+    <controlDef name="SmallButton" class="Button"
+        zON="-3.0" zOFF="-1.0"
+        default="0.0"
+        mesh="pm3500_button_small.fim">
+        <color id="body" value="grey"/>
+    </controlDef>
+    
+    <controlDef name="OnButton" class="Button"
+        zON="-3.0" zOFF="-3.0"
+        default="0.0"
+        mesh="pm3500_button_big.fim">
+        <texture file="pm3500m_tex0.png" x0="284" y0="935" w="88" h="88" />
+        <texOffset dxON="90"/>
+        <color id="body" value="#EFD8D8"/>
+        <colorON id="body" value="#FFC000"/>
+        <halo color="#FFC000" alpha="0.2"/>
+    </controlDef>
+    
+    <controlDef name="CueButton" class="Button"
+        zON="-3.0" zOFF="-3.0"
+        default="0.0"
+        mesh="pm3500_button_big.fim">
+        <texture file="pm3500m_tex0.png" x0="464" y0="935" w="88" h="88" />
+        <texOffset dxON="90"/>
+        <color id="body" value="#EF3903"/>
+        <colorON id="body" value="#FF4913"/>
+        <halo color="#FF4913" alpha="0.2"/>
+    </controlDef>
+    
+    
+    <!---- Knobs ---->
+    
+    <controlDef name="Gain" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="pm3500_knob_big.fim">
+        <color id="body" value="grey"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+
+    <controlDef name="EQ_Q" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="pm3500_knob_small.fim">
+        <color id="body" value="green"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="EQGain" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        dualInner="1"
+        mesh="pm3500_dual_inner.fim">
+        <color id="body" value="green"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="EQFreq" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="pm3500_dual_outer.fim">
+        <color id="body" value="green"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="HPFFreq" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="pm3500_knob_small.fim">
+        <color id="body" value="green"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="AUXInner" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        dualInner="1"
+        mesh="pm3500_dual_inner.fim">
+        <color id="body" value="blue"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+    
+    <controlDef name="AUXOuter" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="pm3500_dual_outer.fim">
+        <color id="body" value="blue"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+    
+    <controlDef name="Group" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="30"
+        mesh="pm3500_knob_small.fim">
+        <color id="body" value="grey"/>
+        <color id="mark" value="white"/>
+    </controlDef>
+    
+    <controlDef name="STOuter" class="Knob"
+        fiMin="30"
+        fiMax="330"
+        default="180"
+        mesh="pm3500_dual_outer.fim">
+        <color id="body" value="white"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+    
+
+    <!---- Faders ---->
+
+    <controlDef name="FaderLeft" class="Fader"
+        sMax="60.0"
+        default="0.0"
+        mesh="pm3500_fader_left.fim">
+        <color id="body" value="white"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+
+    <controlDef name="FaderRight" class="Fader"
+        sMax="60.0"
+        default="0.0"
+        mesh="pm3500_fader_right.fim">
+        <color id="body" value="white"/>
+        <color id="mark" value="black"/>
+    </controlDef>
+
+
+</layouts>

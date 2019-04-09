@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipment type="console" maker="Yamaha" product="PM3000" file="yamaha_pm3000.xml">
+    <layout name="Yamaha PM3000-24" desc="[ 24M ][ Master ]"/>
+    <layout name="Yamaha PM3000-32" desc="[ 32M ][ Master ]"/>
+    <layout name="Yamaha PM3000C-40" desc="[ 20M ][ Master ][ 20M ]"/>
+</equipment>
