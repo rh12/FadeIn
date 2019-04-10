@@ -1,6 +1,6 @@
 # FadeIn
 <img src="images/about_fadein-logo.png">
-iOS app for sound engineers using analog equipment
+iOS app for sound engineers using analog equipment<br/>
 
 FadeIn is no longer available in the AppStore, since analog consoles themselves are rarely used these days.<br/>
 I've made the app available here (with the consent of all involved parties), as a novelty and to showcase my early work.
