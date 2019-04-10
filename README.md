@@ -1,16 +1,15 @@
 # FadeIn
 <div>
 <img align="left" src="images/about_fadein-logo.png">
-iOS app for sound engineers using analog equipment
+  <br/>iOS app for sound engineers using analog equipment<br/>
 </div>
-<br/>
-<br/>
 
 FadeIn is no longer available in the AppStore, since analog consoles themselves are rarely used these days.<br/>
 I've made the app available here (with the consent of all involved parties), as a novelty and to showcase my early work.
 
 It has been updated to work on iOS 11/12, added Zoom, and Free Viewmode, fixed a few things,<br/>
 but did not redesign the app, or refactor the codebase.
+
 
 ## Screenshots
 <img src=".readme_res/4in_01_ms.png" width="208"> <img src=".readme_res/4in_02_scv_venicef.png" width="216"> <img src=".readme_res/4in_03_av&zoom_xl250.png" width="216"> <img src=".readme_res/4in_05_setup-def_pm3k.png" width="216">
