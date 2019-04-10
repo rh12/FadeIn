@@ -1,6 +1,6 @@
 # FadeIn
 <p>
-<img align="left" src="about_fadein-logo.png">
+<img align="left" src="images/about_fadein-logo.png">
 <br>iOS app for sound engineers using analog equipment<br><br>
 </p>
 
