@@ -22,8 +22,8 @@
 - (void)launchExecution;
 - (void)deviceOrientationDidChange:(NSNotification *)notification;
 - (void)hideDelayed:(NSNumber *)animated;
-- (void)launchExecution;
-- (void)cleanUp;
+//- (void)launchExecution;
+//- (void)cleanUp;
 
 #if __has_feature(objc_arc)
 @property (strong) UIView *indicator;

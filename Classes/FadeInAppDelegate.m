@@ -68,7 +68,7 @@
     NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 //    NSLog(@"DON'T FORGET TO PATCH!!!!!!!");
     if (NO) {   /// TO TEST PATCH
-        [self patchFromOldVersion:lastUsedVersion toNewVersion:currentVersion];
+        //[self patchFromOldVersion:lastUsedVersion toNewVersion:currentVersion];
     }
     if ([lastUsedVersion isEqualToString:currentVersion]) {
         self.versionChanged = NO;

@@ -358,19 +358,6 @@ navigationBarBackgroundImageLandscapePhone = _navigationBarBackgroundImageLandsc
     }
 }
 
-// Release any retained subviews of the main view.
-- (void)viewDidUnload {
-	_currentPageIndex = 0;
-    [_pagingScrollView release], _pagingScrollView = nil;
-    [_visiblePages release], _visiblePages = nil;
-    [_recycledPages release], _recycledPages = nil;
-    [_toolbar release], _toolbar = nil;
-    [_previousButton release], _previousButton = nil;
-    [_nextButton release], _nextButton = nil;
-    self.progressHUD = nil;
-    [super viewDidUnload];
-}
-
 #pragma mark - Appearance
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -520,36 +507,36 @@ navigationBarBackgroundImageLandscapePhone = _navigationBarBackgroundImageLandsc
     
 }
 
-#pragma mark - Rotation
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    return YES;
-}
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    
-	// Remember page index before rotation
-	_pageIndexBeforeRotation = _currentPageIndex;
-	_rotating = YES;
-	
-}
-
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-	
-	// Perform layout
-	_currentPageIndex = _pageIndexBeforeRotation;
-    
-	// Layout manually (iOS < 5)
-    if (SYSTEM_VERSION_LESS_THAN(@"5")) [self viewWillLayoutSubviews];
-	
-	// Delay control holding
-	[self hideControlsAfterDelay];
-	
-}
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-	_rotating = NO;
-}
+//#pragma mark - Rotation
+//
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+//    return YES;
+//}
+//
+//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+//    
+//    // Remember page index before rotation
+//    _pageIndexBeforeRotation = _currentPageIndex;
+//    _rotating = YES;
+//    
+//}
+//
+//- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+//    
+//    // Perform layout
+//    _currentPageIndex = _pageIndexBeforeRotation;
+//    
+//    // Layout manually (iOS < 5)
+//    if (SYSTEM_VERSION_LESS_THAN(@"5")) [self viewWillLayoutSubviews];
+//    
+//    // Delay control holding
+//    [self hideControlsAfterDelay];
+//    
+//}
+//
+//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+//    _rotating = NO;
+//}
 
 #pragma mark - Data
 

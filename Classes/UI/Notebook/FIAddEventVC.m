@@ -79,14 +79,6 @@
 }
 
 
-- (void) viewDidUnload {
-	// Release any retained subviews of the main view.
-    [eventTypeSC release];
-    eventTypeSC = nil;
-    [super viewDidUnload];
-}
-
-
 // ------------------------------------------------------------------------------------------------
 #pragma mark    UI ACTIONS & DELEGATES
 // ------------------------------------------------------------------------------------------------

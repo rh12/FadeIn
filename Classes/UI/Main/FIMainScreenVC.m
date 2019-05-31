@@ -85,7 +85,7 @@ enum {
     [[FIUICommon common] consoleList];
     
     // invalidate Saved State upon New Version
-    if (NO) {   // not currently necessary
+    if (/* DISABLES CODE */ (NO)) {   // not currently necessary
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         if ( FADEIN_APPDELEGATE.versionChanged && [defaults objectForKey:kSavedStateDictKey] ) {
             [defaults removeObjectForKey:kSavedStateDictKey];
@@ -155,13 +155,6 @@ enum {
 //	
 //	// Release any cached data, images, etc that aren't in use.
 //}
-
-
-- (void) viewDidUnload {
-	// Release any retained subviews of the main view.
-	self.buttonsArray = nil;
-    self.hlArray = nil;
-}
 
 
 // ------------------------------------------------------------------------------------------------

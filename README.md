@@ -50,6 +50,6 @@ The fast and responsive controls allows you to quickly save any (or all) values 
 
 
 ## Requirements
-- Xcode 9.2+ to build
+- Xcode 10.2.1+ to build
 - iPhone5S+ running iOS 11+
 - iPads are not supported directly (FadeIn was designed to be used with one hand)

@@ -107,16 +107,6 @@
 //}
 
 
-- (void) viewDidUnload {
-	// Release any retained subviews of the main view.
-    self.versionLabel = nil;
-    self.appImageView = nil;
-    self.appNameLabel = nil;
-    self.reviewButton = nil;
-    self.buyButton = nil;
-}
-
-
 // ------------------------------------------------------------------------------------------------
 #pragma mark  UI ACTIONS
 // ------------------------------------------------------------------------------------------------

@@ -131,11 +131,6 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
-- (void) viewDidUnload {
-	// Release any retained subviews of the main view.
-    [super viewDidUnload];
-}
-
 
 // ------------------------------------------------------------------------------------------------
 #pragma mark    UI ACTIONS & DELEGATES

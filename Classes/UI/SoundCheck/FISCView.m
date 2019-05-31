@@ -284,7 +284,7 @@
 //        [self debug_drawLine:sctX0];
 //        [self debug_drawLine:sctX1];
 
-        if (NO) {
+        if (/* DISABLES CODE */ (NO)) {
             if (vc.activeLogicModule) {
                 // activeLogicModule bounds (YELLOW)
                 glColor4f(1.0f,1.0f,0.0f,1.0f);

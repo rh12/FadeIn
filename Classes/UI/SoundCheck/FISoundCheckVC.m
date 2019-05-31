@@ -286,7 +286,7 @@
     [fvmDict release];
 
     // setup AutoFollow Button
-    if (deviceMotionAvailable && NO) {      /////////////// DISABLED for now
+    if (deviceMotionAvailable && /* DISABLES CODE */ (NO)) {      /////////////// DISABLED for now
         NSMutableDictionary *afDict = [[NSMutableDictionary alloc] init];
         afDict[scbVC] = self;
         afDict[scbOriginX] = @(contentView.bounds.size.width - SCBUTTON_SIZE - 5.0f);
@@ -301,7 +301,7 @@
     }
     
     // setup Dummy Button
-    if (NO) {
+    if (/* DISABLES CODE */ (NO)) {
         NSMutableDictionary *dummyDict = [[NSMutableDictionary alloc] init];
         dummyDict[scbVC] = self;
         dummyDict[scbOriginX] = @(lockButton.frame.origin.x + lockButton.frame.size.width + 5.0f);
@@ -395,27 +395,6 @@
 //	
 //	// Release any cached data, images, etc that aren't in use.
 //}
-
-
-- (void) viewDidUnload {
-    [super viewDidUnload];
-    
-	// Release any retained subviews of the main view.
-    self.contentView = nil;
-	self.infoBar = nil;
-    self.scView = nil;
-    self.scrollBar = nil;
-    self.toolBar = nil;
-    self.chToolBar = nil;
-    self.insertToolBar = nil;
-    self.lockButton = nil;
-    self.freeVMButton = nil;
-    self.afButton = nil;
-    self.dummyButton = nil;
-    self.assistView = nil;
-    [quickJumpVC release];  quickJumpVC = nil;
-    [settingsVC release];  settingsVC = nil;
-}
 
 
 // ------------------------------------------------------------------------------------------------

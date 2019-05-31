@@ -83,12 +83,6 @@
 }
 
 
-- (void) viewDidUnload {
-	// Release any retained subviews of the main view.
-    [super viewDidUnload];
-}
-
-
 // ------------------------------------------------------------------------------------------------
 #pragma mark    UI ACTIONS & DELEGATES
 // ------------------------------------------------------------------------------------------------

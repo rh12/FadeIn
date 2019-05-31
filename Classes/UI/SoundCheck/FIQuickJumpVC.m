@@ -145,11 +145,6 @@ static CGFloat const kLabelHeight = 40.0f;
 }
 
 
-- (void) viewDidUnload {
-	// Release any retained subviews of the main view.
-}
-
-
 // ------------------------------------------------------------------------------------------------
 #pragma mark    UI ACTIONS & DELEGATES
 // ------------------------------------------------------------------------------------------------

@@ -118,17 +118,6 @@
 //}
 
 
-- (void) viewDidUnload {
-	// Release any retained subviews of the main view.
-    [cameraButton release], cameraButton = nil;
-    [trashButton release], trashButton = nil;
-    [changeModuleSC release], changeModuleSC = nil;
-    [deleteActionSheet release], deleteActionSheet = nil;
-    [imagePicker release], imagePicker = nil;
-    [super viewDidUnload];
-}
-
-
 // ------------------------------------------------------------------------------------------------
 #pragma mark    SETUP & UPDATE
 // ------------------------------------------------------------------------------------------------

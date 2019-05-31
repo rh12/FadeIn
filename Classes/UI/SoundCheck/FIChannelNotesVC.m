@@ -102,12 +102,6 @@
 //}
 
 
-- (void) viewDidUnload {
-	// Release any retained subviews of the main view.
-    [changeModuleSC release], changeModuleSC = nil;
-    [super viewDidUnload];
-}
-
 // ------------------------------------------------------------------------------------------------
 #pragma mark    UI ACTIONS & DELEGATE methods
 // ------------------------------------------------------------------------------------------------

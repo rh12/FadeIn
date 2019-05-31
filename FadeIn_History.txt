@@ -1,3 +1,10 @@
+    2019.05.31.     FadeIn v1.4.0.1
+    ========================================================
+    - updated project for Xcode 10.2.1
+        : fixed deprecations
+        : patched libraries, where needed
+
+
     2019.04.09.     FadeIn v1.4.0
     ========================================================
     - added iOS 11 compatibility

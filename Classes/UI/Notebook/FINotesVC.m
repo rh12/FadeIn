@@ -123,12 +123,6 @@
 //	// Release any cached data, images, etc that aren't in use.
 //}
 
-- (void) viewDidUnload {
-	// Release any retained subviews of the main view.
-    self.textView = nil;
-}
-
-
 /*
  // Override to allow orientations other than the default portrait orientation.
  - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
